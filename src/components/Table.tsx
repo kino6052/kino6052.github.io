@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WIDTH } from "./utils";
+import { WIDTH } from "../utils/utils";
 
 export type ITable = {
   title?: string | React.ReactElement;

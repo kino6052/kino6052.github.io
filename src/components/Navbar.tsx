@@ -1,9 +1,9 @@
 import React from "react";
 import { filter } from "rxjs/operators";
 import styled from "styled-components";
-import { ELanguage, ERoute, Ids, setState } from "./bridge";
-import { EventSubject, EventWrapper } from "./EventWrapper";
-import { languageOptions, WIDTH } from "./utils";
+import { ELanguage, ERoute, Ids, setState } from "../utils/bridge";
+import { EventSubject, EventWrapper } from "../utils/EventWrapper";
+import { languageOptions, WIDTH } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === `${Ids.RouteChange}`)

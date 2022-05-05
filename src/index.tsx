@@ -4,12 +4,12 @@ import {
   getCurrentState,
   IState,
   setState,
-  subscribeToStateChange
-} from "./bridge";
-import { getLocationSubject } from "./utils";
+  subscribeToStateChange,
+} from "./utils/bridge";
+import { getLocationSubject } from "./utils/utils";
 
 import { App } from "./App";
-import { EventSubject } from "./EventWrapper";
+import { EventSubject } from "./utils/EventWrapper";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
@@ -18,12 +18,12 @@ getLocationSubject().subscribe((route) => {
   const currentState = getCurrentState;
   const nextState: IState = {
     ...currentState,
-    route
+    route,
   };
   EventSubject.next(["state", "", JSON.stringify(nextState)]);
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 

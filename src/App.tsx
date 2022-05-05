@@ -2,20 +2,20 @@ import "./styles.css";
 import React from "react";
 import styled from "styled-components";
 import { links, tags } from "./data";
-import { Navbar } from "./Navbar";
-import { ProfilePage } from "./ProfilePage";
-import { ExperiencePage } from "./ExperiencePage";
-import { ProjectPage } from "./ProjectPage";
-import { MiscPage } from "./MiscPage";
-import { parsePath, WIDTH } from "./utils";
-import { ERoute, IState } from "./bridge";
-import { ContactPage } from "./ContactPage";
-import { projectPages } from "./ProjectPages";
+import { Navbar } from "./components/Navbar";
+import { ProfilePage } from "./pages/ProfilePage";
+import { ExperiencePage } from "./pages/ExperiencePage";
+import { ProjectPage } from "./pages/ProjectPage";
+import { MiscPage } from "./pages/MiscPage";
+import { parsePath, WIDTH } from "./utils/utils";
+import { ERoute, IState } from "./utils/bridge";
+import { ContactPage } from "./pages/ContactPage";
+import { projectPages } from "./pages/ProjectPages";
 
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
-      state: { route, language }
+      state: { route, language },
     } = props;
     const parsedPath = parsePath(route);
     console.warn(parsedPath);

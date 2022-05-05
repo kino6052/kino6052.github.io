@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Ids } from "./bridge";
-import { EventWrapper } from "./EventWrapper";
-import { WIDTH } from "./utils";
+import { Ids } from "../utils/bridge";
+import { EventWrapper } from "../utils/EventWrapper";
+import { WIDTH } from "../utils/utils";
 
 export interface ICard {
   id: string;

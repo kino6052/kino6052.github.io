@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { EventWrapper } from "./EventWrapper";
-import { WIDTH } from "./utils";
+import { EventWrapper } from "../utils/EventWrapper";
+import { WIDTH } from "../utils/utils";
 
 const Input = styled(
   ({

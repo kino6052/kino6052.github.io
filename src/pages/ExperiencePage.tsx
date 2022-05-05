@@ -1,6 +1,6 @@
 import React from "react";
-import { career, education, languages, skills } from "./data";
-import { Table } from "./Table";
+import { career, education, languages, skills } from "../data";
+import { Table } from "../components/Table";
 
 export const ExperiencePage = () => (
   <>

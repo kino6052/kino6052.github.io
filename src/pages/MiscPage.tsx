@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import { CardContainer, ICard } from "./CardContainer";
+import { CardContainer, ICard } from "../components/CardContainer";
 
 const other: ICard[] = [
   {
     title: "Interview Article",
     subtitle: "Level Up Coding Publication",
     description: "Interviewed by Marina Vorontsova",
-    url:
-      "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f",
-    imageUrl: "https://miro.medium.com/max/1400/1*YdNh4UOlefbG1tAXFp7LLg.png"
-  }
+    url: "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f",
+    imageUrl: "https://miro.medium.com/max/1400/1*YdNh4UOlefbG1tAXFp7LLg.png",
+  },
 ];
 
 const frontEndBlog: ICard[] = [
@@ -19,33 +18,30 @@ const frontEndBlog: ICard[] = [
     description: "Opinion on State Management",
     url: "https://soshace.com/react-hooks-rxjs-or-how-react-is-meant-to-be/",
     imageUrl:
-      "https://soshace.com/wp-content/uploads/2019/07/React-Hooks-RxJS-or-How-React-Is-Meant-to-Be-react-ecosystem.jpg"
+      "https://soshace.com/wp-content/uploads/2019/07/React-Hooks-RxJS-or-How-React-Is-Meant-to-Be-react-ecosystem.jpg",
   },
   {
     title: "React TDD",
     subtitle: "Test Driven Development in React",
     description: "Opinion on TDD in React",
-    url:
-      "https://kirill-novik.medium.com/test-driven-development-and-react-347487c9610a",
+    url: "https://kirill-novik.medium.com/test-driven-development-and-react-347487c9610a",
     imageUrl:
-      "https://blogs.zeiss.com/digital-innovation/de/wp-content/uploads/sites/2/2015/04/201504_Test_Driven_Development_2_neu_fi.png"
+      "https://blogs.zeiss.com/digital-innovation/de/wp-content/uploads/sites/2/2015/04/201504_Test_Driven_Development_2_neu_fi.png",
   },
   {
     title: "I Don't Like GraphQL",
     subtitle: "So How About JSON and TS?",
     description: "Opinion on Declarative Data Access",
-    url:
-      "https://kirill-novik.medium.com/i-dont-like-graphql-so-how-about-json-and-typescript-69765ca9e620",
-    imageUrl: "https://miro.medium.com/max/670/1*KFlPmF76jX_m7-iGNL5c0g.png"
+    url: "https://kirill-novik.medium.com/i-dont-like-graphql-so-how-about-json-and-typescript-69765ca9e620",
+    imageUrl: "https://miro.medium.com/max/670/1*KFlPmF76jX_m7-iGNL5c0g.png",
   },
   {
     title: "My Experience with WebRTC",
     subtitle: "Some Lessons Learned",
     description: "Sharing WebRTC lessons learned",
-    url:
-      "https://kirill-novik.medium.com/my-experiences-getting-started-with-webrtc-5a7dd9c26df5",
-    imageUrl: "https://miro.medium.com/max/700/0*vzViH1oTnBSymXrN.png"
-  }
+    url: "https://kirill-novik.medium.com/my-experiences-getting-started-with-webrtc-5a7dd9c26df5",
+    imageUrl: "https://miro.medium.com/max/700/0*vzViH1oTnBSymXrN.png",
+  },
 ];
 
 const machineLearningBlog: ICard[] = [
@@ -55,8 +51,8 @@ const machineLearningBlog: ICard[] = [
     description: "Opinion on State Management",
     url: "https://soshace.com/react-hooks-rxjs-or-how-react-is-meant-to-be/",
     imageUrl:
-      "https://soshace.com/wp-content/uploads/2019/07/React-Hooks-RxJS-or-How-React-Is-Meant-to-Be-react-ecosystem.jpg"
-  }
+      "https://soshace.com/wp-content/uploads/2019/07/React-Hooks-RxJS-or-How-React-Is-Meant-to-Be-react-ecosystem.jpg",
+  },
 ];
 
 export const MiscPage = () => (

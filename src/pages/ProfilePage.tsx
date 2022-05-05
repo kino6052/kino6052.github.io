@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { ELanguage } from "./bridge";
+import { ELanguage } from "../utils/bridge";
 import {
   currentLanguage,
   MOBILE_WIDTH,
   TABLET_WIDTH,
   translations,
-  WIDTH
-} from "./utils";
+  WIDTH,
+} from "../utils/utils";
 
 export const ProfilePage = styled(
   (

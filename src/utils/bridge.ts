@@ -5,17 +5,17 @@ export enum ERoute {
   Resume = "",
   Projects = "projects",
   Misc = "misc",
-  Contact = "contact"
+  Contact = "contact",
 }
 
 export enum ELanguage {
   English = "English",
   Russian = "Русский",
-  Chinese = "中文"
+  Chinese = "中文",
 }
 
 export enum Ids {
-  RouteChange
+  RouteChange,
 }
 
 export interface IState {
@@ -25,7 +25,7 @@ export interface IState {
 
 export const initialState: IState = {
   route: ERoute.Resume,
-  language: ELanguage.English
+  language: ELanguage.English,
 };
 
 const StateSubject = new BehaviorSubject<IState>(initialState);
