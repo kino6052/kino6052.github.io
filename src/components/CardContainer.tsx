@@ -52,6 +52,7 @@ export const CardContainer = styled(
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  padding: 8px;
 
   @media (max-width: ${WIDTH}px) {
     grid-template-columns: repeat(1, 1fr);
@@ -61,9 +62,10 @@ export const CardContainer = styled(
     display: flex;
     flex-direction: column;
     box-shadow: #ddd 0 0 8px;
-    border-radius: 8px;
+    border-radius: 2px;
     padding: 16px;
     height: 256px;
+    text-decoration: none;
     :hover {
       transform: scale(1.02);
       transition: all 0.1s;
