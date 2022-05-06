@@ -81,6 +81,9 @@ const Button = styled(
     box-shadow: #aaa 0 0 8px;
     background: #1976d2ee;
   }
+  @media (max-width: ${WIDTH}px) {
+    width: unset;
+  }
 `;
 
 export const ContactPage = styled((props) => (

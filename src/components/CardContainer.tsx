@@ -61,7 +61,7 @@ export const CardContainer = styled(
   .card {
     display: flex;
     flex-direction: column;
-    box-shadow: #ddd 0 0 8px;
+    box-shadow: #ccc 0 0 4px, #ddd 0 2px 2px;
     border-radius: 2px;
     padding: 16px;
     height: 256px;
@@ -79,7 +79,7 @@ export const CardContainer = styled(
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      border: 1px solid #eee;
+      border: 1px solid #ddd;
       color: transparent;
     }
     h1 {
