@@ -3,7 +3,7 @@ import { filter } from "rxjs/operators";
 import styled from "styled-components";
 import { ELanguage, ERoute, Ids, setState } from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
-import { languageOptions, WIDTH } from "../utils/utils";
+import { languageOptions, WIDTH, zIndex } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === `${Ids.RouteChange}`)
@@ -52,6 +52,7 @@ export const Navbar = styled(
   height: 48px;
   background: #333;
   justify-content: center;
+  z-index: ${zIndex.nav};
 
   select {
     display: inline-flex;

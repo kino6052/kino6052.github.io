@@ -52,7 +52,9 @@ export const projectPages = {
           </a>
         </p>
         <br />
+
+        <br />
       </section>
     </>
-  )
+  ),
 } as const;
