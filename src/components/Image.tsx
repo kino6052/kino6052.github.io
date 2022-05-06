@@ -2,16 +2,28 @@ import React from "react";
 import styled from "styled-components";
 
 export const Image = styled(
-  (props: React.InputHTMLAttributes<HTMLDivElement> & { caption: string }) => (
-    <>
-      <img src={props.src} />
-      <span>{props.caption}</span>
-    </>
+  ({
+    caption,
+    className,
+    src,
+    ...rest
+  }: React.InputHTMLAttributes<HTMLImageElement> & { caption: string }) => (
+    <div className={className}>
+      <img src={src} {...rest} />
+      <span className="caption">{caption}</span>
+    </div>
   )
 )`
-    .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  .image {
+  }
 
-    }
-
-    .caption
+  .caption {
+    font-size: 16px;
+    font-style: italic;
+    color: grey;
+  }
 `;

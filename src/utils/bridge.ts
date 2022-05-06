@@ -34,7 +34,7 @@ export const subscribeToStateChange = (fn: (state: IState) => void) =>
   StateSubject.subscribe(fn);
 
 export const getCurrentState = () => StateSubject.getValue();
-export const setState = (state: IState) => {
+export const setState = (state: Partial<IState>) => {
   const currentState = { ...getCurrentState() };
   const nextState = { ...currentState, ...state };
   EventSubject.next(["state", "", JSON.stringify(nextState)]);

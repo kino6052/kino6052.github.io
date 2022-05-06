@@ -1,3 +1,5 @@
+import { Image } from "../components/Image";
+
 export const projectPages = {
   "nodejs-server": (
     <>
@@ -26,6 +28,7 @@ export const projectPages = {
       <section className="container">
         <h1>AAA MyQuote App</h1>
         <h2>CSAA Insurance Company</h2>
+        <br />
         <p>
           Despite the fact that the insurance industry is one of the dullest
           things on Earth, the quote applications development can be pretty fun.
@@ -52,7 +55,29 @@ export const projectPages = {
           </a>
         </p>
         <br />
-
+        <div style={{ display: "flex" }}>
+          <Image
+            src="/csaa.jpg"
+            caption="MyQuote Coverage Screen"
+            width={250}
+          />
+          <Image src="/csaa.jpg" caption="MyQuote Address Screen" width={250} />
+          <Image
+            src="/csaa.jpg"
+            caption="MyQuote Personal Info Screen"
+            width={250}
+          />
+        </div>
+        <br />
+        <br />
+        <p>
+          Insurance is a unique field. Similar to banking dealing with financial
+          abstractions like interest, insurance deals with risk. Yet, unlike
+          banks, the end-user doesn't use the insurance products very often and
+          the insurance applications tend to be not as reachly featured in
+          comparison.
+        </p>
+        <br />
         <br />
       </section>
     </>

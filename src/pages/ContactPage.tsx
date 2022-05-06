@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { EventWrapper } from "../utils/EventWrapper";
 import { WIDTH } from "../utils/utils";
@@ -14,7 +15,9 @@ const Input = styled(
     name: string;
     tag?: "input" | "textarea";
   }) => {
-    const Tag = tag;
+    const Tag = tag as unknown as React.FC<
+      React.InputHTMLAttributes<HTMLInputElement>
+    >;
     return (
       <div className={`${className} input`}>
         <label for={name}>{label}</label>
