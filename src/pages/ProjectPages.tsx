@@ -31,28 +31,51 @@ export const projectPages = {
         <br />
         <p>
           Despite the fact that the insurance industry is one of the dullest
-          things on Earth, the quote applications development can be pretty fun.
+          things on Earth, the insurance quote applications development can be
+          actually pretty fun.
         </p>
         <br />
         <p>
-          Insurance is a unique field. Similar to banking dealing with financial
-          abstractions like interest, insurance deals with risk. Yet, unlike
-          banks, the end-user doesn't use the insurance products very often and
-          the insurance applications tend to be not as reachly featured in
-          comparison.
+          Insurance is a unique field. The main subject of their activity has no
+          concrete embodiment. It deals with abstractions like risk. The
+          end-user doesn't use the insurance products very often, and the
+          insurance applications tend to be not as richly featured as some other
+          counterparts. Yet, it is an absolute must-have in modern civilization.
         </p>
         <br />
-        <p>However, the great </p>
+        <p>
+          The necessity that comes with insurance tends to make the cheaper
+          options more favorable to the customers. However, even the more
+          expensive insurances tend to be able to make competition leveraging
+          their brand. Among them are humor, recognizable design, and ease of
+          use.
+        </p>
+        <br />
+        <p>This is where I come into the picture.</p>
         <br />
         <p>
-          Here is{" "}
+          A potential customer in need to buy an insurance policy goes online
+          trying to get a quote, and it goes without saying that the better the
+          user experience is during the quote process the better the chances
+          they will buy the policy are.
+        </p>
+        <br />
+        <p>
+          I am very proud to say that I think that{" "}
+          <b>AAA quote process is one of the smoothest in the industry</b>.
+          Thanks to the strong UI/UX and Dev teams over at AAA.
+        </p>
+        <br />
+        <p>
+          Our team was responsible for building{" "}
           <a
             href="https://www.quote.csaa-insurance.aaa.com/"
             target="_blank"
             rel="noreferrer"
           >
-            the link to the application
+            the AAA quote application
           </a>
+          .
         </p>
         <br />
         <div style={{ display: "flex" }}>
@@ -69,14 +92,34 @@ export const projectPages = {
           />
         </div>
         <br />
+        <p>
+          This application is a testimony to how a creative approach can make
+          even the dullest things fun. The app has an effective design, it is
+          highly interactive, and the entire process takes minutes to complete.
+        </p>
         <br />
         <p>
-          Insurance is a unique field. Similar to banking dealing with financial
-          abstractions like interest, insurance deals with risk. Yet, unlike
-          banks, the end-user doesn't use the insurance products very often and
-          the insurance applications tend to be not as reachly featured in
-          comparison.
+          In essence, the quote application is a form that the user has to fill
+          out. However, this form is extremely complex. It is highly conditional
+          and is associated with a lot of possible routes the user can take.
+          Very soon in the development process, it becomes very complex to
+          maintain.
         </p>
+        <br />
+        <p>
+          This effort would be impossible without a great quality assurance
+          team. The QA team ensured a great part of the success of this project.
+        </p>
+        <br />
+        <p>
+          In conclusion, this project was among a few that I have been able to
+          participate in from start to finish, and am very proud of the end
+          result. I would like to thank the management, the UX, QA, and Dev
+          teams working on this project for making the development process fun
+          and meaningful inspite of the challenges that come from the fact that
+          the insurance industry tends be extremely dull.
+        </p>
+        <br />
         <br />
         <br />
       </section>
