@@ -16,13 +16,13 @@ import { translations, WIDTH } from "./utils/utils";
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
-      state: { path, language, hasSubmitted },
+      state: { path, language, hasSubmitted, isOpen },
     } = props;
     const { route, currentProject } = getCurrentPathState(path);
     const projectPages = getProjectPages(language);
     return (
       <div className={`app ${props.className}`}>
-        <Navbar links={links} language={language} />
+        <Navbar links={links} language={language} isOpen={isOpen} />
         {route === ERoute.Resume && (
           <ProfilePage content={translations[language]["profilePage"]} />
         )}

@@ -20,20 +20,23 @@ export const languageRouteMap = {
   [ELanguage.Russian]: "ru",
 };
 
-export enum Ids {
-  RouteChange,
+export enum Id {
+  RouteChange = "route-change",
+  ToggleMenu = "toggle-menu",
 }
 
 export interface IState {
   path: string;
   language: ELanguage;
   hasSubmitted: boolean;
+  isOpen: boolean;
 }
 
 export const initialState: IState = {
   path: ERoute.Resume,
   language: ELanguage.English,
   hasSubmitted: false,
+  isOpen: false,
 };
 
 const StateSubject = new BehaviorSubject<IState>(initialState);

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Ids } from "../utils/bridge";
+import { Id } from "../utils/bridge";
 import { EventWrapper } from "../utils/EventWrapper";
 import { WIDTH } from "../utils/utils";
 
@@ -21,7 +21,7 @@ export const CardContainer = styled(
         {props.cards.map((card) => {
           const Wrapper = card.shouldStay ? EventWrapper : React.Fragment;
           const props = (
-            card.shouldStay ? { id: `${Ids.RouteChange}`, value: card.url } : {}
+            card.shouldStay ? { id: `${Id.RouteChange}`, value: card.url } : {}
           ) as React.ComponentProps<typeof EventWrapper>;
           return (
             <Wrapper {...props}>
