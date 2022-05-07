@@ -1,7 +1,7 @@
 import React from "react";
 import { filter } from "rxjs/operators";
 import styled from "styled-components";
-import { ELanguage, ERoute, Ids, setState } from "../utils/bridge";
+import { ELanguage, Ids, setState } from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
 import { languageOptions, WIDTH, zIndex } from "../utils/utils";
 
@@ -18,7 +18,7 @@ EventSubject.pipe(
 export const Navbar = styled(
   (
     props: React.InputHTMLAttributes<HTMLDivElement> & {
-      links: [string, ERoute][];
+      links: [string, string][];
       language: ELanguage;
     }
   ) => (

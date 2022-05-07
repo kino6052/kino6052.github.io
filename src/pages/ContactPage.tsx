@@ -20,7 +20,7 @@ const Input = styled(
     >;
     return (
       <div className={`${className} input`}>
-        <label for={name}>{label}</label>
+        <label htmlFor={name}>{label}</label>
         <Tag name={name} {...rest}></Tag>
       </div>
     );
@@ -56,7 +56,7 @@ const Button = styled(
     children,
     name,
     ...rest
-  }: React.InputHTMLAttributes<HTMLButtonElement> & {
+  }: React.ButtonHTMLAttributes<unknown> & {
     name: string;
   }) => {
     return (
@@ -135,7 +135,7 @@ export const ContactPage = styled((props) => (
         <br />
         <div className="field-container">
           <EventWrapper id="submit-question">
-            <Button role="button" type="submit">
+            <Button name="submit" role="button" type="submit">
               Submit
             </Button>
           </EventWrapper>

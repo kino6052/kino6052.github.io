@@ -1,16 +1,16 @@
-import "./styles.css";
 import React from "react";
 import styled from "styled-components";
-import { links, tags } from "./data";
 import { Navbar } from "./components/Navbar";
-import { ProfilePage } from "./pages/ProfilePage";
-import { ExperiencePage } from "./pages/ExperiencePage";
-import { ProjectPage } from "./pages/ProjectPage";
-import { MiscPage } from "./pages/MiscPage";
-import { parsePath, translations, WIDTH } from "./utils/utils";
-import { ERoute, IState } from "./utils/bridge";
+import { links } from "./data";
 import { ContactPage } from "./pages/ContactPage";
+import { ExperiencePage } from "./pages/ExperiencePage";
+import { MiscPage } from "./pages/MiscPage";
+import { ProfilePage } from "./pages/ProfilePage";
+import { ProjectPage } from "./pages/ProjectPage";
 import { getProjectPages } from "./pages/ProjectPages";
+import "./styles.css";
+import { ERoute, IState } from "./utils/bridge";
+import { parsePath, translations, WIDTH } from "./utils/utils";
 
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
@@ -18,19 +18,14 @@ export const App = styled(
       state: { route, language },
     } = props;
     const parsedPath = parsePath(route);
-    const isHomePage = route === "/";
+    const isHomePage = route === ("/" as ERoute);
     const isProjectsPage =
       parsedPath.length === 1 && parsedPath[0] === ERoute.Projects;
     const isProjectDescriptionPage =
       parsedPath.length > 1 && parsedPath[0] === ERoute.Projects;
     const isMiscPage = parsedPath[0] === ERoute.Misc;
     const isContactPage = parsedPath[0] === ERoute.Contact;
-    console.warn(
-      "Language",
-      language
-      // getProjectPages(language),
-      // getProjectPages(language)[parsedPath[1]]
-    );
+    const projectPages = getProjectPages(language);
     return (
       <div className={`app ${props.className}`}>
         <Navbar links={links} language={language} />
@@ -41,7 +36,8 @@ export const App = styled(
         <br />
         <br />
         <br />
-        {isProjectDescriptionPage && getProjectPages(language)[parsedPath[1]]}
+        {isProjectDescriptionPage &&
+          projectPages[parsedPath[1] as keyof typeof projectPages]}
         {isProjectsPage && <ProjectPage />}
         {isMiscPage && <MiscPage />}
         {isContactPage && <ContactPage />}

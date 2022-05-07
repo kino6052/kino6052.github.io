@@ -7,7 +7,7 @@ export const Image = styled(
     className,
     src,
     ...rest
-  }: React.InputHTMLAttributes<HTMLImageElement> & { caption: string }) => (
+  }: React.ImgHTMLAttributes<unknown> & { caption: string }) => (
     <div className={className}>
       <img src={src} {...rest} />
       <span className="caption">{caption}</span>
