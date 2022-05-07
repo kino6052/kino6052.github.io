@@ -51,14 +51,14 @@ export const projectPages = {
           use.
         </p>
         <br />
-        <p>This is where I come into the picture.</p>
-        <br />
         <p>
           A potential customer in need to buy an insurance policy goes online
           trying to get a quote, and it goes without saying that the better the
           user experience is during the quote process the better the chances
           they will buy the policy are.
         </p>
+        <br />
+        <p>This is where I come into the picture.</p>
         <br />
         <p>
           I am very proud to say that I think that{" "}
@@ -112,12 +112,12 @@ export const projectPages = {
         </p>
         <br />
         <p>
-          In conclusion, this project was among a few that I have been able to
-          participate in from start to finish, and am very proud of the end
-          result. I would like to thank the management, the UX, QA, and Dev
-          teams working on this project for making the development process fun
-          and meaningful inspite of the challenges that come from the fact that
-          the insurance industry tends be extremely dull.
+          This project was among a few that I have been able to participate in
+          from start to finish, and am very proud of the end result. I would
+          like to thank the management, the UX, QA, and Dev teams working on
+          this project for making the development process fun and meaningful
+          inspite of the challenges that come from the fact that the insurance
+          industry tends be extremely dull.
         </p>
         <br />
         <br />

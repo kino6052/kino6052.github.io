@@ -7,7 +7,7 @@ import { ProfilePage } from "./pages/ProfilePage";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { MiscPage } from "./pages/MiscPage";
-import { parsePath, WIDTH } from "./utils/utils";
+import { parsePath, translations, WIDTH } from "./utils/utils";
 import { ERoute, IState } from "./utils/bridge";
 import { ContactPage } from "./pages/ContactPage";
 import { projectPages } from "./pages/ProjectPages";
@@ -30,7 +30,9 @@ export const App = styled(
     return (
       <div className={`app ${props.className}`}>
         <Navbar links={links} language={language} />
-        {isHomePage && <ProfilePage tags={tags} language={language} />}
+        {isHomePage && (
+          <ProfilePage content={translations[language]["profilePage"]} />
+        )}
         {isHomePage && <ExperiencePage />}
         <br />
         <br />

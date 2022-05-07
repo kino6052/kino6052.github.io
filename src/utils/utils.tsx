@@ -28,29 +28,77 @@ export const parsePath = (path: string) => {
 };
 
 const translationEnglish = {
-  name: "Kirill Novik",
-  title: "Full-stack Web Developer",
-  subtitle: "Over 7 years of experience. Open for remote work.",
-  description:
-    "I am a versatile full-stack developer experienced in designing, creating and maintaining scalable cloud infrastructures, and applications with a focus on test-driven, agile and object oriented development practices.",
+  profilePage: {
+    name: "Kirill Novik",
+    title: "Full-stack Web Developer",
+    subtitle: "Over 7 years of experience. Open for remote work.",
+    description:
+      "I am a versatile full-stack developer experienced in designing, creating and maintaining scalable cloud infrastructures, and applications with a focus on test-driven, agile and object oriented development practices.",
+    tags: [
+      "React",
+      "TypeScript",
+      "RxJS",
+      "Node",
+      "AWS",
+      "MUI",
+      "NextJS",
+      "Redux",
+      "Monorepo",
+      "Storybook",
+      "WACG",
+      "OWASP",
+    ],
+  },
 };
 
 type TTranslation = typeof translationEnglish;
 
 const translationRussian: TTranslation = {
-  name: "Кирилл Новик",
-  title: "Фул-стэк Разработчик",
-  subtitle: "Более 7 лет опыта. Рассматриваю предложения по удаленке.",
-  description:
-    "Я универсальный разработчик с полным стеком, имеющий опыт проектирования, создания и обслуживания масштабируемых облачных инфраструктур и приложений с акцентом на методах разработки, основанной на тестировании, гибкой и объектно-ориентированной разработке.",
+  profilePage: {
+    name: "Кирилл Новик",
+    title: "Фул-стэк Разработчик",
+    subtitle: "Более 7 лет опыта. Рассматриваю предложения по удаленке.",
+    description:
+      "Я универсальный разработчик с полным стеком, имеющий опыт проектирования, создания и обслуживания масштабируемых облачных инфраструктур и приложений с акцентом на методах разработки, основанной на тестировании, гибкой и объектно-ориентированной разработке.",
+    tags: [
+      "React",
+      "TypeScript",
+      "RxJS",
+      "Node",
+      "AWS",
+      "MUI",
+      "NextJS",
+      "Redux",
+      "Monorepo",
+      "Storybook",
+      "WACG",
+      "OWASP",
+    ],
+  },
 };
 
 const translationChinese: TTranslation = {
-  name: "Kirill Novik",
-  title: "全栈开发人员",
-  subtitle: "超过7年的经验。 为远程工作开放",
-  description:
-    "我是一名多才多艺的全栈开发人员，在设计、创建和维护可扩展的云基础设施和应用程序方面经验丰富，专注于测试驱动、敏捷和面向对象的开发实践。",
+  profilePage: {
+    name: "Kirill Novik",
+    title: "全栈开发人员",
+    subtitle: "超过7年的经验。 为远程工作开放",
+    description:
+      "我是一名多才多艺的全栈开发人员，在设计、创建和维护可扩展的云基础设施和应用程序方面经验丰富，专注于测试驱动、敏捷和面向对象的开发实践。",
+    tags: [
+      "React",
+      "TypeScript",
+      "RxJS",
+      "Node",
+      "AWS",
+      "MUI",
+      "NextJS",
+      "Redux",
+      "Monorepo",
+      "Storybook",
+      "WACG",
+      "OWASP",
+    ],
+  },
 };
 
 export const translations = {

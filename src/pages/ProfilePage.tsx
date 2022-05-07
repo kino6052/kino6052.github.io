@@ -11,8 +11,7 @@ import {
 export const ProfilePage = styled(
   (
     props: React.InputHTMLAttributes<HTMLDivElement> & {
-      tags: string[];
-      language: ELanguage;
+      content: typeof translations[string]["profilePage"];
     }
   ) => (
     <section className={props.className}>
@@ -21,17 +20,17 @@ export const ProfilePage = styled(
         <div className="profile">
           <div aria-label="profile picture" className="profile-picture"></div>
           <div aria-label="profile description" className="profile-description">
-            <h1>{translations[props.language].name}</h1>
-            <h2>{translations[props.language].title}</h2>
-            <h3>{translations[props.language].subtitle}</h3>
+            <h1>{props.content.name}</h1>
+            <h2>{props.content.title}</h2>
+            <h3>{props.content.subtitle}</h3>
           </div>
         </div>
         <div className="spacer"></div>
         <div aria-label="profile summary" className="profile-summary">
-          <p>{translations[props.language].description}</p>
+          <p>{props.content.description}</p>
           <div className="spacer"></div>
           <div className="tag-container">
-            {props.tags.map((tag) => (
+            {props.content.tags.map((tag) => (
               <span className="tag">{tag}</span>
             ))}
           </div>
