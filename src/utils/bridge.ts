@@ -51,8 +51,6 @@ export const setState = (state: Partial<IState>) => {
   EventSubject.next(["state", "", JSON.stringify(nextState)]);
 };
 
-EventSubject.subscribe(console.warn);
-
 EventSubject.pipe(filter(([event]) => event === "state")).subscribe(
   async ([, , value]) => {
     if (!value) return;

@@ -40,9 +40,9 @@ EventSubject.pipe(
       event === "click" &&
       [Id.RouteChange, Id.ToggleMenu].includes(id as unknown as Id)
   )
-).subscribe(() => {
+).subscribe(([, id]) => {
   const { isOpen } = getCurrentState();
-  console.warn(isOpen);
+  if (!isOpen && id === Id.RouteChange) return;
   setState({ isOpen: !isOpen });
 });
 
@@ -75,11 +75,13 @@ export const Navbar = styled(
   ) => (
     <nav className={`menu ${props.className}`}>
       <EventWrapper id={`${Id.ToggleMenu}`}>
-        <div className="hamburger">
-          <a className="main-nav-toggle" href="#main-nav">
+        <button className="hamburger">
+          <span
+            className={`main-nav-toggle ${props.isOpen ? "active-menu" : ""}`}
+          >
             <i>Menu</i>
-          </a>
-        </div>
+          </span>
+        </button>
       </EventWrapper>
       <ul className={props.isOpen ? "open" : "close"}>
         {props.links.map((link) => (
@@ -122,13 +124,16 @@ export const Navbar = styled(
   .hamburger {
     display: none;
     @media (max-width: ${WIDTH}px) {
+      cursor: pointer;
       display: inline-flex;
       position: absolute;
-      right: 48px;
+      right: 24px;
       height: 26px;
       align-items: center;
+      background: none;
+      border: none;
 
-      a.main-nav-toggle {
+      .main-nav-toggle {
         display: block;
         width: 28px;
         height: 16px;
