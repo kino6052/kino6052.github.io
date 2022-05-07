@@ -3,22 +3,23 @@ import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";
 import { App } from "./App";
 import {
-  ERoute,
   getCurrentState,
   IState,
   subscribeToStateChange,
 } from "./utils/bridge";
 import { EventSubject } from "./utils/EventWrapper";
-import { getLocationSubject } from "./utils/utils";
+import { getCurrentPathState, getLocationSubject } from "./utils/router";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
 
-getLocationSubject().subscribe((route) => {
+getLocationSubject().subscribe((path) => {
   const currentState = getCurrentState();
+  const { language } = getCurrentPathState(path);
   const nextState: IState = {
     ...currentState,
-    route: route as ERoute,
+    language,
+    path,
   };
   EventSubject.next(["state", "", JSON.stringify(nextState)]);
   window.scrollTo({

@@ -10,37 +10,30 @@ import { ProjectPage } from "./pages/ProjectPage";
 import { getProjectPages } from "./pages/ProjectPages";
 import "./styles.css";
 import { ERoute, IState } from "./utils/bridge";
-import { parsePath, translations, WIDTH } from "./utils/utils";
+import { getCurrentPathState } from "./utils/router";
+import { translations, WIDTH } from "./utils/utils";
 
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
-      state: { route, language },
+      state: { path, language },
     } = props;
-    const parsedPath = parsePath(route);
-    const isHomePage = route === ("/" as ERoute);
-    const isProjectsPage =
-      parsedPath.length === 1 && parsedPath[0] === ERoute.Projects;
-    const isProjectDescriptionPage =
-      parsedPath.length > 1 && parsedPath[0] === ERoute.Projects;
-    const isMiscPage = parsedPath[0] === ERoute.Misc;
-    const isContactPage = parsedPath[0] === ERoute.Contact;
+    const { route, currentProject } = getCurrentPathState(path);
     const projectPages = getProjectPages(language);
     return (
       <div className={`app ${props.className}`}>
         <Navbar links={links} language={language} />
-        {isHomePage && (
+        {route === ERoute.Resume && (
           <ProfilePage content={translations[language]["profilePage"]} />
         )}
-        {isHomePage && <ExperiencePage />}
+        {route === ERoute.Resume && <ExperiencePage />}
         <br />
         <br />
         <br />
-        {isProjectDescriptionPage &&
-          projectPages[parsedPath[1] as keyof typeof projectPages]}
-        {isProjectsPage && <ProjectPage />}
-        {isMiscPage && <MiscPage />}
-        {isContactPage && <ContactPage />}
+        {currentProject && projectPages[currentProject]}
+        {!currentProject && route === ERoute.Projects && <ProjectPage />}
+        {route === ERoute.Misc && <MiscPage />}
+        {route === ERoute.Contact && <ContactPage />}
         <div className="footer">
           <div className="footer-content">Copyright 2022</div>
         </div>

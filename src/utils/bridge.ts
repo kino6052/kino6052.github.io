@@ -14,17 +14,23 @@ export enum ELanguage {
   Chinese = "中文",
 }
 
+export const languageRouteMap = {
+  [ELanguage.Chinese]: "ch",
+  [ELanguage.English]: "en",
+  [ELanguage.Russian]: "ru",
+};
+
 export enum Ids {
   RouteChange,
 }
 
 export interface IState {
-  route: ERoute;
+  path: string;
   language: ELanguage;
 }
 
 export const initialState: IState = {
-  route: ERoute.Resume,
+  path: ERoute.Resume,
   language: ELanguage.English,
 };
 

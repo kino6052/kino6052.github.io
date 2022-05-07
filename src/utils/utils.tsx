@@ -1,4 +1,5 @@
 import { BehaviorSubject } from "rxjs";
+import { getCurrentPathState } from "./router";
 
 export const WIDTH = 800 - 8 * 4;
 export const TABLET_WIDTH = 700;
@@ -9,23 +10,6 @@ export const zIndex = {
 } as const;
 export const languageOptions = ["English", "Русский", "中文"];
 export const currentLanguage = languageOptions[2];
-
-export const getLocationSubject = () => {
-  const currentPath = window.location.pathname;
-  const LocationSubject = new BehaviorSubject(currentPath);
-  setInterval(() => {
-    // TODO: Make sure you don't set interval every time
-    const currentPath = LocationSubject.getValue();
-    const nextPath = window.location.pathname;
-    if (nextPath !== currentPath) LocationSubject.next(nextPath);
-  }, 100);
-  return LocationSubject;
-};
-
-export const parsePath = (path: string) => {
-  const result = path.split("/");
-  return result.filter((v) => !!v);
-};
 
 const translationEnglish = {
   profilePage: {

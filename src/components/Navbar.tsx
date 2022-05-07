@@ -1,17 +1,35 @@
 import React from "react";
 import { filter } from "rxjs/operators";
 import styled from "styled-components";
-import { ELanguage, Ids, setState } from "../utils/bridge";
+import {
+  ELanguage,
+  getCurrentState,
+  Ids,
+  languageRouteMap,
+  setState,
+} from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
+import { getCurrentPathState, getResultingPath } from "../utils/router";
 import { languageOptions, WIDTH, zIndex } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === `${Ids.RouteChange}`)
-).subscribe(([, , path]) => window.history.pushState({}, "", path));
+).subscribe(([, , path]) => {
+  const { language } = getCurrentState();
+  const route = languageRouteMap[language] || "";
+  const subpath = (route && `/${route}`) || "";
+  window.history.pushState({}, "", `${subpath}${path}`);
+});
 
 EventSubject.pipe(
   filter(([event, id]) => event === "change" && id === "language")
 ).subscribe(([, , language]) => {
+  const state = getCurrentPathState(window.location.pathname);
+  const resultingPath = getResultingPath({
+    ...state,
+    language: language as ELanguage,
+  });
+  window.history.pushState({}, "", resultingPath);
   setState({ language: language as ELanguage });
 });
 
