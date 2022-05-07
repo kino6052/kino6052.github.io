@@ -1,6 +1,8 @@
 import { Image } from "../components/Image";
+import { ELanguage } from "../utils/bridge";
+import { translations } from "../utils/utils";
 
-export const projectPages = {
+export const getProjectPages = (language: ELanguage) => ({
   "nodejs-server": (
     <>
       <section className="container">
@@ -26,54 +28,29 @@ export const projectPages = {
     <>
       {/*  */}
       <section className="container">
-        <h1>AAA MyQuote App</h1>
-        <h2>CSAA Insurance Company</h2>
+        <h1>{translations[language].projectPages.title}</h1>
+        <h2>{translations[language].projectPages.subtitle}</h2>
+        <br />
+        <p>{translations[language].projectPages.paragraph1}</p>
+        <br />
+        <p>{translations[language].projectPages.paragraph2}</p>
+        <br />
+        <p>{translations[language].projectPages.paragraph3}</p>
+        <br />
+        <p>{translations[language].projectPages.paragraph4}</p>
+        <br />
+        <p>{translations[language].projectPages.paragraph5}</p>
+        <br />
+        <p>{translations[language].projectPages.paragraph6}</p>
         <br />
         <p>
-          Despite the fact that the insurance industry is one of the dullest
-          things on Earth, the insurance quote applications development can be
-          actually pretty fun.
-        </p>
-        <br />
-        <p>
-          Insurance is a unique field. The main subject of their activity has no
-          concrete embodiment. It deals with abstractions like risk. The
-          end-user doesn't use the insurance products very often, and the
-          insurance applications tend to be not as richly featured as some other
-          counterparts. Yet, it is an absolute must-have in modern civilization.
-        </p>
-        <br />
-        <p>
-          The necessity that comes with insurance tends to make the cheaper
-          options more favorable to the customers. However, even the more
-          expensive insurances tend to be able to make competition leveraging
-          their brand. Among them are humor, recognizable design, and ease of
-          use.
-        </p>
-        <br />
-        <p>
-          A potential customer in need to buy an insurance policy goes online
-          trying to get a quote, and it goes without saying that the better the
-          user experience is during the quote process the better the chances
-          they will buy the policy are.
-        </p>
-        <br />
-        <p>This is where I come into the picture.</p>
-        <br />
-        <p>
-          I am very proud to say that I think that{" "}
-          <b>AAA quote process is one of the smoothest in the industry</b>.
-          Thanks to the strong UI/UX and Dev teams over at AAA.
-        </p>
-        <br />
-        <p>
-          Our team was responsible for building{" "}
+          {translations[language].projectPages.paragraph7}{" "}
           <a
             href="https://www.quote.csaa-insurance.aaa.com/"
             target="_blank"
             rel="noreferrer"
           >
-            the AAA quote application
+            {translations[language].projectPages.paragraph7link}
           </a>
           .
         </p>
@@ -92,37 +69,17 @@ export const projectPages = {
           />
         </div>
         <br />
-        <p>
-          This application is a testimony to how a creative approach can make
-          even the dullest things fun. The app has an effective design, it is
-          highly interactive, and the entire process takes minutes to complete.
-        </p>
+        <p>{translations[language].projectPages.paragraph8}</p>
         <br />
-        <p>
-          In essence, the quote application is a form that the user has to fill
-          out. However, this form is extremely complex. It is highly conditional
-          and is associated with a lot of possible routes the user can take.
-          Very soon in the development process, it becomes very complex to
-          maintain.
-        </p>
+        <p>{translations[language].projectPages.paragraph9}</p>
         <br />
-        <p>
-          This effort would be impossible without a great quality assurance
-          team. The QA team ensured a great part of the success of this project.
-        </p>
+        <p>{translations[language].projectPages.paragraph10}</p>
         <br />
-        <p>
-          This project was among a few that I have been able to participate in
-          from start to finish, and am very proud of the end result. I would
-          like to thank the management, the UX, QA, and Dev teams working on
-          this project for making the development process fun and meaningful
-          inspite of the challenges that come from the fact that the insurance
-          industry tends be extremely dull.
-        </p>
+        <p>{translations[language].projectPages.paragraph11}</p>
         <br />
         <br />
         <br />
       </section>
     </>
   ),
-} as const;
+});

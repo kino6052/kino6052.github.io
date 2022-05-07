@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { CardContainer, ICard } from "../components/CardContainer";
-import { projectPages } from "./ProjectPages";
+import { ELanguage } from "../utils/bridge";
+import { getProjectPages } from "./ProjectPages";
+
+const projectPages = getProjectPages(ELanguage.English);
 
 const commercialProjects: ICard[] = [
   {

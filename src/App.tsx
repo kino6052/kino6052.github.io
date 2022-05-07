@@ -10,7 +10,7 @@ import { MiscPage } from "./pages/MiscPage";
 import { parsePath, translations, WIDTH } from "./utils/utils";
 import { ERoute, IState } from "./utils/bridge";
 import { ContactPage } from "./pages/ContactPage";
-import { projectPages } from "./pages/ProjectPages";
+import { getProjectPages } from "./pages/ProjectPages";
 
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
@@ -18,7 +18,6 @@ export const App = styled(
       state: { route, language },
     } = props;
     const parsedPath = parsePath(route);
-    console.warn(parsedPath);
     const isHomePage = route === "/";
     const isProjectsPage =
       parsedPath.length === 1 && parsedPath[0] === ERoute.Projects;
@@ -26,7 +25,12 @@ export const App = styled(
       parsedPath.length > 1 && parsedPath[0] === ERoute.Projects;
     const isMiscPage = parsedPath[0] === ERoute.Misc;
     const isContactPage = parsedPath[0] === ERoute.Contact;
-
+    console.warn(
+      "Language",
+      language
+      // getProjectPages(language),
+      // getProjectPages(language)[parsedPath[1]]
+    );
     return (
       <div className={`app ${props.className}`}>
         <Navbar links={links} language={language} />
@@ -37,7 +41,7 @@ export const App = styled(
         <br />
         <br />
         <br />
-        {isProjectDescriptionPage && projectPages[parsedPath[1]]}
+        {isProjectDescriptionPage && getProjectPages(language)[parsedPath[1]]}
         {isProjectsPage && <ProjectPage />}
         {isMiscPage && <MiscPage />}
         {isContactPage && <ContactPage />}

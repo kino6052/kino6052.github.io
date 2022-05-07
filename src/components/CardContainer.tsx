@@ -5,7 +5,7 @@ import { EventWrapper } from "../utils/EventWrapper";
 import { WIDTH } from "../utils/utils";
 
 export interface ICard {
-  id: string;
+  id?: string;
   title: string;
   subtitle?: string;
   imageUrl?: string;
