@@ -46,13 +46,14 @@ export const defaultState: IRouterState = {
 export const getResultingPath = (routerState: IRouterState) =>
   [
     languageRouteMap[routerState.language],
-    routerState.route,
+    routerState.route || "`",
     routerState.currentProject,
   ]
     .filter((v) => !!v)
     .reduce((acc, v) => {
       return `${acc}/${v}`;
-    }, "") || "/en/";
+    }, "")
+    ?.replace("`", "") || "";
 
 export const getCurrentPathState = (path: string): IRouterState => {
   const parsedPath = parsePath(path);
