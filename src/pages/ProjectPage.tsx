@@ -21,7 +21,7 @@ const commercialProjects: ICard[] = [
     description: "Discount Tire Online Store",
     imageUrl:
       "https://pbs.twimg.com/profile_images/1243577157193846785/FNjTpDRU_400x400.png",
-    url: `/projects/${Object.keys(projectPages || {})[0]}`,
+    url: `/projects/discount-tire`,
     shouldStay: true,
   },
   {
@@ -30,7 +30,7 @@ const commercialProjects: ICard[] = [
     description: "RPA Automation Tool",
     imageUrl:
       "https://automationhero.ai/wp-content/uploads/2019/11/PressRelease-02.jpg",
-    url: `/projects/${Object.keys(projectPages || {})[0]}`,
+    url: `/projects/automation-hero`,
     shouldStay: true,
   },
   {
@@ -119,14 +119,14 @@ export const ProjectPage = () => (
       <br />
       <CardContainer cards={studentProjects} />
       <br />
-      <h2>Personal Projects</h2>
+      {/* <h2>Personal Projects</h2>
       <p>
         Here are some projects that demonstrate my skill and understanding of
         various aspects of web-development.
       </p>
       <br />
       <CardContainer cards={personalProjects} />
-      <br />
+      <br /> */}
     </section>
     <br />
     <br />

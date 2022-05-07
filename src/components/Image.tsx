@@ -9,7 +9,7 @@ export const Image = styled(
     ...rest
   }: React.ImgHTMLAttributes<unknown> & { caption: string }) => (
     <div className={className}>
-      <img src={src} {...rest} />
+      <img className="image" src={src} {...rest} />
       <span className="caption">{caption}</span>
     </div>
   )
@@ -18,7 +18,16 @@ export const Image = styled(
   flex-direction: column;
   align-items: center;
   width: fit-content;
+  max-width: 100%;
+  padding: 8px;
+
   .image {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: #ccc 0 0 4px, #ddd 0 2px 2px;
+    margin-bottom: 8px;
   }
 
   .caption {

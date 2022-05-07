@@ -92,7 +92,7 @@ export const ProfilePage = styled(
         width: 256px;
         height: 256px;
         background-color: grey;
-        background-image: url(https://avatars.githubusercontent.com/u/9941024?s=400&u=88ec56c4d3735a856c3f1576e8e0606f4c7f510d&v=4);
+        background-image: url(/kirill.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;

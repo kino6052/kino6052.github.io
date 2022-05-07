@@ -27,11 +27,13 @@ export enum Ids {
 export interface IState {
   path: string;
   language: ELanguage;
+  hasSubmitted: boolean;
 }
 
 export const initialState: IState = {
   path: ERoute.Resume,
   language: ELanguage.English,
+  hasSubmitted: false,
 };
 
 const StateSubject = new BehaviorSubject<IState>(initialState);

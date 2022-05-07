@@ -16,7 +16,7 @@ import { translations, WIDTH } from "./utils/utils";
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
-      state: { path, language },
+      state: { path, language, hasSubmitted },
     } = props;
     const { route, currentProject } = getCurrentPathState(path);
     const projectPages = getProjectPages(language);
@@ -33,7 +33,9 @@ export const App = styled(
         {currentProject && projectPages[currentProject]}
         {!currentProject && route === ERoute.Projects && <ProjectPage />}
         {route === ERoute.Misc && <MiscPage />}
-        {route === ERoute.Contact && <ContactPage />}
+        {route === ERoute.Contact && (
+          <ContactPage hasSubmitted={hasSubmitted} />
+        )}
         <div className="footer">
           <div className="footer-content">Copyright 2022</div>
         </div>
@@ -55,10 +57,13 @@ export const App = styled(
   h4,
   h5,
   h6,
+  li,
+  a,
   p,
   b {
     margin: 0;
     color: #444;
+    word-break: break-word;
   }
 
   input,
@@ -81,7 +86,9 @@ export const App = styled(
   }
 
   b,
-  p {
+  p,
+  a,
+  li {
     font-size: 18px;
     line-height: 26px;
     font-weight: semi-bold;
