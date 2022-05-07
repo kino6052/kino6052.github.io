@@ -4,15 +4,7 @@ import { BehaviorSubject } from "rxjs";
 
 export const getLocationSubject = () => {
   const currentPath = window.location.pathname;
-  const _resultingPath = getResultingPath(getCurrentPathState(currentPath));
-  const preference = navigator.language.substring(0, 2);
-  console.warn(_resultingPath.substring(3));
-  const resultingPathWithPreference = `${preference}/${_resultingPath.substring(
-    3
-  )}`;
-  const resultingPath = getResultingPath(
-    getCurrentPathState(resultingPathWithPreference)
-  );
+  const resultingPath = getResultingPath(getCurrentPathState(currentPath));
   if (currentPath !== resultingPath)
     window.history.pushState({}, "", resultingPath);
 
@@ -41,9 +33,14 @@ interface IRouterState {
   currentProject?: keyof ReturnType<typeof getProjectPages>;
 }
 
+const getLanguageByValue = (value: string) =>
+  Object.entries(languageRouteMap).find(([, r]) => r === value)?.[0] as
+    | ELanguage
+    | undefined;
+
 export const defaultState: IRouterState = {
   route: ERoute.Resume,
-  language: ELanguage.English,
+  language: getLanguageByValue(navigator.language) || ELanguage.English,
 };
 
 export const getResultingPath = (routerState: IRouterState) =>
@@ -62,13 +59,7 @@ export const getCurrentPathState = (path: string): IRouterState => {
   const projects = getProjectPages(ELanguage.English);
   return parsedPath.reduce((acc, v, i) => {
     const conditionalLanguage =
-      i === 0 &&
-      v &&
-      v.length == 2 &&
-      ((Object.entries(languageRouteMap).find(
-        ([, r]) => r === v
-      )?.[0] as ELanguage) ||
-        undefined);
+      i === 0 && v && v.length == 2 && (getLanguageByValue(v) || undefined);
     const conditionalFirstLevelRoute =
       [0, 1].includes(i) &&
       Object.values(ERoute as object).find((r) => r === v);
