@@ -107,17 +107,10 @@ export const ContactPage = styled(
         {!hasSubmitted && (
           <>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              aliquam velit nunc, a lacinia magna sodales a. Ut facilisis
-              pellentesque sapien a interdum. Vestibulum lobortis eget leo
-              vehicula lobortis. Quisque at semper turpis, id mattis ex. Nam
-              hendrerit erat et enim ultricies luctus. Fusce ac tempor ligula.
-              Nunc consectetur ex eu rutrum facilisis. Sed scelerisque tellus a
-              eros volutpat, eget cursus augue posuere. Duis auctor arcu a
-              sapien posuere, eget facilisis arcu sodales. In quis ex sed ex
-              hendrerit auctor. Praesent fermentum finibus porta. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Duis commodo libero a
-              elit porta sollicitudin.
+              Thanks for stopping by! Please, feel free to reach out to me
+              regarding opportunities or should you have any questions. I'm
+              looking forward to connecting and collaborating with creative
+              people.
             </p>
             <br />
             <form>

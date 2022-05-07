@@ -88,6 +88,39 @@ const translationEnglish = {
       paragraph2:
         "RPA desktop automation development is not easy. In fact, it is absolutely impossible using old-fashioned approaches such as querying UI layer APIs to get control handlers. Unfortunately, this was the exact route this startup went. However, this allowed me to learn a great deal about desktop development using C# and electron.js. I also learned some Windows Presentation Framework API to be dangerous. Not to mention Google Extension API and the requirements for publishing and running the programs on Windows and Chrome (as extension). ",
     },
+    alphabank: {
+      title: "Alphabank for Mid-sized Business",
+      subtitle: "Banking Dashboard App",
+      imageCaption: "Alphabank Dashboard",
+      paragraph1:
+        "Not only Alphabank is the first fintech company I worked at, but it also was the very first tech company I worked at in Russia.",
+      paragraph2:
+        "Their main stack was React+Redux Microfrontends. I had a quality experience working there, as the teams were really talented, agile, and versatile.",
+      paragraph3:
+        "The pipelines used were pretty standard. The architecture was roughly broken into front-end, middle, and back-end parts.",
+      paragraph4:
+        "I would argue that Alphabank's UI design is one of the best banking application UI designs I've seen throughout my career.",
+      paragraph5:
+        "I'm very grateful to have had this opportunity to be a contractor for this great company.9",
+    },
+    isonas: {
+      title: "Pure Access",
+      subtitle: "Dashboard for Access Control Management",
+      imageCaption: "ISONAS Pure Access",
+      paragraph1:
+        "ISONAS was a startup that was primarily focused on the security systems hardware. ",
+      paragraph2:
+        "My job was to make and maintain the dashboard to interact with their devices. I loved everything about that job. For starters, I was getting exposed to Java on the back-end, working with very low-level APIs interacting with the security systems hardware over TCP/IP. ",
+      paragraph3:
+        "I had the freedom to design cloud infrastructure in AWS. I learned a lot while working at the company. I am very grateful to Jesse Euton, my supervisor, for all his help and encouragement.",
+    },
+    medtronic: {
+      title: "Vital Sync",
+      subtitle: "Ventilator Monitoring Dashboard",
+      imageCaption: "Vital Sync",
+      paragraph1:
+        "As an intern at Medtronic, my responsibility was to create a thin web client for the patient monitoring application using .NET MVC4 suite.",
+    },
   },
 };
 

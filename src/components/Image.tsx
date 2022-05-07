@@ -6,10 +6,14 @@ export const Image = styled(
     caption,
     className,
     src,
+    isFullWidth,
     ...rest
-  }: React.ImgHTMLAttributes<unknown> & { caption: string }) => (
-    <div className={className}>
-      <img className="image" src={src} {...rest} />
+  }: React.ImgHTMLAttributes<unknown> & {
+    caption: string;
+    isFullWidth?: boolean;
+  }) => (
+    <div className={`${className} ${isFullWidth ? "full-width" : ""}`}>
+      <img className={`image`} src={src} {...rest} />
       <span className="caption">{caption}</span>
     </div>
   )
@@ -21,6 +25,10 @@ export const Image = styled(
   max-width: 100%;
   padding: 8px;
 
+  &.full-width {
+    width: 100%;
+  }
+
   .image {
     display: flex;
     width: 100%;
@@ -28,6 +36,10 @@ export const Image = styled(
     box-sizing: border-box;
     box-shadow: #ccc 0 0 4px, #ddd 0 2px 2px;
     margin-bottom: 8px;
+
+    &.full-width {
+      width: ;
+    }
   }
 
   .caption {
