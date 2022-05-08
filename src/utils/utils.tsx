@@ -174,7 +174,68 @@ const translationRussian: TTranslation = {
       paragraph11:
         "Этот проект был одним из немногих, в которых я участвовал от начала до конца, и я очень горжусь конечным результатом. Я хотел бы поблагодарить руководство, команды UX, QA и Dev, работающие над этим проектом, за то, что они сделали процесс разработки интересным и значимым, несмотря на проблемы, возникающие из-за того, что страховая отрасль имеет тенденцию быть чрезвычайно скучной.",
     },
-    "discount-tire": {},
+    "discount-tire": {
+      title: "Интернет-магазин",
+      subtitle: "Discount Tire",
+      imageCaption: "Discount Tire Страница Магазина",
+      paragraph1:
+        "Несмотря на то, что я недолго работал в Discount Tire, мне это очень понравилось, потому что впервые в моей карьере я смог, наконец, объяснить непрофессионалу, чем я на самом деле занимаюсь, и дать ему ссылку на приложение.",
+      paragraph2:
+        "Их основное приложение — это интернет-магазин, в котором вы можете приобрести диски и шины, и поэтому оно имеет все необходимые функции:",
+      features: [
+        "Управление счетом",
+        "Управление корзиной",
+        "Обработка платежей",
+        "Обработка местоположения",
+        "Объявления и обработка кампаний",
+        "Поиск и отображение продуктов",
+      ],
+      paragraph3:
+        "Я получил некоторые интересные идеи о принятии решений командой, приближающейся к созданию интернет-магазина с React и GraphQL, начиная от того, как они обрабатывают состояние, и заканчивая тем, как они проводят оптимизацию.",
+      link: "Вот ссылка на их приложение.",
+    },
+    "automation-hero": {
+      title: "HeroGo",
+      subtitle: "RPA Инструмент автоматизации",
+      imageCaption: "Экран приложения Automation Hero",
+      paragraph1:
+        "Уникальность этого проекта заключалась в том, что это был мой первый (и последний) проект в качестве фрилансера, работающего удаленно. Также это был мой первый проект по созданию платформы RPA. Не говоря уже о том, что стартап был основан парой немецких предпринимателей, поэтому местонахождение их главного офиса находилось в Берлине.",
+      paragraph2:
+        "Разработка автоматизации рабочего стола RPA непроста. На самом деле абсолютно невозможно использовать старомодные подходы, такие как запросы к API уровня пользовательского интерфейса, для получения обработчиков элементов управления. К сожалению, это был именно тот путь, по которому пошел этот стартап. Тем не менее, это позволило мне многое узнать о настольной разработке с использованием C# и electronic.js. Я также узнал, что некоторые API Windows Presentation Framework опасны. Не говоря уже о Google Extension API и требованиях для публикации и запуска программ в Windows и Chrome (как расширения).",
+    },
+    alphabank: {
+      title: "Альфабанк для среднего бизнеса",
+      subtitle: "Приложение банковской панели",
+      imageCaption: "Личный кабинет Альфабанка",
+      paragraph1:
+        "Альфабанк — не только первая финтех-компания, в которой я работал, но и самая первая технологическая компания, в которой я работал в России.",
+      paragraph2:
+        "Их основным стеком были React+Redux Microfrontends. У меня был качественный опыт работы там, так как команды были действительно талантливыми, гибкими и разносторонними.",
+      paragraph3:
+        "Используемые трубопроводы были довольно стандартными. Архитектура была грубо разбита на front-end, middle и back-end части.",
+      paragraph4:
+        "Я бы сказал, что дизайн пользовательского интерфейса Alphabank — один из лучших дизайнов пользовательского интерфейса банковских приложений, которые я видел за всю свою карьеру.",
+      paragraph5:
+        "Я очень благодарен за возможность быть подрядчиком для этой замечательной компании.",
+    },
+    isonas: {
+      title: "Pure Access",
+      subtitle: "Панель управления доступом",
+      imageCaption: "ISONAS Pure Access",
+      paragraph1:
+        "ISONAS был стартапом, который в основном занимался аппаратным обеспечением систем безопасности. ",
+      paragraph2:
+        "Моя работа заключалась в том, чтобы сделать и поддерживать приборную панель для взаимодействия с их устройствами. Мне все нравилось в этой работе. Во-первых, я познакомился с Java на серверной части, работая с очень низкоуровневыми API, взаимодействующими с оборудованием систем безопасности через TCP/IP. ",
+      paragraph3:
+        "У меня была свобода проектирования облачной инфраструктуры в AWS. Я многому научился, работая в компании. Я очень благодарен Джесси Ютону, моему руководителю, за всю его помощь и поддержку.",
+    },
+    medtronic: {
+      title: "Vital Sync",
+      subtitle: "Панель мониторинга ИВЛ",
+      imageCaption: "Vital Sync",
+      paragraph1:
+        "В качестве стажера в Medtronic я отвечал за создание тонкого веб-клиента для приложения для мониторинга пациентов с использованием пакета .NET MVC4.",
+    },
   },
 };
 
@@ -202,33 +263,88 @@ const translationChinese: TTranslation = {
   },
   projectPages: {
     csaa: {
-      title: "AAA MyQuote App",
-      subtitle: "CSAA Insurance Company",
+      title: "AAA MyQuote 应用程序",
+      subtitle: "CSAA保险公司",
       paragraph1:
-        "Despite the fact that the insurance industry is one of the dullest things on Earth, the insurance quote applications development can be actually pretty fun.",
+        "尽管保险业是地球上最无聊的事情之一，但保险报价应用程序的开发实际上非常有趣。",
       paragraph2:
-        "Insurance is a unique field. The main subject of their activity has no concrete embodiment. It deals with abstractions like risk. The end-user doesn't use the insurance products very often, and the insurance applications tend to be not as richly featured as some other counterparts. Yet, it is an absolute must-have in modern civilization.",
+        "保险是一个独特的领域。 他们活动的主体没有具体的体现。 它处理诸如风险之类的抽象。 最终用户不经常使用保险产品，保险应用程序往往不像其他一些同行那样丰富。 然而，它是现代文明中的绝对必备品。",
       paragraph3:
-        "The necessity that comes with insurance tends to make the cheaper options more favorable to the customers. However, even the more expensive insurances tend to be able to make competition leveraging their brand. Among them are humor, recognizable design, and ease of use.",
+        "保险带来的必要性往往会使更便宜的选择对客户更有利。 然而，即使是更昂贵的保险也往往能够利用其品牌进行竞争。 其中包括幽默、可识别的设计和易用性。",
       paragraph4:
-        "A potential customer in need to buy an insurance policy goes online trying to get a quote, and it goes without saying that the better the user experience is during the quote process the better the chances they will buy the policy are.",
-      paragraph5: "This is where I come into the picture.",
+        "需要购买保险单的潜在客户上网尝试获取报价，不用说，在报价过程中用户体验越好，他们购买保单的机会就越大。",
+      paragraph5: "这就是我进入图片的地方。",
       paragraph6:
-        "I am very proud to say that I think that *AAA quote process is one of the smoothest in the industry*. Thanks to the strong UI/UX and Dev teams over at AAA.",
-      paragraph7: "Our team was responsible for building",
-      paragraph7link: "the AAA quote application",
+        "我很自豪地说，我认为 *AAA 报价流程是业内最顺畅的流程之一*。 感谢 AAA 强大的 UI/UX 和开发团队。",
+      paragraph7: "我们的团队负责建设",
+      paragraph7link: "AAA 报价申请",
       paragraph8:
-        "This application is a testimony to how a creative approach can make even the dullest things fun. The app has an effective design, it is highly interactive, and the entire process takes minutes to complete.",
+        "此应用程序证明了创造性方法如何使最枯燥的事情变得有趣。 该应用程序设计有效，交互性强，整个过程只需几分钟即可完成。",
       paragraph9:
-        "In essence, the quote application is a form that the user has to fill out. However, this form is extremely complex. It is highly conditional and is associated with a lot of possible routes the user can take. Very soon in the development process, it becomes very complex to maintain.",
+        "本质上，报价申请是用户必须填写的表格。 然而，这种形式极其复杂。 它是高度有条件的，并且与用户可以采取的许多可能的路线相关联。 在开发过程中很快，维护变得非常复杂。",
       paragraph10:
-        "This effort would be impossible without a great quality assurance team. The QA team ensured a great part of the success of this project.",
+        "如果没有优秀的质量保证团队，这项工作将是不可能的。 QA 团队在很大程度上确保了该项目的成功。",
       paragraph11:
-        "This project was among a few that I have been able to participate in from start to finish, and am very proud of the end result. I would like to thank the management, the UX, QA, and Dev teams working on this project for making the development process fun and meaningful inspite of the challenges that come from the fact that the insurance industry tends be extremely dull.",
+        "这个项目是我能够从头到尾参与的几个项目之一，并对最终结果感到非常自豪。 我要感谢从事这个项目的管理层、用户体验、质量保证和开发团队，尽管保险业往往非常乏味，但他们使开发过程变得有趣和有意义。",
     },
     "discount-tire": {
-      title: "Online Store",
+      title: "网上商城",
       subtitle: "Discount Tire",
+      imageCaption: "Discount Tire 商店页面",
+      paragraph1:
+        "尽管我在 Discount Tire 工作过短暂，但我真的很喜欢它，因为这是我职业生涯中的第一次，我终于可以向外行解释我实际在做什么，并给他们应用程序的链接。",
+      paragraph2:
+        "他们的主要应用程序是一个在线商店，您可以在其中购买车轮和轮胎，因此它具有所有必要的功能：",
+      features: [
+        "账户处理",
+        "购物车管理",
+        "付款处理",
+        "位置处理",
+        "广告和活动处理",
+        "产品搜索和展示",
+      ],
+      paragraph3:
+        "关于团队使用 React 和 GraphQL 构建在线商店的决策，我得到了一些有趣的见解，从他们如何处理状态到如何进行优化。",
+      link: "这是他们的应用程序的链接。",
+    },
+    "automation-hero": {
+      title: "HeroGo",
+      subtitle: "RPA 自动化工具",
+      imageCaption: "Automation Hero 应用程序屏幕",
+      paragraph1:
+        "这个项目的独特之处在于它是我作为一名远程工作的自由职业者的第一个（也是最后一个）项目。 此外，这是我创建 RPA 平台的第一个项目。 更不用说这家初创公司是由几位德国企业家创立的，因此，他们的主要办公室就在柏林。",
+      paragraph2:
+        "RPA 桌面自动化开发并不容易。 事实上，使用查询 UI 层 API 等老式方法来获取控制处理程序是绝对不可能的。 不幸的是，这正是这家初创公司所走的路线。 然而，这让我学到了很多关于使用 C# 和 electron.js 进行桌面开发的知识。 我还了解到一些 Windows Presentation Framework API 是危险的。 更不用说 Google Extension API 以及在 Windows 和 Chrome 上发布和运行程序的要求（作为扩展）。 ",
+    },
+    alphabank: {
+      title: "面向中型企业的 Alphabank",
+      subtitle: "银行仪表板应用程序",
+      imageCaption: "Alphabank 仪表板",
+      paragraph1:
+        "Alphabank 不仅是我工作的第一家金融科技公司，也是我在俄罗斯工作的第一家科技公司。",
+      paragraph2:
+        "他们的主要堆栈是 React+Redux 微前端。 我在那里工作的经历非常棒，因为这些团队非常有才华、敏捷且多才多艺。",
+      paragraph3: "使用的管道非常标准。 该架构大致分为前端、中间和后端部分。",
+      paragraph4:
+        "我认为 Alphabank 的 UI 设计是我在整个职业生涯中见过的最好的银行应用程序 UI 设计之一。",
+      paragraph5: "我非常感谢有机会成为这家伟大公司的承包商。",
+    },
+    isonas: {
+      title: "Pure Access",
+      subtitle: "访问控制管理仪表板",
+      imageCaption: "ISONAS Pure Access",
+      paragraph1: "ISONAS 是一家主要专注于安全系统硬件的初创公司。 ",
+      paragraph2:
+        "我的工作是制作和维护仪表板以与他们的设备进行交互。 我喜欢那份工作的一切。 首先，我在后端接触到 Java，使用非常低级的 API 通过 TCP/IP 与安全系统硬件进行交互。",
+      paragraph3:
+        "我可以自由地在 AWS 中设计云基础设施。 在公司工作期间，我学到了很多东西。 我非常感谢我的主管 Jesse Euton 的帮助和鼓励。",
+    },
+    medtronic: {
+      title: "Vital Sync",
+      subtitle: "呼吸机监控仪表板",
+      imageCaption: "Vital Sync",
+      paragraph1:
+        "作为 Medtronic 的实习生，我的职责是使用 .NET MVC4 套件为患者监测应用程序创建一个瘦 Web 客户端。",
     },
   },
 };
