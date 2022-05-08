@@ -87,7 +87,7 @@ export const Navbar = styled(
         {props.links.map((link) => (
           <li>
             <EventWrapper id={`${Id.RouteChange}`} value={link[1]}>
-              <a href={link[1]}>{link[0]}</a>
+              <a href={`.${link[1]}}>{link[0]}</a>
             </EventWrapper>
           </li>
         ))}
