@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirill Novik - Full-stack Web Developer!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNULFVBQVU7QUFDWiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
+  </style>
+  <style data-styled="active" data-styled-version="5.3.5">
+    .fbWMin {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      height: 20px;
+      width: 27px;
+      background-size: cover;
+      background-image: url(/icons/en.svg);
+      background-repeat: no-repeat;
+    }
+
+    .jrJlQu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 48px;
+      background: #333;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .jrJlQu .hamburger {
+      display: none;
+    }
+
+    @media (max-width:768px) {
+      .jrJlQu .hamburger {
+        cursor: pointer;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        position: absolute;
+        right: 24px;
+        height: 26px;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: none;
+        border: none;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle {
+        display: block;
+        width: 28px;
+        height: 16px;
+        position: relative;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle:after,
+      .jrJlQu .hamburger .main-nav-toggle:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 0;
+        border-bottom: 4px solid #bbb;
+        width: 100%;
+        left: 0;
+        right: 0;
+        -webkit-transition: all ease-out 0.3s;
+        transition: all ease-out 0.3s;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle:after {
+        top: 100%;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle i {
+        display: block;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 4px;
+        background-color: #bbb;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        -webkit-transition: all ease-out 0.1s;
+        transition: all ease-out 0.1s;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle.active-menu:after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        top: 50%;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle.active-menu:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        top: 50%;
+      }
+
+      .jrJlQu .hamburger .main-nav-toggle.active-menu i {
+        opacity: 0;
+      }
+    }
+
+    .jrJlQu select {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      height: 32px;
+      margin: 0 8px;
+      padding: 0 8px;
+      border-radius: 128px;
+      box-sizing: border-box;
+      width: 0;
+    }
+
+    .jrJlQu ul {
+      width: 768px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width:768px) {
+      .jrJlQu ul.close {
+        display: none;
+      }
+
+      .jrJlQu ul.open {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        top: 48px;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        padding-top: 24px;
+      }
+
+      .jrJlQu ul.open li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+        height: 64px;
+        width: 140px;
+        max-height: 56px;
+      }
+    }
+
+    .jrJlQu ul li {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .jrJlQu ul li a {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      color: white;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: semi-bold;
+    }
+
+    .jrJlQu ul li .icon-container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 0px;
+      overflow: visible;
+    }
+
+    .jrJlQu ul li .icon-container .icon {
+      position: relative;
+      left: 84px;
+      border: 1px solid grey;
+      min-width: 27px;
+    }
+
+    .eAqyuF {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .eAqyuF tr {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 8px;
+    }
+
+    @media (max-width:768px) {
+      .eAqyuF tr {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+
+    .eAqyuF tr.even {
+      background: #f8f8f8;
+    }
+
+    .eAqyuF tr td {
+      width: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    @media (max-width:768px) {
+      .eAqyuF tr td {
+        width: 100%;
+      }
+    }
+
+    .hYenNo {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @media (max-width:768px) {
+      .hYenNo {
+        width: unset;
+      }
+    }
+
+    .hYenNo .cover-image {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 256px;
+      background-image: url(https://wallpaperaccess.com/full/1551429.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .hYenNo .profile-container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 768px;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      margin: 16px;
+    }
+
+    @media (max-width:768px) {
+      .hYenNo .profile-container {
+        width: unset;
+      }
+    }
+
+    @media (max-width:700px) {
+      .hYenNo .profile-container {
+        width: unset;
+      }
+    }
+
+    .hYenNo .profile-container .profile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+
+    @media (max-width:768px) {
+      .hYenNo .profile-container .profile {
+        width: unset;
+      }
+    }
+
+    @media (max-width:700px) {
+      .hYenNo .profile-container .profile {
+        width: unset;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: auto;
+      }
+    }
+
+    @media (max-width:600px) {
+      .hYenNo .profile-container .profile {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: auto;
+        width: unset;
+      }
+    }
+
+    .hYenNo .profile-container .profile .profile-picture {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      min-width: 256px;
+      width: 256px;
+      height: 256px;
+      background-color: grey;
+      background-image: url(/kirill.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 100%;
+      border: 8px solid white;
+      margin: 8px;
+      margin-top: -96px;
+    }
+
+    @media (max-width:700px) {
+      .hYenNo .profile-container .profile .profile-picture {
+        width: unset;
+        margin: auto;
+        margin-top: -96px;
+      }
+    }
+
+    .hYenNo .profile-container .profile .profile-description {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin: 8px 8px;
+    }
+
+    .hYenNo .profile-container .profile .profile-description h3 {
+      font-size: 18px;
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .hYenNo .profile-container .profile-summary {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin: 8px;
+    }
+
+    .hYenNo .profile-container .profile-summary .tag-container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 8px 0;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .hYenNo .profile-container .profile-summary .tag-container .tag {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 4px 16px;
+      color: white;
+      background: #aaa;
+      border-radius: 100px;
+      margin: 8px;
+    }
+
+    .hYenNo .profile-container .profile-summary .tag-container .tag:first-child {
+      margin-left: 0;
+    }
+
+    .hJKKB {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-family: system-ui, "Open Sans", sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hJKKB h1,
+    .hJKKB h2,
+    .hJKKB h3,
+    .hJKKB h4,
+    .hJKKB h5,
+    .hJKKB h6,
+    .hJKKB li,
+    .hJKKB a,
+    .hJKKB p,
+    .hJKKB b {
+      margin: 0;
+      color: #444;
+      word-break: break-word;
+    }
+
+    .hJKKB input,
+    .hJKKB textarea,
+    .hJKKB button {
+      font-family: system-ui, "Open Sans", sans-serif;
+      font-size: 16px;
+    }
+
+    .hJKKB h1 {
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 64px;
+    }
+
+    .hJKKB h2 {
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: semi-bold;
+    }
+
+    .hJKKB b,
+    .hJKKB p,
+    .hJKKB a,
+    .hJKKB li {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: semi-bold;
+    }
+
+    .hJKKB span {
+      font-size: 16px;
+    }
+
+    .hJKKB .spacer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 8px;
+    }
+
+    .hJKKB .container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 768px;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    @media (max-width:768px) {
+      .hJKKB .container {
+        width: 100%;
+        padding: 16px;
+      }
+    }
+
+    .hJKKB .footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 16px;
+      box-sizing: border-box;
+      height: 48px;
+      background: #333;
+      width: 100%;
+      color: white;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .hJKKB .footer .footer-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 768px;
+    }
+  </style>
+  <script defer="" src="/static/js/bundle.js"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <div id="root">
+    <div class="app sc-papXJ hJKKB">
+      <nav class="menu sc-dkzDqf jrJlQu"><button class="hamburger" id="toggle-menu"><span
+            class="main-nav-toggle "><i>Menu</i></span></button>
+        <ul class="close">
+          <li><a href="/" id="route-change">Resume</a></li>
+          <li><a href="/projects" id="route-change">Projects</a></li>
+          <li><a href="/misc" id="route-change">Misc</a></li>
+          <li><a href="/contact" id="route-change">Contact</a></li>
+          <li>
+            <div class="icon-container" id="language">
+              <div class="sc-gsnTZi fbWMin icon" src="en"></div>
+            </div><select id="language">
+              <option>English</option>
+              <option>Русский</option>
+              <option>中文</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <section class="sc-ftvSup hYenNo">
+        <div class="cover-image"></div>
+        <div class="profile-container">
+          <div class="profile">
+            <div aria-label="profile picture" class="profile-picture"></div>
+            <div aria-label="profile description" class="profile-description">
+              <h1>Kirill Novik</h1>
+              <h2>Full-stack Web Developer</h2>
+              <h3>Over 7 years of experience. Open for remote work.</h3>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div aria-label="profile summary" class="profile-summary">
+            <p>I am a versatile full-stack developer experienced in designing, creating and maintaining
+              scalable cloud infrastructures, and applications with a focus on test-driven, agile and
+              object oriented development practices.</p>
+            <div class="spacer"></div>
+            <div class="tag-container"><span class="tag">React</span><span class="tag">TypeScript</span><span
+                class="tag">RxJS</span><span class="tag">Node</span><span class="tag">AWS</span><span
+                class="tag">MUI</span><span class="tag">NextJS</span><span class="tag">Redux</span><span
+                class="tag">Monorepo</span><span class="tag">Storybook</span><span class="tag">WACG</span><span
+                class="tag">OWASP</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <h1>Experience</h1>
+        <h2>Career</h2>
+        <table class="sc-gKXOVf eAqyuF">
+          <tr class="">
+            <td><b>Staff Software Engineer</b>
+              <p>
+              <p>AAA Insurance</p>
+              <p>November 2020 - June 2022</p>
+              </p>
+            </td>
+            <td><b></b>
+              <p><b>Responsibilities</b>
+              <ul>
+                <li>Create and maintain a custom insurance quote appliaction</li>
+                <li>Create a React UI kit according to the company's design system</li>
+              </ul><b>Achievements</b>
+              <ul>
+                <li>Successfully communicated technical details to business, development and QA teams
+                </li>
+                <li>Successfull implemented major features</li>
+                <li>Carefully followed UI design specifications to ensure quality</li>
+                <li>Significiantly improved test coverage</li>
+                <li>Influenced important architectural decisions that proved reliable</li>
+                <li>Demonstrated reliable performance across sprints</li>
+              </ul><b>Technical Details</b>
+              <ul>
+                <li>Utilized <b>React with Hooks</b></li>
+                <li>Improved maintainability by using <b>TypeScript</b> and <b>Unit Test</b> practices
+                </li>
+                <li>Integrated features with the <b>AWS</b> backend</li>
+                <li>Utilized best practices to optimize appliaction performance using <b>caching</b> and
+                  <b>Service Workers</b>
+                </li>
+                <li>Set up and utilized process automation (<b>GitHub workflows</b>, <b>Git hooks</b>,
+                  <b>AWS CI Pipeline</b>)
+                </li>
+                <li>Verified <b>accessibility</b> with <b>UsableNet AQA</b></li>
+              </ul>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b>React Developer (Contract)</b>
+              <p>
+              <p>Discount Tire</p>
+              <p>March 2020 - May 2020</p>
+              </p>
+            </td>
+            <td><b></b>
+              <p><b>Responsibilities</b>
+              <ul>
+                <li>Assist in the migration of the main appliaction to React</li>
+                <li>Improve test coverage</li>
+                <li>Participate in architectural decision making process</li>
+              </ul><b>Achievements</b>
+              <ul>
+                <li>Successfully communicated technical details to business, development and QA teams
+                </li>
+                <li>Successfull implemented major features</li>
+                <li>Carefully followed UI design specifications to ensure quality</li>
+                <li>Significiantly improved test coverage</li>
+                <li>Influenced important architectural decisions that proved reliable</li>
+                <li>Demonstrated reliable performance across sprints</li>
+              </ul><b>Technical Details</b>
+              <ul>
+                <li>Utilized <b>React with Hooks</b></li>
+                <li>Improved maintainability by using <b>TypeScript</b> and <b>Unit Test</b> practices
+                </li>
+                <li>Integrated features with the <b>AWS</b> backend</li>
+                <li>Utilized best practices to optimize appliaction performance using <b>caching</b> and
+                  <b>Service Workers</b>
+                </li>
+                <li>Set up and utilized process automation (<b>GitHub workflows</b>, <b>Git hooks</b>,
+                  <b>AWS CI Pipeline</b>)
+                </li>
+                <li>Verified <b>accessibility</b> with <b>UsableNet AQA</b></li>
+              </ul>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="container">
+        <h2>Education</h2>
+        <table class="sc-gKXOVf eAqyuF">
+          <tr class="even">
+            <td><b>Arizona State University</b>
+              <p>December 2020 - Present, GPA 4.0</p>
+            </td>
+            <td><b>Master's in Computer Science</b>
+              <p>Courses: Introduction to Deep Learning in Visual Computing, Statistical Machine Learning,
+                Inofrmation Assurance and Security, Knowledge Representation and Reasoning</p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b>University of Colorado at Boulder</b>
+              <p>August 2013 - December 2015, GPA 3.9</p>
+            </td>
+            <td><b>Bachelor's in Computer Science</b>
+              <p>Courses: Algorithms, Principles of Programming Languages, Operating Systems, Special
+                Topics: Big Data</p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b>University of Colorado at Boulder</b>
+              <p>August 2010 - December 2013, GPA 3.5</p>
+            </td>
+            <td><b>Bachelor's in Molecular Biology</b>
+              <p>Courses: Genetics, Developmental Biology, Stem Cells</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="container">
+        <h2>Skills</h2>
+        <table class="sc-gKXOVf eAqyuF">
+          <tr class="even">
+            <td><b></b>
+              <p><b>Technologies</b></p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>JavaScript</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>TypeScript</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>RxJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>CSS3</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>HTML5</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>AWS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>PostgreSQL</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>MySQL</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>GraphQL</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>MongoDB</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>SASS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Java</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Python</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>NodeJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>React</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>AngularJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>VueJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>NextJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Storybook</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Jest</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>WebGL</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>OpenGL</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Unity</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Jest</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>WebRTC</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>PyTorch</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>TensorFlow</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>C++</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★☆☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>C#</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Git</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Docker</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>WebPack</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Babel</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>REST</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>OWASP</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>WCAG</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>OWASP</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>WebSockets</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>OAuth2</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>TCP &amp; UDP</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>Answer Set Programming</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Electron</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>React Native</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★☆☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>TCP &amp; UDP</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>ExpressJS</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>MaterialUI</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>MDX</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="container">
+        <h2>Languages</h2>
+        <table class="sc-gKXOVf eAqyuF">
+          <tr class="even">
+            <td><b></b>
+              <p>Russian</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>English</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★★</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>French</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="">
+            <td><b></b>
+              <p>German</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★★☆</h4>
+              </p>
+            </td>
+          </tr>
+          <tr class="even">
+            <td><b></b>
+              <p>Chinese</p>
+            </td>
+            <td><b></b>
+              <p>
+              <h4>★★★☆☆</h4>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </section><br><br><br><br><br><br>
+      <div class="footer">
+        <div class="footer-content">Copyright 2022</div>
+      </div>
+    </div>
+  </div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+</body>
+
+</html>
