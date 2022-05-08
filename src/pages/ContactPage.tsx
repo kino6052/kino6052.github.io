@@ -107,7 +107,7 @@ export const ContactPage = styled(
         {!hasSubmitted && (
           <>
             <p>
-              Thanks for stopping by! Please,8 feel free to reach out to me
+              Thanks for stopping by! Please, feel free to reach out to me
               regarding opportunities or should you have any questions. I'm
               looking forward to connecting and collaborating with creative
               people.

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kirill Novik - Full-stack Web Developer</title>
     <style>
         body {
             margin: 0;
@@ -15,7 +15,19 @@
         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNULFVBQVU7QUFDWiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
     </style>
     <style data-styled="active" data-styled-version="5.3.5">
-        .edGFtK {
+        .fbWMin {
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            height: 20px;
+            width: 27px;
+            background-size: cover;
+            background-image: url(/icons/en.svg);
+            background-repeat: no-repeat;
+        }
+
+        .jrJlQu {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -32,9 +44,100 @@
             -webkit-justify-content: center;
             -ms-flex-pack: center;
             justify-content: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            z-index: 1;
         }
 
-        .edGFtK select {
+        .jrJlQu .hamburger {
+            display: none;
+        }
+
+        @media (max-width:768px) {
+            .jrJlQu .hamburger {
+                cursor: pointer;
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                position: absolute;
+                right: 24px;
+                height: 26px;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                background: none;
+                border: none;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle {
+                display: block;
+                width: 28px;
+                height: 16px;
+                position: relative;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle:after,
+            .jrJlQu .hamburger .main-nav-toggle:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 0;
+                border-bottom: 4px solid #bbb;
+                width: 100%;
+                left: 0;
+                right: 0;
+                -webkit-transition: all ease-out 0.3s;
+                transition: all ease-out 0.3s;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle:after {
+                top: 100%;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle i {
+                display: block;
+                text-indent: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                height: 4px;
+                background-color: #bbb;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                -webkit-transition: all ease-out 0.1s;
+                transition: all ease-out 0.1s;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle.active-menu:after {
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                top: 50%;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle.active-menu:before {
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                top: 50%;
+            }
+
+            .jrJlQu .hamburger .main-nav-toggle.active-menu i {
+                opacity: 0;
+            }
+        }
+
+        .jrJlQu select {
             display: -webkit-inline-box;
             display: -webkit-inline-flex;
             display: -ms-inline-flexbox;
@@ -44,14 +147,14 @@
             -ms-flex-positive: 1;
             flex-grow: 1;
             height: 32px;
-            margin: 0;
+            margin: 0 8px;
             padding: 0 8px;
             border-radius: 128px;
             box-sizing: border-box;
-            width: 48px;
+            width: 0;
         }
 
-        .edGFtK ul {
+        .jrJlQu ul {
             width: 768px;
             display: -webkit-box;
             display: -webkit-flex;
@@ -68,7 +171,42 @@
             margin: 0;
         }
 
-        .edGFtK ul li {
+        @media (max-width:768px) {
+            .jrJlQu ul.close {
+                display: none;
+            }
+
+            .jrJlQu ul.open {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                position: absolute;
+                top: 48px;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                background: #333;
+                padding-top: 24px;
+            }
+
+            .jrJlQu ul.open li {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-shrink: 1;
+                -ms-flex-negative: 1;
+                flex-shrink: 1;
+                height: 64px;
+                width: 140px;
+                max-height: 56px;
+            }
+        }
+
+        .jrJlQu ul li {
             display: -webkit-inline-box;
             display: -webkit-inline-flex;
             display: -ms-inline-flexbox;
@@ -81,9 +219,13 @@
             -webkit-justify-content: center;
             -ms-flex-pack: center;
             justify-content: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
         }
 
-        .edGFtK ul li a {
+        .jrJlQu ul li a {
             display: -webkit-inline-box;
             display: -webkit-inline-flex;
             display: -ms-inline-flexbox;
@@ -96,7 +238,77 @@
             font-weight: semi-bold;
         }
 
-        .BZYQI {
+        .jrJlQu ul li .icon-container {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 0px;
+            overflow: visible;
+        }
+
+        .jrJlQu ul li .icon-container .icon {
+            position: relative;
+            left: 84px;
+            border: 1px solid grey;
+            min-width: 27px;
+        }
+
+        .eAqyuF {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .eAqyuF tr {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            padding: 8px;
+        }
+
+        @media (max-width:768px) {
+            .eAqyuF tr {
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        .eAqyuF tr.even {
+            background: #f8f8f8;
+        }
+
+        .eAqyuF tr td {
+            width: 50%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        @media (max-width:768px) {
+            .eAqyuF tr td {
+                width: 100%;
+            }
+        }
+
+        .hYenNo {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -112,12 +324,12 @@
         }
 
         @media (max-width:768px) {
-            .BZYQI {
+            .hYenNo {
                 width: unset;
             }
         }
 
-        .BZYQI .cover-image {
+        .hYenNo .cover-image {
             width: 100%;
             display: -webkit-box;
             display: -webkit-flex;
@@ -129,7 +341,7 @@
             background-position: center center;
         }
 
-        .BZYQI .profile-container {
+        .hYenNo .profile-container {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -146,18 +358,18 @@
         }
 
         @media (max-width:768px) {
-            .BZYQI .profile-container {
+            .hYenNo .profile-container {
                 width: unset;
             }
         }
 
         @media (max-width:700px) {
-            .BZYQI .profile-container {
+            .hYenNo .profile-container {
                 width: unset;
             }
         }
 
-        .BZYQI .profile-container .profile {
+        .hYenNo .profile-container .profile {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -168,13 +380,13 @@
         }
 
         @media (max-width:768px) {
-            .BZYQI .profile-container .profile {
+            .hYenNo .profile-container .profile {
                 width: unset;
             }
         }
 
         @media (max-width:700px) {
-            .BZYQI .profile-container .profile {
+            .hYenNo .profile-container .profile {
                 width: unset;
                 -webkit-flex-direction: column;
                 -ms-flex-direction: column;
@@ -184,7 +396,7 @@
         }
 
         @media (max-width:600px) {
-            .BZYQI .profile-container .profile {
+            .hYenNo .profile-container .profile {
                 -webkit-flex-direction: column;
                 -ms-flex-direction: column;
                 flex-direction: column;
@@ -193,7 +405,7 @@
             }
         }
 
-        .BZYQI .profile-container .profile .profile-picture {
+        .hYenNo .profile-container .profile .profile-picture {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -202,7 +414,7 @@
             width: 256px;
             height: 256px;
             background-color: grey;
-            background-image: url(https://avatars.githubusercontent.com/u/9941024?s=400&u=88ec56c4d3735a856c3f1576e8e0606f4c7f510d&v=4);
+            background-image: url(/kirill.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
@@ -213,14 +425,14 @@
         }
 
         @media (max-width:700px) {
-            .BZYQI .profile-container .profile .profile-picture {
+            .hYenNo .profile-container .profile .profile-picture {
                 width: unset;
                 margin: auto;
                 margin-top: -96px;
             }
         }
 
-        .BZYQI .profile-container .profile .profile-description {
+        .hYenNo .profile-container .profile .profile-description {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -231,13 +443,13 @@
             margin: 8px 8px;
         }
 
-        .BZYQI .profile-container .profile .profile-description h3 {
+        .hYenNo .profile-container .profile .profile-description h3 {
             font-size: 18px;
             color: #aaa;
             font-weight: 400;
         }
 
-        .BZYQI .profile-container .profile-summary {
+        .hYenNo .profile-container .profile-summary {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -248,7 +460,7 @@
             margin: 8px;
         }
 
-        .BZYQI .profile-container .profile-summary .tag-container {
+        .hYenNo .profile-container .profile-summary .tag-container {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -259,7 +471,7 @@
             flex-wrap: wrap;
         }
 
-        .BZYQI .profile-container .profile-summary .tag-container .tag {
+        .hYenNo .profile-container .profile-summary .tag-container .tag {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -271,65 +483,11 @@
             margin: 8px;
         }
 
-        .BZYQI .profile-container .profile-summary .tag-container .tag:first-child {
+        .hYenNo .profile-container .profile-summary .tag-container .tag:first-child {
             margin-left: 0;
         }
 
-        .dNvOes {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-
-        .dNvOes tr {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            padding: 8px;
-        }
-
-        @media (max-width:768px) {
-            .dNvOes tr {
-                -webkit-flex-direction: column;
-                -ms-flex-direction: column;
-                flex-direction: column;
-            }
-        }
-
-        .dNvOes tr.even {
-            background: #f8f8f8;
-        }
-
-        .dNvOes tr td {
-            width: 50%;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-flex: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        @media (max-width:768px) {
-            .dNvOes tr td {
-                width: 100%;
-            }
-        }
-
-        .kVTjJI {
+        .hJKKB {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -347,49 +505,54 @@
             overflow: hidden;
         }
 
-        .kVTjJI h1,
-        .kVTjJI h2,
-        .kVTjJI h3,
-        .kVTjJI h4,
-        .kVTjJI h5,
-        .kVTjJI h6,
-        .kVTjJI p,
-        .kVTjJI b {
+        .hJKKB h1,
+        .hJKKB h2,
+        .hJKKB h3,
+        .hJKKB h4,
+        .hJKKB h5,
+        .hJKKB h6,
+        .hJKKB li,
+        .hJKKB a,
+        .hJKKB p,
+        .hJKKB b {
             margin: 0;
             color: #444;
+            word-break: break-word;
         }
 
-        .kVTjJI input,
-        .kVTjJI textarea,
-        .kVTjJI button {
+        .hJKKB input,
+        .hJKKB textarea,
+        .hJKKB button {
             font-family: system-ui, "Open Sans", sans-serif;
             font-size: 16px;
         }
 
-        .kVTjJI h1 {
+        .hJKKB h1 {
             font-size: 64px;
             font-weight: bold;
             line-height: 64px;
         }
 
-        .kVTjJI h2 {
+        .hJKKB h2 {
             font-size: 32px;
             line-height: 48px;
             font-weight: semi-bold;
         }
 
-        .kVTjJI b,
-        .kVTjJI p {
+        .hJKKB b,
+        .hJKKB p,
+        .hJKKB a,
+        .hJKKB li {
             font-size: 18px;
             line-height: 26px;
             font-weight: semi-bold;
         }
 
-        .kVTjJI span {
+        .hJKKB span {
             font-size: 16px;
         }
 
-        .kVTjJI .spacer {
+        .hJKKB .spacer {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -397,7 +560,7 @@
             padding: 8px;
         }
 
-        .kVTjJI .container {
+        .hJKKB .container {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -415,13 +578,13 @@
         }
 
         @media (max-width:768px) {
-            .kVTjJI .container {
+            .hJKKB .container {
                 width: 100%;
                 padding: 16px;
             }
         }
 
-        .kVTjJI .footer {
+        .hJKKB .footer {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -438,7 +601,7 @@
             justify-content: center;
         }
 
-        .kVTjJI .footer .footer-content {
+        .hJKKB .footer .footer-content {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -446,28 +609,32 @@
             width: 768px;
         }
     </style>
+    <script defer="" src="/static/js/bundle.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1058.0">
-    <noscript>
-        You need to enable JavaScript to run this app.
-    </noscript>
+<body data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="">
+    <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root">
-        <div class="app sc-iBkjds kVTjJI">
-            <nav class="menu sc-bczRLJ edGFtK">
-                <ul>
-                    <li><a href="/" id="0">Resume</a></li>
-                    <li><a href="/projects" id="0">Projects</a></li>
-                    <li><a href="/misc" id="0">Misc</a></li>
-                    <li><a href="/contact" id="0">Contact</a></li>
-                    <li><select id="language">
+        <div class="app sc-papXJ hJKKB">
+            <nav class="menu sc-dkzDqf jrJlQu"><button class="hamburger" id="toggle-menu"><span
+                        class="main-nav-toggle "><i>Menu</i></span></button>
+                <ul class="close">
+                    <li><a href="/" id="route-change">Resume</a></li>
+                    <li><a href="/projects" id="route-change">Projects</a></li>
+                    <li><a href="/misc" id="route-change">Misc</a></li>
+                    <li><a href="/contact" id="route-change">Contact</a></li>
+                    <li>
+                        <div class="icon-container" id="language">
+                            <div class="sc-gsnTZi fbWMin icon" src="en"></div>
+                        </div><select id="language">
                             <option>English</option>
                             <option>Русский</option>
                             <option>中文</option>
-                        </select></li>
+                        </select>
+                    </li>
                 </ul>
             </nav>
-            <section class="sc-gsnTZi BZYQI">
+            <section class="sc-ftvSup hYenNo">
                 <div class="cover-image"></div>
                 <div class="profile-container">
                     <div class="profile">
@@ -496,7 +663,7 @@
             <section class="container">
                 <h1>Experience</h1>
                 <h2>Career</h2>
-                <table class="sc-dkzDqf dNvOes">
+                <table class="sc-gKXOVf eAqyuF">
                     <tr class="">
                         <td><b>Staff Software Engineer</b>
                             <p>
@@ -525,9 +692,11 @@
                                 </li>
                                 <li>Integrated features with the <b>AWS</b> backend</li>
                                 <li>Utilized best practices to optimize appliaction performance using <b>caching</b> and
-                                    <b>Service Workers</b></li>
+                                    <b>Service Workers</b>
+                                </li>
                                 <li>Set up and utilized process automation (<b>GitHub workflows</b>, <b>Git hooks</b>,
-                                    <b>AWS CI Pipeline</b>)</li>
+                                    <b>AWS CI Pipeline</b>)
+                                </li>
                                 <li>Verified <b>accessibility</b> with <b>UsableNet AQA</b></li>
                             </ul>
                             </p>
@@ -562,9 +731,11 @@
                                 </li>
                                 <li>Integrated features with the <b>AWS</b> backend</li>
                                 <li>Utilized best practices to optimize appliaction performance using <b>caching</b> and
-                                    <b>Service Workers</b></li>
+                                    <b>Service Workers</b>
+                                </li>
                                 <li>Set up and utilized process automation (<b>GitHub workflows</b>, <b>Git hooks</b>,
-                                    <b>AWS CI Pipeline</b>)</li>
+                                    <b>AWS CI Pipeline</b>)
+                                </li>
                                 <li>Verified <b>accessibility</b> with <b>UsableNet AQA</b></li>
                             </ul>
                             </p>
@@ -574,7 +745,7 @@
             </section>
             <section class="container">
                 <h2>Education</h2>
-                <table class="sc-dkzDqf dNvOes">
+                <table class="sc-gKXOVf eAqyuF">
                     <tr class="even">
                         <td><b>Arizona State University</b>
                             <p>December 2020 - Present, GPA 4.0</p>
@@ -605,7 +776,7 @@
             </section>
             <section class="container">
                 <h2>Skills</h2>
-                <table class="sc-dkzDqf dNvOes">
+                <table class="sc-gKXOVf eAqyuF">
                     <tr class="even">
                         <td><b></b>
                             <p><b>Technologies</b></p>
@@ -1085,7 +1256,7 @@
             </section>
             <section class="container">
                 <h2>Languages</h2>
-                <table class="sc-dkzDqf dNvOes">
+                <table class="sc-gKXOVf eAqyuF">
                     <tr class="even">
                         <td><b></b>
                             <p>Russian</p>
