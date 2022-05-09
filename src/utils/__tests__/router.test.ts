@@ -1,5 +1,5 @@
 import { ELanguage, ERoute } from "../bridge";
-import { getCurrentPathState, defaultState } from "../router";
+import { getCurrentPathState, defaultState, getResultingPath } from "../router";
 
 describe("Router", () => {
   it("should correctly parse empty string", () => {
@@ -28,36 +28,40 @@ describe("Router", () => {
         const result = getCurrentPathState("/ru");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ru/",
           language: ELanguage.Russian,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ru/");
       });
 
       it("should correctly parse language", () => {
         const result = getCurrentPathState("/ru/");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ru/",
           language: ELanguage.Russian,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ru/");
       });
 
       it("should correctly parse language", () => {
         const result = getCurrentPathState("/ch");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ch/",
           language: ELanguage.Chinese,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ch/");
       });
 
       it("should correctly parse language", () => {
         const result = getCurrentPathState("/ch/");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ch/",
           language: ELanguage.Chinese,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ch/");
       });
 
       it("should correctly parse language", () => {
@@ -76,31 +80,34 @@ describe("Router", () => {
         const result = getCurrentPathState("/ru/misc");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ru/misc",
           language: ELanguage.Russian,
           route: ERoute.Misc,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ru/misc");
       });
 
       it("should correctly parse language param and route", () => {
         const result = getCurrentPathState("/ru/projects");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ru/projects",
           language: ELanguage.Russian,
           route: ERoute.Projects,
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ru/projects");
       });
 
       it("should correctly parse language param and route", () => {
         const result = getCurrentPathState("/ru/projects/csaa");
         expect(result).toEqual({
           ...defaultState,
-          resultingPath: "/ru/projects/csaa",
           language: ELanguage.Russian,
           route: ERoute.Projects,
           currentProject: "csaa",
         });
+        const resultingPath = getResultingPath(result);
+        expect(resultingPath).toEqual("/ru/projects/csaa");
       });
     });
   });
@@ -111,8 +118,9 @@ describe("Router", () => {
       expect(result).toEqual({
         ...defaultState,
         route: "projects",
-        resultingPath: "/en/projects",
       });
+      const resultingPath = getResultingPath(result);
+      expect(resultingPath).toEqual("/en/projects");
     });
 
     it("should do a correct fallback", () => {

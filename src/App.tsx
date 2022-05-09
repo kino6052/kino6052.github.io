@@ -22,7 +22,12 @@ export const App = styled(
     const projectPages = getProjectPages(language);
     return (
       <div className={`app ${props.className}`}>
-        <Navbar links={links} language={language} isOpen={isOpen} />
+        <Navbar
+          links={links}
+          language={language}
+          isOpen={isOpen}
+          selection={route}
+        />
         {route === ERoute.Resume && (
           <ProfilePage content={translations[language]["profilePage"]} />
         )}

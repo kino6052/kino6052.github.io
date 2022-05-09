@@ -2,11 +2,11 @@ import { ERoute } from "./utils/bridge";
 import { ITable } from "./components/Table";
 import { getStarsMarkup } from "./utils/utils";
 
-export const links: [string, string][] = [
-  ["Resume", "/"],
-  ["Projects", `/${ERoute.Projects}`],
-  ["Misc", `/${ERoute.Misc}`],
-  ["Contact", `/${ERoute.Contact}`],
+export const links: [string, ERoute][] = [
+  ["Resume", ERoute.Resume],
+  ["Projects", ERoute.Projects],
+  ["Misc", ERoute.Misc],
+  ["Contact", ERoute.Contact],
 ];
 export const tags = [
   "React",

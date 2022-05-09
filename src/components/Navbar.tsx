@@ -3,6 +3,7 @@ import { filter, tap } from "rxjs/operators";
 import styled from "styled-components";
 import {
   ELanguage,
+  ERoute,
   getCurrentState,
   Id,
   languageRouteMap,
@@ -68,7 +69,8 @@ const iconMap = {
 export const Navbar = styled(
   (
     props: React.InputHTMLAttributes<HTMLDivElement> & {
-      links: [string, string][];
+      links: [string, ERoute][];
+      selection: ERoute;
       language: ELanguage;
       isOpen?: boolean;
     }
@@ -85,9 +87,9 @@ export const Navbar = styled(
       </EventWrapper>
       <ul className={props.isOpen ? "open" : "close"}>
         {props.links.map((link) => (
-          <li>
-            <EventWrapper id={`${Id.RouteChange}`} value={link[1]}>
-              <a href={`.${link[1]}`}>{link[0]}</a>
+          <li className={link[1] === props.selection ? "selected" : ""}>
+            <EventWrapper id={`${Id.RouteChange}`} value={`./${link[1]}`}>
+              <a href={`./${link[1]}`}>{link[0]}</a>
             </EventWrapper>
           </li>
         ))}
@@ -222,10 +224,15 @@ export const Navbar = styled(
           height: 64px;
           width: 140px;
           max-height: 56px;
+
+          &.selected {
+            width: 100%;
+          }
         }
       }
     }
 
+    height: 100%;
     width: ${WIDTH}px;
     display: flex;
     flex-direction: row;
@@ -238,6 +245,14 @@ export const Navbar = styled(
       flex-grow: 1;
       justify-content: center;
       align-items: center;
+      height: 100%;
+
+      &.selected {
+        background: #ffffff1a;
+        & > a {
+          font-weight: semi-bold;
+        }
+      }
 
       a {
         display: inline-flex;
@@ -253,6 +268,7 @@ export const Navbar = styled(
         width: 0px;
         overflow: visible;
         .icon {
+          pointer-events: none;
           position: relative;
           left: 84px;
           border: 1px solid grey;
