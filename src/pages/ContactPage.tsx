@@ -121,9 +121,12 @@ const Button = styled(
   margin: 8px;
   color: white;
   cursor: pointer;
-  :hover {
+  :hover:enabled {
     box-shadow: #aaa 0 0 8px;
     background: #1976d2ee;
+  }
+  :hover:disabled {
+    cursor: no-drop;
   }
   @media (max-width: ${WIDTH}px) {
     width: unset;
