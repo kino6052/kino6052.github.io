@@ -173,6 +173,7 @@ export const ContactPage = styled(
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
+                    required
                     value={firstName}
                   />
                 </EventWrapper>
@@ -182,6 +183,7 @@ export const ContactPage = styled(
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
+                    required
                     value={lastName}
                   />
                 </EventWrapper>
@@ -193,6 +195,7 @@ export const ContactPage = styled(
                     name="email"
                     type="email"
                     autoComplete="email"
+                    required
                     value={email}
                   />
                 </EventWrapper>
@@ -201,6 +204,7 @@ export const ContactPage = styled(
                     label="Subject"
                     name="subject"
                     type="text"
+                    required
                     value={subject}
                   />
                 </EventWrapper>
@@ -212,6 +216,7 @@ export const ContactPage = styled(
                     name="body"
                     tag="textarea"
                     type="text"
+                    required
                     value={message}
                   ></Input>
                 </EventWrapper>

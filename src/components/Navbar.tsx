@@ -88,8 +88,8 @@ export const Navbar = styled(
       <ul className={props.isOpen ? "open" : "close"}>
         {props.links.map((link) => (
           <li className={link[1] === props.selection ? "selected" : ""}>
-            <EventWrapper id={`${Id.RouteChange}`} value={`./${link[1]}`}>
-              <a href={`./${link[1]}`}>{link[0]}</a>
+            <EventWrapper id={`${Id.RouteChange}`} value={`/${link[1]}`}>
+              <a href={`/${link[1]}`}>{link[0]}</a>
             </EventWrapper>
           </li>
         ))}
