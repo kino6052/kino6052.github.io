@@ -16,7 +16,17 @@ import { translations, WIDTH } from "./utils/utils";
 export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
-      state: { path, language, hasSubmitted, isOpen },
+      state: {
+        path,
+        language,
+        hasSubmitted,
+        isOpen,
+        email,
+        firstName,
+        lastName,
+        message,
+        subject,
+      },
     } = props;
     const { route, currentProject } = getCurrentPathState(path);
     const projectPages = getProjectPages(language);
@@ -39,7 +49,16 @@ export const App = styled(
         {!currentProject && route === ERoute.Projects && <ProjectPage />}
         {route === ERoute.Misc && <MiscPage />}
         {route === ERoute.Contact && (
-          <ContactPage hasSubmitted={hasSubmitted} />
+          <ContactPage
+            hasSubmitted={hasSubmitted}
+            state={{
+              email,
+              firstName,
+              lastName,
+              subject,
+              message,
+            }}
+          />
         )}
         <div className="footer">
           <div className="footer-content">Copyright 2022</div>

@@ -1,14 +1,50 @@
 import React from "react";
 import { filter } from "rxjs";
 import styled from "styled-components";
-import { setState } from "../utils/bridge";
+import { getCurrentState, Id, setState } from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
 import { WIDTH } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === "submit-question")
 ).subscribe(([, ,]) => {
+  const { subject, message, email, firstName, lastName } = getCurrentState();
+  const formData = new FormData();
+  formData.append("from", email);
+  formData.append("to", "test@test.test");
+  formData.append(
+    "subject",
+    `${firstName}, ${lastName}, ${subject}, ${message}`
+  );
+  formData.append("text", message);
+  fetch(
+    "https://api.mailgun.net/v3/sandboxe0dbf7b2c75449399dace78f2b035bd8.mailgun.org/messages",
+    {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Basic YXBpOmtleS0wMDdiZjEwMTg1N2NiODBiNDMwOWU2Y2UyM2JiODAxMA==",
+      },
+      body: formData,
+    }
+  );
   setState({ hasSubmitted: true });
+});
+
+EventSubject.pipe(
+  filter(
+    ([event, id]) =>
+      event === "change" &&
+      [
+        Id.EmailInput,
+        Id.FirstNameInput,
+        Id.LastNameInput,
+        Id.SubjectInput,
+        Id.MessageInput,
+      ].includes(id as Id)
+  )
+).subscribe(([, id, value]) => {
+  setState({ [id]: value });
 });
 
 const Input = styled(
@@ -92,13 +128,26 @@ const Button = styled(
   @media (max-width: ${WIDTH}px) {
     width: unset;
   }
+  &:disabled {
+    background: grey;
+  }
 `;
 
 export const ContactPage = styled(
   ({
     className,
     hasSubmitted,
-  }: React.InputHTMLAttributes<unknown> & { hasSubmitted: boolean }) => (
+    state: { firstName, lastName, subject, email, message },
+  }: React.InputHTMLAttributes<unknown> & {
+    hasSubmitted: boolean;
+    state: {
+      firstName: string;
+      lastName: string;
+      subject: string;
+      email: string;
+      message: string;
+    };
+  }) => (
     <>
       <section className={`${className} container`}>
         <h1>Contact</h1>
@@ -115,40 +164,66 @@ export const ContactPage = styled(
             <br />
             <form>
               <div className="field-container">
-                <Input
-                  label="First Name"
-                  name="first-name"
-                  type="text"
-                  autoComplete="given-name"
-                />
-                <Input
-                  label="Last Name"
-                  name="last-name"
-                  type="text"
-                  autoComplete="family-name"
-                />
+                <EventWrapper id={Id.FirstNameInput}>
+                  <Input
+                    label="First Name"
+                    name="first-name"
+                    type="text"
+                    autoComplete="given-name"
+                    value={firstName}
+                  />
+                </EventWrapper>
+                <EventWrapper id={Id.LastNameInput}>
+                  <Input
+                    label="Last Name"
+                    name="last-name"
+                    type="text"
+                    autoComplete="family-name"
+                    value={lastName}
+                  />
+                </EventWrapper>
               </div>
               <div className="field-container">
-                <Input
-                  label="Email Addres"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                />
-                <Input label="Subject" name="subject" type="text" />
+                <EventWrapper id={Id.EmailInput}>
+                  <Input
+                    label="Email Addres"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    value={email}
+                  />
+                </EventWrapper>
+                <EventWrapper id={Id.SubjectInput}>
+                  <Input
+                    label="Subject"
+                    name="subject"
+                    type="text"
+                    value={subject}
+                  />
+                </EventWrapper>
               </div>
               <div className="field-container">
-                <Input
-                  label="Body"
-                  name="body"
-                  tag="textarea"
-                  type="text"
-                ></Input>
+                <EventWrapper id={Id.MessageInput}>
+                  <Input
+                    label="Body"
+                    name="body"
+                    tag="textarea"
+                    type="text"
+                    value={message}
+                  ></Input>
+                </EventWrapper>
               </div>
               <br />
               <div className="field-container">
                 <EventWrapper id="submit-question">
-                  <Button name="submit" role="button" type="submit">
+                  <Button
+                    name="submit"
+                    role="button"
+                    type="submit"
+                    disabled={
+                      !(lastName && firstName && email && subject && message)
+                    }
+                  >
                     Submit
                   </Button>
                 </EventWrapper>

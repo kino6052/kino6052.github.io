@@ -23,6 +23,11 @@ export const languageRouteMap = {
 export enum Id {
   RouteChange = "route-change",
   ToggleMenu = "toggle-menu",
+  FirstNameInput = "firstName",
+  LastNameInput = "lastName",
+  SubjectInput = "subject",
+  EmailInput = "email",
+  MessageInput = "message",
 }
 
 export interface IState {
@@ -30,6 +35,11 @@ export interface IState {
   language: ELanguage;
   hasSubmitted: boolean;
   isOpen: boolean;
+  firstName: string;
+  lastName: string;
+  subject: string;
+  email: string;
+  message: string;
 }
 
 export const initialState: IState = {
@@ -37,6 +47,11 @@ export const initialState: IState = {
   language: ELanguage.English,
   hasSubmitted: false,
   isOpen: false,
+  firstName: "",
+  lastName: "",
+  subject: "",
+  email: "",
+  message: "",
 };
 
 const StateSubject = new BehaviorSubject<IState>(initialState);
