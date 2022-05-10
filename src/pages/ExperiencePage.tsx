@@ -21,14 +21,20 @@ export const ExperiencePage: React.FC<
       <h2>{translations[language].profilePage.experience.list[0].subtitle}</h2>
       <Table table={getCareer(language)} />
     </section>
+    <br />
+    <br />
     <section className="container">
-      <h2>Education</h2>
+      <h2>{translations[language].profilePage.experience.list[1].subtitle}</h2>
       <Table isZebra table={getEducation(language)} />
     </section>
+    <br />
+    <br />
     <section className="container">
-      <h2>Skills</h2>
+      <h2>{translations[language].profilePage.experience.list[2].subtitle}</h2>
       <Table isZebra table={skills} />
     </section>
+    <br />
+    <br />
     <section className="container">
       <h2>{translations[language].profilePage.languages.title}</h2>
       <Table isZebra table={getLanguages(language)} />

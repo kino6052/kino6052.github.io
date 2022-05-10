@@ -154,6 +154,9 @@ const translationEnglish = {
             },
           ],
         },
+        {
+          subtitle: "Skills",
+        },
       ],
     },
     languages: {
@@ -402,6 +405,9 @@ const translationRussian: TTranslation = {
             },
           ],
         },
+        {
+          subtitle: "Навыки",
+        },
       ],
     },
     languages: {
@@ -525,6 +531,137 @@ const translationChinese: TTranslation = {
       "WACG",
       "OWASP",
     ],
+    experience: {
+      title: "经验",
+      list: [
+        {
+          subtitle: "职业",
+          list: [
+            {
+              title: "职员软件工程师",
+              company: "CSAA 保险",
+              description: "2020年11月 - 2022年6月",
+              list: [
+                {
+                  title: "责任",
+                  list: [
+                    "创建和维护自定义保险报价应用程序",
+                    "根据公司的设计系统规范创建一个 React UI 套件",
+                  ],
+                },
+                {
+                  title: "成就",
+                  list: [
+                    "成功地向业务、开发和质量保证团队传达了技术细节",
+                    "成功实现主要功能",
+                    "严格遵循 UI 设计规范，确保质量",
+                    "显着提高测试覆盖率",
+                    "影响了证明可靠的重要架构决策",
+                    "在冲刺中表现出可靠的性能",
+                  ],
+                },
+                {
+                  title: "技术细节",
+                  list: [
+                    "使用带有 Hooks 的 React",
+                    "通过使用 TypeScript 和单元测试实践提高了可维护性",
+                    "与 AWS 后端集成的功能",
+                    "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
+                    "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
+                    "使用 UsableNet AQA 验证可访问性",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "React 开发人员（合同）",
+              company: "折扣轮胎",
+              description: "2020年3月 - 2020年5月",
+              items: [
+                {
+                  title: "责任",
+                  list: [
+                    "协助将主应用程序迁移到 React",
+                    "提高测试覆盖率",
+                    "参与架构决策过程",
+                  ],
+                },
+                {
+                  title: "成就",
+                  list: [
+                    "成功地向业务、开发和质量保证团队传达了技术细节",
+                    "成功实现主要功能",
+                    "严格遵循 UI 设计规范，确保质量",
+                    "显着提高测试覆盖率",
+                    "影响了证明可靠的重要架构决策",
+                    "在冲刺中表现出可靠的性能",
+                  ],
+                },
+                {
+                  title: "技术细节",
+                  list: [
+                    "使用带有 Hooks 的 React",
+                    "通过使用 TypeScript 和单元测试实践提高了可维护性",
+                    "与 AWS 后端集成的功能",
+                    "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
+                    "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
+                    "使用 UsableNet AQA 验证可访问性",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          subtitle: "教育",
+          list: [
+            {
+              title: "亚利桑那州立大学",
+              description: "2020 年 12 月至今，GPA 4.0",
+              list: [
+                {
+                  title: "计算机科学硕士",
+                  list: [
+                    "课程：视觉计算深度学习概论、统计机器学习、信息保障与安全、知识表示与推理",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "科罗拉多大学博尔德分校",
+              description: "2013 年 8 月 - 2015 年 12 月，GPA 3.9",
+              list: [
+                {
+                  title: "计算机科学学士学位",
+                  list: ["课程：算法、编程语言原理、操作系统、专题：大数据"],
+                },
+              ],
+            },
+            {
+              title: "科罗拉多大学博尔德分校",
+              description: "2010 年 8 月 - 2013 年 12 月，GPA 3.5",
+              list: [
+                {
+                  title: "分子生物学学士",
+                  list: ["课程：遗传学、发育生物学、干细胞"],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          subtitle: "技能",
+        },
+      ],
+    },
+    languages: {
+      title: "语言",
+      russian: "俄语",
+      english: "英语",
+      french: "法语",
+      german: "德语",
+      chinese: "汉语",
+    },
   },
   projectPages: {
     csaa: {

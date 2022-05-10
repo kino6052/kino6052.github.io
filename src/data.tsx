@@ -537,7 +537,7 @@ export const getCareer = (language: ELanguage): ITable => [
   ],
 ];
 
-export const getEducation = (language): ITable =>
+export const getEducation = (language: ELanguage): ITable =>
   translations[language].profilePage.experience.list[1].list.map(
     ({ title, description, list }) => [
       {
@@ -545,8 +545,8 @@ export const getEducation = (language): ITable =>
         description,
       },
       {
-        title: list[0].title,
-        description: list[0].list,
+        title: list?.[0].title || "",
+        description: list?.[0].list[0] || "",
       },
     ]
   );
