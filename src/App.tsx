@@ -41,7 +41,7 @@ export const App = styled(
         {route === ERoute.Resume && (
           <ProfilePage content={translations[language]["profilePage"]} />
         )}
-        {route === ERoute.Resume && <ExperiencePage />}
+        {route === ERoute.Resume && <ExperiencePage language={language} />}
         <br />
         <br />
         <br />

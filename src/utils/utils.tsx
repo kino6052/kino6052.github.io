@@ -32,6 +32,138 @@ const translationEnglish = {
       "WACG",
       "OWASP",
     ],
+    experience: {
+      title: "Experience",
+      list: [
+        {
+          subtitle: "Career",
+          list: [
+            {
+              title: "Staff Software Engineer",
+              company: "CSAA Insurance",
+              description: "November 2020 - June 2022",
+              list: [
+                {
+                  title: "Responsibilities",
+                  list: [
+                    "Create and maintain a custom insurance quote application",
+                    "Create a React UI kit according to the company's design system specifications",
+                  ],
+                },
+                {
+                  title: "Achievements",
+                  list: [
+                    "Successfully communicated technical details to business, development and QA teams",
+                    "Successful implemented major features",
+                    "Carefully followed UI design specifications to ensure quality",
+                    "Significantly improved test coverage",
+                    "Influenced important architectural decisions that proved reliable",
+                    "Demonstrated reliable performance across sprints",
+                  ],
+                },
+                {
+                  title: "Technical Details",
+                  list: [
+                    "Utilized React with Hooks",
+                    "Improved maintainability by using TypeScript and Unit Test practices",
+                    "Integrated features with the AWS backend",
+                    "Utilized best practices to optimize application performance using caching and Service Workers",
+                    "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
+                    "Verified accessibility with UsableNet AQA",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "React Developer (Contract)",
+              company: "Discount Tire",
+              description: "March 2020 - May 2020",
+              items: [
+                {
+                  title: "Responsibilities",
+                  list: [
+                    "Assist in the migration of the main application to React",
+                    "Improve test coverage",
+                    "Participate in architectural decision making process",
+                  ],
+                },
+                {
+                  title: "Achievements",
+                  list: [
+                    "Successfully communicated technical details to business, development and QA teams",
+                    "Successfully implemented major features",
+                    "Carefully followed UI design specifications to ensure quality",
+                    "Significantly improved test coverage",
+                    "Influenced important architectural decisions that proved reliable",
+                    "Demonstrated reliable performance across sprints",
+                  ],
+                },
+                {
+                  title: "Technical Details",
+                  list: [
+                    "Utilized React with Hooks",
+                    "Improved maintainability by using TypeScript and Unit Test practices",
+                    "Integrated features with the AWS backend",
+                    "Utilized best practices to optimize application performance using caching and Service Workers",
+                    "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
+                    "Verified accessibility with UsableNet AQA",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          subtitle: "Education",
+          list: [
+            {
+              title: "Arizona State University",
+              description: "December 2020 - Present, GPA 4.0",
+              list: [
+                {
+                  title: "Master's in Computer Science",
+                  list: [
+                    "Courses: Introduction to Deep Learning in Visual Computing, Statistical Machine Learning, Information Assurance and Security, Knowledge Representation and Reasoning",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "University of Colorado at Boulder",
+              description: "August 2013 - December 2015, GPA 3.9",
+              list: [
+                {
+                  title: "Bachelor's in Computer Science",
+                  list: [
+                    "Courses: Algorithms, Principles of Programming Languages, Operating Systems, Special Topics: Big Data",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "University of Colorado at Boulder",
+              description: "August 2010 - December 2013, GPA 3.5",
+              list: [
+                {
+                  title: "Bachelor's in Molecular Biology",
+                  list: [
+                    "Courses: Genetics, Developmental Biology, Stem Cells",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    languages: {
+      title: "Languages",
+      russian: "Russian",
+      english: "English",
+      french: "French",
+      german: "German",
+      chinese: "Chinese",
+    },
   },
   projectPages: {
     csaa: {
@@ -57,7 +189,7 @@ const translationEnglish = {
       paragraph10:
         "This effort would be impossible without a great quality assurance team. The QA team ensured a great part of the success of this project.",
       paragraph11:
-        "This project was among a few that I have been able to participate in from start to finish, and am very proud of the end result. I would like to thank the management, the UX, QA, and Dev teams working on this project for making the development process fun and meaningful inspite of the challenges that come from the fact that the insurance industry tends be extremely dull.",
+        "This project was among a few that I have been able to participate in from start to finish, and am very proud of the end result. I would like to thank the management, the UX, QA, and Dev teams working on this project for making the development process fun and meaningful in spite of the challenges that come from the fact that the insurance industry tends be extremely dull.",
     },
     "discount-tire": {
       title: "Online Store",
@@ -147,6 +279,139 @@ const translationRussian: TTranslation = {
       "WACG",
       "OWASP",
     ],
+    experience: {
+      title: "Опыт",
+      list: [
+        {
+          subtitle: "Карьера",
+          list: [
+            {
+              title: "Штатный Инженер-Программист",
+              company: "Страховая Компания CSAA",
+              description: "Ноябрь 2020 г. - Июнь 2022 г.",
+              list: [
+                {
+                  title: "Обязанности",
+                  list: [
+                    "Создание и поддержка специализированного приложения для расчета стоимости страховки",
+                    "Создайте библиотеки пользовательского интерфейса React в соответствии со спецификациями системы дизайна компании",
+                  ],
+                },
+                {
+                  title: "Достижения",
+                  list: [
+                    "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
+                    "Успешно реализованы основные функции",
+                    "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
+                    "Значительно улучшенное тестовое покрытие",
+                    "Повлиял на важные архитектурные решения, которые оказались надежными",
+                    "Продемонстрированная надежная производительность в спринтах",
+                  ],
+                },
+                {
+                  title: "Технические Подробности",
+                  list: [
+                    "Использовали React с Hooks",
+                    "Улучшенная поддерживаемость за счет использования методов TypeScript и модульного тестирования.",
+                    "Интегрированные функции с серверной частью AWS",
+                    "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers.",
+                    "Использование лучших практик для оптимизации производительности приложений. Настройка и автоматизация процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline), кэширование Sing и Service Workers.",
+                    "Подтвержденная доступность с помощью UsableNet AQA",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Разработчик React (Контракт)",
+              company: "Discount Tire",
+              description: "Март 2020 г. - Май 2020 г.",
+              items: [
+                {
+                  title: "Обязанности",
+                  list: [
+                    "Помощь в переносе основного приложения на React",
+                    "Улучшить тестовое покрытие",
+                    "Участвовать в процессе принятия архитектурных решений",
+                  ],
+                },
+                {
+                  title: "Achievements",
+                  list: [
+                    "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
+                    "Успешно реализованы основные функции",
+                    "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
+                    "Значительно улучшенное тестовое покрытие",
+                    "Повлиял на важные архитектурные решения, которые оказались надежными",
+                    "Продемонстрированная надежная производительность в спринтах",
+                  ],
+                },
+                {
+                  title: "Технические подробности",
+                  list: [
+                    "Использовали React с Hooks",
+                    "Улучшенная ремонтопригодность за счет использования методов TypeScript и модульного тестирования",
+                    "Интегрированные функции с серверной частью AWS",
+                    "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers",
+                    "Настройка и использование автоматизации процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline)",
+                    "Подтвержденная доступность с помощью UsableNet AQA",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          subtitle: "Образование",
+          list: [
+            {
+              title: "Университет штата Аризона",
+              description:
+                "Декабрь 2020 г. - настоящее время, средний балл 4.0 (из 4.0)",
+              list: [
+                {
+                  title: "Магистр компьютерных наук",
+                  list: [
+                    "Курсы: Введение в глубокое обучение визуальным вычислениям, Статистическое машинное обучение, Обеспечение и безопасность информации, Представление знаний и рассуждения",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Университет Колорадо в Боулдере",
+              description: "Август 2013 г. - Декабрь 2015 г., средний балл 3.9",
+              list: [
+                {
+                  title: "Бакалавр компьютерных наук",
+                  list: [
+                    "Курсы: Алгоритмы, Принципы языков программирования, Операционные системы, Специальные темы: Большие данные",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Университет Колорадо в Боулдере",
+              description: "Август 2010 г. - декабрь 2013 г., средний балл 3.5",
+              list: [
+                {
+                  title: "Бакалавр молекулярной биологии",
+                  list: [
+                    "Курсы: Генетика, Биология развития, Стволовые клетки",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    languages: {
+      title: "Языки",
+      russian: "Русский",
+      english: "Английский",
+      french: "Французский",
+      german: "Немецкий",
+      chinese: "Китайский",
+    },
   },
   projectPages: {
     csaa: {

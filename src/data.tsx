@@ -1,6 +1,6 @@
-import { ERoute } from "./utils/bridge";
+import { ELanguage, ERoute } from "./utils/bridge";
 import { ITable } from "./components/Table";
-import { getStarsMarkup } from "./utils/utils";
+import { getStarsMarkup, translations } from "./utils/utils";
 
 export const links: [string, ERoute][] = [
   ["Resume", ERoute.Resume],
@@ -407,10 +407,10 @@ export const skills: ITable = [
   ],
 ];
 
-export const languages: ITable = [
+export const getLanguages = (language: ELanguage): ITable => [
   [
     {
-      description: "Russian",
+      description: translations[language].profilePage.languages.russian,
     },
     {
       description: getStarsMarkup(5),
@@ -418,7 +418,7 @@ export const languages: ITable = [
   ],
   [
     {
-      description: "English",
+      description: translations[language].profilePage.languages.english,
     },
     {
       description: getStarsMarkup(5),
@@ -426,7 +426,7 @@ export const languages: ITable = [
   ],
   [
     {
-      description: "French",
+      description: translations[language].profilePage.languages.french,
     },
     {
       description: getStarsMarkup(4),
@@ -434,7 +434,7 @@ export const languages: ITable = [
   ],
   [
     {
-      description: "German",
+      description: translations[language].profilePage.languages.german,
     },
     {
       description: getStarsMarkup(4),
@@ -442,7 +442,7 @@ export const languages: ITable = [
   ],
   [
     {
-      description: "Chinese",
+      description: translations[language].profilePage.languages.chinese,
     },
     {
       description: getStarsMarkup(3),
@@ -450,167 +450,103 @@ export const languages: ITable = [
   ],
 ];
 
-export const career: ITable = [
+export const getCareer = (language: ELanguage): ITable => [
   [
     {
-      title: "Staff Software Engineer",
+      title:
+        translations[language].profilePage.experience.list[0].list[0].title,
       description: (
         <>
-          <p>AAA Insurance</p>
-          <p>November 2020 - June 2022</p>
+          <p>
+            {
+              translations[language].profilePage.experience.list[0].list[0]
+                .company
+            }
+          </p>
+          <p>
+            {
+              translations[language].profilePage.experience.list[0].list[0]
+                .description
+            }
+          </p>
         </>
       ),
     },
     {
       description: (
         <>
-          <b>Responsibilities</b>
-          <ul>
-            <li>Create and maintain a custom insurance quote appliaction</li>
-            <li>
-              Create a React UI kit according to the company's design system
-            </li>
-          </ul>
-          <b>Achievements</b>
-          <ul>
-            <li>
-              Successfully communicated technical details to business,
-              development and QA teams
-            </li>
-            <li>Successfull implemented major features</li>
-            <li>
-              Carefully followed UI design specifications to ensure quality
-            </li>
-            <li>Significiantly improved test coverage</li>
-            <li>
-              Influenced important architectural decisions that proved reliable
-            </li>
-            <li>Demonstrated reliable performance across sprints</li>
-          </ul>
-          <b>Technical Details</b>
-          <ul>
-            <li>
-              Utilized <b>React with Hooks</b>
-            </li>
-            <li>
-              Improved maintainability by using <b>TypeScript</b> and{" "}
-              <b>Unit Test</b> practices
-            </li>
-            <li>
-              Integrated features with the <b>AWS</b> backend
-            </li>
-            <li>
-              Utilized best practices to optimize appliaction performance using{" "}
-              <b>caching</b> and <b>Service Workers</b>
-            </li>
-            <li>
-              Set up and utilized process automation (<b>GitHub workflows</b>,{" "}
-              <b>Git hooks</b>, <b>AWS CI Pipeline</b>)
-            </li>
-            <li>
-              Verified <b>accessibility</b> with <b>UsableNet AQA</b>
-            </li>
-          </ul>
+          {translations[
+            language
+          ].profilePage.experience.list[0].list[0].list?.map(
+            ({ title, list }) => (
+              <>
+                <b>{title}</b>
+                <ul>
+                  {list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )
+          )}
         </>
       ),
     },
   ],
   [
     {
-      title: "React Developer (Contract)",
+      title:
+        translations[language].profilePage.experience.list[0].list[1].title,
       description: (
         <>
-          <p>Discount Tire</p>
-          <p>March 2020 - May 2020</p>
+          <p>
+            {
+              translations[language].profilePage.experience.list[0].list[1]
+                .company
+            }
+          </p>
+          <p>
+            {
+              translations[language].profilePage.experience.list[0].list[1]
+                .description
+            }
+          </p>
         </>
       ),
     },
     {
       description: (
         <>
-          <b>Responsibilities</b>
-          <ul>
-            <li>Assist in the migration of the main appliaction to React</li>
-            <li>Improve test coverage</li>
-            <li>Participate in architectural decision making process</li>
-          </ul>
-          <b>Achievements</b>
-          <ul>
-            <li>
-              Successfully communicated technical details to business,
-              development and QA teams
-            </li>
-            <li>Successfull implemented major features</li>
-            <li>
-              Carefully followed UI design specifications to ensure quality
-            </li>
-            <li>Significiantly improved test coverage</li>
-            <li>
-              Influenced important architectural decisions that proved reliable
-            </li>
-            <li>Demonstrated reliable performance across sprints</li>
-          </ul>
-          <b>Technical Details</b>
-          <ul>
-            <li>
-              Utilized <b>React with Hooks</b>
-            </li>
-            <li>
-              Improved maintainability by using <b>TypeScript</b> and{" "}
-              <b>Unit Test</b> practices
-            </li>
-            <li>
-              Integrated features with the <b>AWS</b> backend
-            </li>
-            <li>
-              Utilized best practices to optimize appliaction performance using{" "}
-              <b>caching</b> and <b>Service Workers</b>
-            </li>
-            <li>
-              Set up and utilized process automation (<b>GitHub workflows</b>,{" "}
-              <b>Git hooks</b>, <b>AWS CI Pipeline</b>)
-            </li>
-            <li>
-              Verified <b>accessibility</b> with <b>UsableNet AQA</b>
-            </li>
-          </ul>
+          {translations[
+            language
+          ].profilePage.experience.list[0].list[0].list?.map(
+            ({ title, list }) => (
+              <>
+                <b>{title}</b>
+                <ul>
+                  {list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )
+          )}
         </>
       ),
     },
   ],
 ];
 
-export const education: ITable = [
-  [
-    {
-      title: "Arizona State University",
-      description: "December 2020 - Present, GPA 4.0",
-    },
-    {
-      title: "Master's in Computer Science",
-      description:
-        "Courses: Introduction to Deep Learning in Visual Computing, Statistical Machine Learning, Inofrmation Assurance and Security, Knowledge Representation and Reasoning",
-    },
-  ],
-  [
-    {
-      title: "University of Colorado at Boulder",
-      description: "August 2013 - December 2015, GPA 3.9",
-    },
-    {
-      title: "Bachelor's in Computer Science",
-      description:
-        "Courses: Algorithms, Principles of Programming Languages, Operating Systems, Special Topics: Big Data",
-    },
-  ],
-  [
-    {
-      title: "University of Colorado at Boulder",
-      description: "August 2010 - December 2013, GPA 3.5",
-    },
-    {
-      title: "Bachelor's in Molecular Biology",
-      description: "Courses:   Genetics, Developmental Biology, Stem Cells",
-    },
-  ],
-];
+export const getEducation = (language): ITable =>
+  translations[language].profilePage.experience.list[1].list.map(
+    ({ title, description, list }) => [
+      {
+        title,
+        description,
+      },
+      {
+        title: list[0].title,
+        description: list[0].list,
+      },
+    ]
+  );
