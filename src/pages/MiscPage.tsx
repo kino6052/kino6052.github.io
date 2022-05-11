@@ -1,5 +1,8 @@
+import React from "react";
 import styled from "styled-components";
 import { CardContainer, ICard } from "../components/CardContainer";
+import { ELanguage } from "../utils/bridge";
+import { translations } from "../utils/utils";
 
 const other: ICard[] = [
   {
@@ -55,141 +58,89 @@ const machineLearningBlog: ICard[] = [
   },
 ];
 
-export const MiscPage = () => (
+export const MiscPage: React.FC<
+  React.InputHTMLAttributes<unknown> & { language: ELanguage }
+> = ({ language }) => (
   <>
     <section className="container">
-      <h1>Misc</h1>
-      <h2>Blog</h2>
-      <p>
-        I enjoy writing articles about various topics. My favorite topics are
-        philosophy and programming. Usually, the motivation when I write an
-        article is to use the process to assist me in learning and thinking, as
-        it is much easier to get a better understanding of a particular topic
-        when you try to explain it to someone. Even if it is a rubber duck,
-        which technically makes me a practicioner of the "rubber duck debugging"
-        methodology. I also use it as a way to keep memories of how my thinking
-        process changes over time, as well as to kindle a conversation with
-        those who are kind enough to read it.
-      </p>
+      <h1>{translations[language].misc.title}</h1>
+      <h2>{translations[language].misc.sections[0].title}</h2>
+      <p>{translations[language].misc.sections[0].description[0]}</p>
       <br />
-      <p>Here are a few articles I would like to share.</p>
+      <p>{translations[language].misc.sections[0].description[1]}</p>
       <br />
-      <h2>Web Development</h2>
+      <h2>{translations[language].misc.sections[1].title}</h2>
       <br />
       <CardContainer cards={frontEndBlog} />
       <br />
-      <h2>Machine Learning</h2>
+      <h2>{translations[language].misc.sections[2].title}</h2>
       <br />
       <CardContainer cards={machineLearningBlog} />
       <br />
       <br />
       <br />
-      <h2>Other</h2>
-      <p>
-        There are a few items that I find relevant to share here as they provide
-        extra details that could help to better tell my story.
-      </p>
+      <h2>{translations[language].misc.sections[3].title}</h2>
+      <p>{translations[language].misc.sections[3].description[0]}</p>
       <br />
       <p>
         <a href="https://soshace.com/aboutus" target="_blank" rel="noreferrer">
-          Soshace freelancer agency
+          {translations[language].misc.sections[3].link}
         </a>{" "}
-        wanted to interview me and share my story of becoming a successful
-        freelance developer on their platform, and I have gladly taken up on
-        this opportunity. Here is the resulting article:
+        {translations[language].misc.sections[3].description[1]}
       </p>
       <br />
       <CardContainer cards={other} />
       <br />
       <br />
-      <h2>Interests</h2>
-      <p>
-        I believe that curiosity is one of the traits a good problem-solver
-        needs to possess as it encourages exploration that is vital when solving
-        problems. I find that these various interests have only been helping me
-        in this regard.
-      </p>
+      <h2>{translations[language].misc.sections[4].title}</h2>
+      <p>{translations[language].misc.sections[4].description[0]}</p>
       <br />
-      <h3>Languages</h3>
-      <p>
-        There are a very few things that could compare in their ability to
-        broaden one's horizons as much as language learning does. The may lesson
-        is that it is through play and learning from mistakes you organically
-        get better and keep your motivation.
-      </p>
+      <h3>{translations[language].misc.sections[4].description[1][0]}</h3>
+      <p>{translations[language].misc.sections[4].description[1][1]}</p>
       <br />
-      <h3>Philosophy</h3>
-      <p>
-        Learning languages also helps in becoming more familiar with
-        abstractions and abstract thinking that is the crucial for successful
-        problem solving. There are no fields of knowledge more abstract than
-        logic and grammar. They are both related to language. The deeper in
-        abstractions you go, the more fun things become.
-      </p>
+      <h3>{translations[language].misc.sections[4].description[2][0]}</h3>
+      <p>{translations[language].misc.sections[4].description[2][1]}</p>
       <br />
-      <p>
-        On the more practical side, I practice the way of minimalism, or trying
-        to keep my attention on what's necessary and sufficient in a given
-        circumstance. If something isn't necesary in a given circumstance, it
-        usually doesn't get much of my attention or energy.
-      </p>
+      <p>{translations[language].misc.sections[4].description[2][2]}</p>
       <br />
-      <h3>Music</h3>
-      <p>
-        My brother and I have been playing off and on in a tiny band together.
-        It taught me that creative collaboration takes a lot of energy, and that
-        you have to learn to make sure that you can practice a lot on your own
-        before doing something meaningful as a group.
-      </p>
+      <h3>{translations[language].misc.sections[4].description[3][0]}</h3>
+      <p>{translations[language].misc.sections[4].description[3][1]}</p>
       <a
         href="https://soundcloud.com/kirill-novik"
         target="_blank"
         rel="noreferrer"
       >
-        Some of our tracks can be found here.
+        {translations[language].misc.sections[4].description[3][2]}
       </a>
       <br />
-      <h3>Mathematics</h3>
-      <p>
-        Mathematics is of interest to me as part of the broader study of
-        philosophy. It is the most obvious field where you can build more
-        complex knowledge from a small set of foundational pieces. It is my
-        passion to build ontologies to store my knowledge.
-      </p>
+      <h3>{translations[language].misc.sections[4].description?.[4][0]}</h3>
+      <p>{translations[language].misc.sections[4].description?.[4][1][0]}</p>
       <br />
       <p>
-        I have also undertaken a very interesting{" "}
+        {translations[language].misc.sections[4].description?.[4][1][1][0]}{" "}
         <a
           href="https://medium.com/math-simplified/twin-prime-conjecture-proof-ef4b5c2c65e0"
           target="_blank"
           rel="noreferrer"
         >
-          journey reasoning about the nature of primes and twin primes
+          {translations[language].misc.sections[4].description?.[4][1][1][1]}
         </a>
         .
       </p>
       <br />
-      <h3>Workout</h3>
-      <p>
-        As part of minimalist approach, I find that calisthenics is extremely
-        powerful in this regard. With the minimum set of equipment one can
-        perform a comprehensive training routine.
-      </p>
+      <h3>{translations[language].misc.sections[4].description?.[5][0]}</h3>
+      <p>{translations[language].misc.sections[4].description?.[5][1]}</p>
       <br />
-      <h3>Self-sufficient Living</h3>
+      <h3>{translations[language].misc.sections[4].description?.[6][0]}</h3>
       <p>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://www.canva.com/design/DADq1XGg6M8/0aNlIyfMxS4a1HGAoa40uw/view?utm_content=DADq1XGg6M8&utm_campaign=designshare&utm_medium=link&utm_source=postdownload#1"
         >
-          Here is the ebook
+          {translations[language].misc.sections[4].description?.[6][1][0]}
         </a>{" "}
-        I wrote for my non-profit company Aeroaquaponic. It summarizes the
-        results of my philosophical musings on the topics of meaning of life and
-        happiness. It describes a minimalist approach to life that isn't only
-        beneficial to the practicioner but also to the larger context.
-        Self-sufficiency is my long-term goal.
+        {translations[language].misc.sections[4].description?.[6][1][1]}
       </p>
       <br />
       <br />

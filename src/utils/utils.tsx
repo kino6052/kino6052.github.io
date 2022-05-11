@@ -295,6 +295,118 @@ const translationEnglish = {
       snippet: "WebGL and Canvas Based Portfolio.",
     },
   },
+  misc: {
+    title: "Misc",
+    sections: [
+      {
+        title: "Blog",
+        description: [
+          `I enjoy writing articles about various topics. My favorite topics are philosophy and programming. Usually, the motivation when I write an article is to use the process to assist me in learning and thinking, as it is much easier to get a better understanding of a particular topic when you try to explain it to someone. Even if it is a rubber duck, which technically makes me a practitioner of the "rubber duck debugging" methodology. I also use it as a way to keep memories of how my thinking process changes over time, as well as to kindle a conversation with those who are kind enough to read it.`,
+          "Here are a few articles I would like to share.",
+        ],
+      },
+      {
+        title: "Web Development",
+        projects: [
+          {
+            title: "React + RxJS",
+            subtitle: "How React is meant to be",
+            snippet: "My Opinion on State Management.",
+          },
+          {
+            title: "React TDD",
+            subtitle: "Test-driven Development in React",
+            snippet: "Opinion on TDD in React",
+          },
+          {
+            title: "I Don't Like GraphQL",
+            subtitle: "So How about JSON and TS?",
+            snippet: "Opinion on Declarative Data Access",
+          },
+          {
+            title: "My Experience with WebRTC",
+            subtitle: "Some Lessons Learned ",
+            snippet: "Sharing Some Thoughts on RTC.",
+          },
+        ],
+      },
+      {
+        title: "Machine Learning",
+        projects: [
+          {
+            title: "Dissecting My Confusion",
+            subtitle: "Support-vector Machine",
+            snippet: "Musings on the Concept of SVM.",
+          },
+        ],
+      },
+      {
+        title: "Other",
+        description: [
+          "There are a few items that I find relevant to share here as they provide extra details that could help to better tell my story.",
+          "<> wanted to interview me and share my story of becoming a successful freelance developer on their platform, and I have gladly taken up on this opportunity. Here is the resulting article:",
+        ],
+        link: "Soshace freelancer agency",
+        projects: [
+          {
+            title: "Interview Article",
+            subtitle: "Level Up Coding Publication",
+            snippet: "Interviewed by Marina Vorontsova",
+          },
+        ],
+      },
+      {
+        title: "Interests",
+        description: [
+          "I believe that curiosity is one of the traits a good problem-solver needs to possess as it encourages exploration that is vital when solving problems. I find that these various interests have only been helping me in this regard.",
+          [
+            "Languages",
+            "There are a very few things that could compare in their ability to broaden one's horizons as much as language learning does. The may lesson is that it is through play and learning from mistakes you organically get better and keep your motivation.",
+          ],
+          [
+            "Philosophy",
+            [
+              "Learning languages also helps in becoming more familiar with abstractions and abstract thinking that is the crucial for successful problem solving. There are no fields of knowledge more abstract than logic and grammar. They are both related to language. The deeper in abstractions you go, the more fun things become.",
+              "On the more practical side, I practice the way of minimalism, or trying to keep my attention on what's necessary and sufficient in a given circumstance. If something isn't necessary in a given circumstance, it usually doesn't get much of my attention or energy.",
+            ],
+          ],
+          [
+            "Music",
+            [
+              "My brother and I have been playing off and on in a tiny band together. It taught me that creative collaboration takes a lot of energy, and that you have to learn to make sure that you can practice a lot on your own before doing something meaningful as a group.",
+              "Some of our tracks can be found here.",
+            ],
+          ],
+          [
+            "Mathematics",
+            [
+              "Mathematics is of interest to me as part of the broader study of philosophy. It is the most obvious field where you can build more complex knowledge from a small set of foundational pieces. It is my passion to build ontologies to store my knowledge.",
+              [
+                "I have also undertaken a very interesting <>.",
+                "journey reasoning about the nature of primes and twin primes.",
+              ],
+            ],
+          ],
+          [
+            "Workout",
+            [
+              "As part of minimalist approach, I find that calisthenics is extremely powerful in this regard. With the minimum set of equipment one can perform a comprehensive training routine.",
+            ],
+          ],
+          [
+            "Self-sufficient Living",
+            [
+              "As part of minimalist approach, I find that calisthenics is extremely powerful in this regard. With the minimum set of equipment one can perform a comprehensive training routine.",
+              [
+                "Here is the ebook I wrote for my non-profit company Aeroaquaponic.",
+                "It summarizes the results of my philosophical musings on the topics of meaning of life and happiness. It describes a minimalist approach to life that isn't only beneficial to the practitioner but also to the larger context. Self-sufficiency is my long-term goal.",
+              ],
+            ],
+          ],
+        ],
+      },
+    ],
+  },
   contactPage: {
     title: "Contact",
     subtitle: "Let's Stay in Touch",
@@ -601,6 +713,118 @@ const translationRussian: TTranslation = {
       snippet: "Портфолио на основе WebGL и Canvas.",
     },
   },
+  misc: {
+    title: "Прочее",
+    sections: [
+      {
+        title: "Блог",
+        description: [
+          `Мне нравится писать статьи на разные темы. Мои любимые темы — философия и программирование. Обычно мотивация, когда я пишу статью, заключается в том, чтобы использовать этот процесс, чтобы помочь мне учиться и думать, поскольку гораздо легче лучше понять конкретную тему, когда вы пытаетесь объяснить ее кому-то. Даже если это резиновый утенок, что технически делает меня практиком методологии «отладки резиновой утенка». Я также использую его как способ сохранить воспоминания о том, как со временем меняется мой мыслительный процесс, а также для того, чтобы завязать разговор с теми, кто достаточно любезен, чтобы прочитать его.`,
+          "Вот несколько статей, которыми я хотел бы поделиться.",
+        ],
+      },
+      {
+        title: "Веб Разработка",
+        projects: [
+          {
+            title: "React + RxJS",
+            subtitle: "Каким должен быть React",
+            snippet: "Мое мнение об управлении состоянием.",
+          },
+          {
+            title: "React TDD",
+            subtitle: "Разработка через тестирование в React",
+            snippet: "Мнение о TDD в React",
+          },
+          {
+            title: "Мне не нравится GraphQL",
+            subtitle: "Итак, как насчет JSON и TS?",
+            snippet: "Мнение о декларативном доступе к данным.",
+          },
+          {
+            title: "Мой опыт работы с WebRTC",
+            subtitle: "Некоторые извлеченные уроки",
+            snippet: "Делимся некоторыми мыслями о RTC.",
+          },
+        ],
+      },
+      {
+        title: "Машинное обучение",
+        projects: [
+          {
+            title: "Анализируя мое замешательство",
+            subtitle: "SVM",
+            snippet: "Размышления о концепции SVM.",
+          },
+        ],
+      },
+      {
+        title: "Прочее",
+        description: [
+          "Есть несколько моментов, которыми я считаю уместным поделиться здесь, поскольку они содержат дополнительные детали, которые могут помочь лучше рассказать мою историю.",
+          "<> хотели взять у меня интервью и поделиться своей историей о том, как стать успешным внештатным разработчиком на их платформе, и я с радостью воспользовался этой возможностью. Вот получившаяся статья:",
+        ],
+        link: "Фрилансерское агентство Soshace",
+        projects: [
+          {
+            title: "Интервью Статья",
+            subtitle: "Level Up Coding Публикация",
+            snippet: "Интервью Марины Воронцовы",
+          },
+        ],
+      },
+      {
+        title: "Интересы",
+        description: [
+          "Я считаю, что любопытство — это одна из черт, которыми должен обладать хороший специалист по решению проблем, поскольку оно побуждает к исследованиям, которые жизненно важны при решении проблем. Я нахожу, что эти различные интересы только помогали мне в этом отношении.",
+          [
+            "Языки",
+            "Есть очень немного вещей, которые могли бы сравниться по своей способности расширять кругозор так, как это делает изучение языка. Майский урок заключается в том, что именно играя и учась на ошибках, вы естественным образом становитесь лучше и сохраняете свою мотивацию.",
+          ],
+          [
+            "Философия",
+            [
+              "Изучение языков также помогает лучше познакомиться с абстракциями и абстрактным мышлением, что имеет решающее значение для успешного решения проблем. Нет более абстрактных областей знаний, чем логика и грамматика. Оба они связаны с языком. Чем глубже вы погружаетесь в абстракции, тем веселее становится.",
+              "С более практической точки зрения я практикую минимализм, или стараюсь сосредоточить свое внимание на том, что необходимо и достаточно в данных обстоятельствах. Если что-то не является необходимым в данных обстоятельствах, это обычно не привлекает много моего внимания или энергии.",
+            ],
+          ],
+          [
+            "Музыка",
+            [
+              "Мы с братом время от времени играем в крошечной группе. Это научило меня тому, что творческое сотрудничество требует много энергии и что вы должны научиться много практиковаться самостоятельно, прежде чем делать что-то значимое в группе.",
+              "Некоторые из наших треков можно найти здесь.",
+            ],
+          ],
+          [
+            "Математика",
+            [
+              "Математика представляет для меня интерес как часть более широкого изучения философии. Это наиболее очевидная область, в которой вы можете построить более сложные знания из небольшого набора основополагающих элементов. Моя страсть — создавать онтологии для хранения своих знаний.",
+              [
+                "Я также предпринял очень интересное <>.",
+                "путешествие, рассуждая о природе простых чисел и простых чисел-близнецов.",
+              ],
+            ],
+          ],
+          [
+            "Физическая Культура",
+            [
+              "Как часть минималистского подхода, я считаю, что художественная гимнастика чрезвычайно эффективна в этом отношении. С минимальным набором оборудования можно выполнять комплексную тренировку.",
+            ],
+          ],
+          [
+            "Самодостаточная жизнь",
+            [
+              "Как часть минималистского подхода, я считаю, что художественная гимнастика чрезвычайно эффективна в этом отношении. С минимальным набором оборудования можно выполнять комплексную тренировку.",
+              [
+                "Вот электронная книга, которую я написал для своей некоммерческой компании Aeroaquaponic.",
+                "В ней подводятся итоги моих философских размышлений на темы смысла жизни и счастья. Он описывает минималистский подход к жизни, который полезен не только практикующему, но и в более широком контексте. Самодостаточность — моя долгосрочная цель.",
+              ],
+            ],
+          ],
+        ],
+      },
+    ],
+  },
   contactPage: {
     title: "Контакт",
     subtitle: "Будем на Связи",
@@ -894,6 +1118,118 @@ const translationChinese: TTranslation = {
       subtitle: "个人投资组合",
       snippet: "基于 WebGL 和 Canvas 的产品组合。",
     },
+  },
+  misc: {
+    title: "其他",
+    sections: [
+      {
+        title: "博客",
+        description: [
+          `我喜欢写各种主题的文章。我最喜欢的主题是哲学和编程。通常我写文章的动机是使用这个过程来帮助我学习和思考，因为当你试图向某人解释某个特定主题时，它会更容易更好地理解它。即使是橡皮鸭，这在技术上使我成为“橡皮鸭调试”方法的实践者。我还用它作为一种方式来记住我的思维过程如何随着时间的推移而变化，并与那些愿意阅读它的人进行对话。`,
+          "这里有一些我想分享的文章。",
+        ],
+      },
+      {
+        title: "Web开发",
+        projects: [
+          {
+            title: "React + RxJS",
+            subtitle: "React 应该如何？",
+            snippet: "我对状态管理的看法。",
+          },
+          {
+            title: "React TDD",
+            subtitle: "React 中的测试驱动开发",
+            snippet: "关于 React 中的 TDD 的看法",
+          },
+          {
+            title: "我不喜欢 GraphQL",
+            subtitle: "那么 JSON 和 TS 呢？",
+            snippet: "关于声明性数据访问的意见。",
+          },
+          {
+            title: "我对 WebRTC 的体验",
+            subtitle: "一些经验教训",
+            snippet: "分享一些关于 RTC 的想法。",
+          },
+        ],
+      },
+      {
+        title: "机器学习",
+        projects: [
+          {
+            title: "Анализируя мое замешательство",
+            subtitle: "SVM",
+            snippet: "对 SVM 概念的思考。",
+          },
+        ],
+      },
+      {
+        title: "其他",
+        description: [
+          "我觉得有几点适合在这里分享，因为它们包含可能有助于更好地讲述我的故事的更多细节。.",
+          "想采访我并分享他们关于如何在他们的平台上成为一名成功的自由开发者的故事，我很高兴地抓住了这个机会。",
+        ],
+        link: "自由职业者Soshace",
+        projects: [
+          {
+            title: "采访文章",
+            subtitle: "Level Up Coding 出版物",
+            snippet: "采访玛丽娜·沃龙佐娃",
+          },
+        ],
+      },
+      {
+        title: "兴趣",
+        description: [
+          "我相信好奇心是一个好的问题解决者应该具备的特质之一，因为它鼓励探索，这对于解决问题至关重要。 我发现这些不同的兴趣只在这方面帮助了我。",
+          [
+            "语言",
+            "很少有东西能比得上语言学习方式拓宽视野的能力。 梅的教训是，通过从错误中学习和学习，你自然会变得更好并保持动力。",
+          ],
+          [
+            "哲学",
+            [
+              "学习语言还可以帮助您更加熟悉抽象和抽象思维，这对于成功解决问题至关重要。 没有比逻辑和语法更抽象的知识领域了。 两者都与语言有关。 你越深入抽象，它就会变得越有趣。",
+              "从更实际的角度来看，我练习极简主义，或者尝试将注意力集中在给定情况下什么是必要和充分的。 如果在这种情况下不需要某些东西，它通常不会吸引我太多的注意力或精力。",
+            ],
+          ],
+          [
+            "音乐",
+            [
+              "我哥哥和我不时在一个小乐队里演奏。 它告诉我，创造性的合作需要大量的精力，在团队中做任何有意义的事情之前，你必须学会​​自己练习很多。",
+              "我们的一些曲目可以在这里找到。",
+            ],
+          ],
+          [
+            "数学",
+            [
+              "作为更广泛的哲学研究的一部分，我对数学很感兴趣。 这是最明显的领域，您可以从一小组构建块中构建更复杂的知识。 我的热情是创建本体来存储我的知识。",
+              [
+                "我还经历了一段非常有趣的 <>.",
+                "旅程，争论素数和孪生素数的性质。",
+              ],
+            ],
+          ],
+          [
+            "体育",
+            [
+              "作为极简主义方法的一部分，我发现健美操在这方面非常有效。 只需最少的设备，您就可以进行复杂的锻炼。",
+            ],
+          ],
+          [
+            "自给自足的生活",
+            [
+              "作为极简主义方法的一部分，我发现健美操在这方面非常有效。 只需最少的设备，您就可以进行复杂的锻炼。",
+              [
+                "这是我为我的非营利公司 Aeroaquaponic 写的电子书。",
+                "它总结了我对生命和幸福意义的哲学思考。 他描述了一种极简主义的生活方式，不仅对从业者有用，而且在更广泛的背景下也有用。 自给自足是我的长期目标。",
+              ],
+            ],
+          ],
+        ],
+      },
+    ],
   },
   contactPage: {
     title: "联络",

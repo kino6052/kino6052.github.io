@@ -49,7 +49,7 @@ export const App = styled(
         {!currentProject && route === ERoute.Projects && (
           <ProjectPage language={language} />
         )}
-        {route === ERoute.Misc && <MiscPage />}
+        {route === ERoute.Misc && <MiscPage language={language} />}
         {route === ERoute.Contact && (
           <ContactPage
             hasSubmitted={hasSubmitted}
