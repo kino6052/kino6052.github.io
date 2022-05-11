@@ -53,6 +53,7 @@ export const App = styled(
         {route === ERoute.Contact && (
           <ContactPage
             hasSubmitted={hasSubmitted}
+            language={language}
             state={{
               email,
               firstName,

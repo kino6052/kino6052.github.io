@@ -1,9 +1,9 @@
 import React from "react";
 import { filter } from "rxjs";
 import styled from "styled-components";
-import { getCurrentState, Id, setState } from "../utils/bridge";
+import { ELanguage, getCurrentState, Id, setState } from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
-import { WIDTH } from "../utils/utils";
+import { translations, WIDTH } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === "submit-question")
@@ -140,9 +140,11 @@ export const ContactPage = styled(
   ({
     className,
     hasSubmitted,
+    language,
     state: { firstName, lastName, subject, email, message },
   }: React.InputHTMLAttributes<unknown> & {
     hasSubmitted: boolean;
+    language: ELanguage;
     state: {
       firstName: string;
       lastName: string;
@@ -153,23 +155,18 @@ export const ContactPage = styled(
   }) => (
     <>
       <section className={`${className} container`}>
-        <h1>Contact</h1>
-        <h2>Let's Stay in Touch</h2>
+        <h1>{translations[language].contactPage.title}</h1>
+        <h2>{translations[language].contactPage.subtitle}</h2>
         <br />
         {!hasSubmitted && (
           <>
-            <p>
-              Thanks for stopping by! Please, feel free to reach out to me
-              regarding opportunities or should you have any questions. I'm
-              looking forward to connecting and collaborating with creative
-              people.
-            </p>
+            <p>{translations[language].contactPage.description}</p>
             <br />
             <form>
               <div className="field-container">
                 <EventWrapper id={Id.FirstNameInput}>
                   <Input
-                    label="First Name"
+                    label={translations[language].contactPage.form.firstName}
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
@@ -179,7 +176,7 @@ export const ContactPage = styled(
                 </EventWrapper>
                 <EventWrapper id={Id.LastNameInput}>
                   <Input
-                    label="Last Name"
+                    label={translations[language].contactPage.form.lastName}
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
@@ -191,7 +188,7 @@ export const ContactPage = styled(
               <div className="field-container">
                 <EventWrapper id={Id.EmailInput}>
                   <Input
-                    label="Email Addres"
+                    label={translations[language].contactPage.form.email}
                     name="email"
                     type="email"
                     autoComplete="email"
@@ -201,7 +198,7 @@ export const ContactPage = styled(
                 </EventWrapper>
                 <EventWrapper id={Id.SubjectInput}>
                   <Input
-                    label="Subject"
+                    label={translations[language].contactPage.form.subject}
                     name="subject"
                     type="text"
                     required
@@ -212,7 +209,7 @@ export const ContactPage = styled(
               <div className="field-container">
                 <EventWrapper id={Id.MessageInput}>
                   <Input
-                    label="Body"
+                    label={translations[language].contactPage.form.body}
                     name="body"
                     tag="textarea"
                     type="text"
@@ -232,7 +229,7 @@ export const ContactPage = styled(
                       !(lastName && firstName && email && subject && message)
                     }
                   >
-                    Submit
+                    {translations[language].contactPage.form.submit}
                   </Button>
                 </EventWrapper>
               </div>
@@ -241,7 +238,7 @@ export const ContactPage = styled(
         )}
         {hasSubmitted && (
           <>
-            <h3>Thanks for submitting!</h3>
+            <h3>{translations[language].contactPage.submittedFormMessage}</h3>
           </>
         )}
       </section>

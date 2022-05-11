@@ -295,6 +295,22 @@ const translationEnglish = {
       snippet: "WebGL and Canvas Based Portfolio.",
     },
   },
+  contactPage: {
+    title: "Contact",
+    subtitle: "Let's Stay in Touch",
+    description:
+      "Thanks for stopping by! Please, feel free to reach out to me regarding opportunities or should you have any questions. I'm looking forward to connecting and collaborating with creative people.",
+    submittedFormMessage:
+      "Thank you for your message. I will get back to you shortly!",
+    form: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      subject: "Subject",
+      body: "Message",
+      submit: "Submit",
+    },
+  },
 };
 
 type TTranslation = typeof translationEnglish;
@@ -585,6 +601,22 @@ const translationRussian: TTranslation = {
       snippet: "Портфолио на основе WebGL и Canvas.",
     },
   },
+  contactPage: {
+    title: "Контакт",
+    subtitle: "Будем на Связи",
+    description:
+      "Спасибо, что уделили внимание моему резюме! Обращайтесь ко мне по поводу предложений по работе или если у вас есть какие-либо вопросы. Я с нетерпением жду общения и сотрудничества с творческими людьми.",
+    submittedFormMessage:
+      "Спасибо за ваше сообщение. Я свяжусь с вами в ближайшее время!",
+    form: {
+      firstName: "Имя",
+      lastName: "Фамилия",
+      email: "Адрес Электронной Почты",
+      subject: "Заголовок",
+      body: "Сообщение",
+      submit: "Отправить",
+    },
+  },
 };
 
 const translationChinese: TTranslation = {
@@ -861,6 +893,21 @@ const translationChinese: TTranslation = {
       title: "Pip Boy",
       subtitle: "个人投资组合",
       snippet: "基于 WebGL 和 Canvas 的产品组合。",
+    },
+  },
+  contactPage: {
+    title: "联络",
+    subtitle: "让我们保持联系",
+    description:
+      "感谢您看我的简历！ 联系我获取工作机会或如果您有任何问题。 我期待与有创造力的人交流和合作。",
+    submittedFormMessage: "感谢您的留言。 我会尽快回复您！",
+    form: {
+      firstName: "名字",
+      lastName: "姓",
+      email: "电子邮件地址",
+      subject: "消息的主题",
+      body: "信息",
+      submit: "提交",
     },
   },
 };
