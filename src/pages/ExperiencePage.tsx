@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  career,
-  education,
-  getCareer,
-  getEducation,
-  getLanguages,
-  languages,
-  skills,
-} from "../data";
+import { getCareer, getEducation, getLanguages, getSkills } from "../data";
 import { Table } from "../components/Table";
 import { ELanguage } from "../utils/bridge";
 import { translations } from "../utils/utils";
@@ -31,7 +23,7 @@ export const ExperiencePage: React.FC<
     <br />
     <section className="container">
       <h2>{translations[language].profilePage.experience.list[2].subtitle}</h2>
-      <Table isZebra table={skills} />
+      <Table isZebra table={getSkills(language)} />
     </section>
     <br />
     <br />

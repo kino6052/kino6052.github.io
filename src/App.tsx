@@ -46,7 +46,9 @@ export const App = styled(
         <br />
         <br />
         {currentProject && projectPages[currentProject]}
-        {!currentProject && route === ERoute.Projects && <ProjectPage />}
+        {!currentProject && route === ERoute.Projects && (
+          <ProjectPage language={language} />
+        )}
         {route === ERoute.Misc && <MiscPage />}
         {route === ERoute.Contact && (
           <ContactPage

@@ -12,6 +12,12 @@ export const languageOptions = ["English", "Русский", "中文"];
 export const currentLanguage = languageOptions[2];
 
 const translationEnglish = {
+  menu: {
+    resume: "Résumé",
+    projects: "Projects",
+    misc: "Misc",
+    contact: "Contact",
+  },
   profilePage: {
     name: "Kirill Novik",
     title: "Full-stack Web Developer",
@@ -156,6 +162,7 @@ const translationEnglish = {
         },
         {
           subtitle: "Skills",
+          description: "Technologies",
         },
       ],
     },
@@ -168,10 +175,26 @@ const translationEnglish = {
       chinese: "Chinese",
     },
   },
+  projectsPage: {
+    title: "Projects",
+    sections: [
+      {
+        title: "Commercial Projects",
+        description:
+          "The real-world projects that gave me much experience and were crucial part in my professional development.",
+      },
+      {
+        title: "Student Projects",
+        description:
+          "Here are some projects that make part of my journey of becoming a software engineer.",
+      },
+    ],
+  },
   projectPages: {
     csaa: {
       title: "AAA MyQuote App",
       subtitle: "CSAA Insurance Company",
+      snippet: "Modern App with Great User Experience.",
       paragraph1:
         "Despite the fact that the insurance industry is one of the dullest things on Earth, the insurance quote applications development can be actually pretty fun.",
       paragraph2:
@@ -197,6 +220,7 @@ const translationEnglish = {
     "discount-tire": {
       title: "Online Store",
       subtitle: "Discount Tire",
+      snippet: "Richly featured online store.",
       imageCaption: "Discount Tire Store Page",
       paragraph1:
         "Even though I worked at Discount Tire briefly, I really liked it because, for the first time in my career, I could finally explain to a lay person what it is that I actually do and give them the link to the application.",
@@ -217,6 +241,7 @@ const translationEnglish = {
     "automation-hero": {
       title: "HeroGo",
       subtitle: "RPA Automation Tool",
+      snippet: "Desktop Interaction Automation Project.",
       imageCaption: "Automation Hero Application Screen",
       paragraph1:
         "What made this project unique was that it was my first (and my last) project as a freelancer working remotely. Also, this was my first project creating an RPA platform. Not to mention that the startup was founded by a couple of German entrepreneurs, and, as such, the location of their main office was in Berlin. ",
@@ -226,6 +251,7 @@ const translationEnglish = {
     alphabank: {
       title: "Alphabank for Mid-sized Business",
       subtitle: "Banking Dashboard App",
+      snippet: "Micro front-end App.",
       imageCaption: "Alphabank Dashboard",
       paragraph1:
         "Not only Alphabank is the first fintech company I worked at, but it also was the very first tech company I worked at in Russia.",
@@ -241,6 +267,7 @@ const translationEnglish = {
     isonas: {
       title: "Pure Access",
       subtitle: "Dashboard for Access Control Management",
+      snippet: "IP Enabled Access Control.",
       imageCaption: "ISONAS Pure Access",
       paragraph1:
         "ISONAS was a startup that was primarily focused on the security systems hardware. ",
@@ -251,10 +278,21 @@ const translationEnglish = {
     },
     medtronic: {
       title: "Vital Sync",
-      subtitle: "Ventilator Monitoring Dashboard",
+      subtitle: "Monitoring Dashboard",
+      snippet: "Ventilator Monitoring App.",
       imageCaption: "Vital Sync",
       paragraph1:
         "As an intern at Medtronic, my responsibility was to create a thin web client for the patient monitoring application using .NET MVC4 suite.",
+    },
+    picturesOfYou: {
+      title: "Pictures of You",
+      subtitle: "Computer Graphics",
+      snippet: "WebGL Music Video Visualization.",
+    },
+    pipBoy: {
+      title: "Pip Boy",
+      subtitle: "Personal Portfolio",
+      snippet: "WebGL and Canvas Based Portfolio.",
     },
   },
 };
@@ -262,6 +300,12 @@ const translationEnglish = {
 type TTranslation = typeof translationEnglish;
 
 const translationRussian: TTranslation = {
+  menu: {
+    resume: "Резюме",
+    projects: "Проекты",
+    misc: "Прочее",
+    contact: "Контакт",
+  },
   profilePage: {
     name: "Кирилл Новик",
     title: "Фул-стэк Разработчик",
@@ -407,6 +451,7 @@ const translationRussian: TTranslation = {
         },
         {
           subtitle: "Навыки",
+          description: "Технологии",
         },
       ],
     },
@@ -419,10 +464,27 @@ const translationRussian: TTranslation = {
       chinese: "Китайский",
     },
   },
+  projectsPage: {
+    title: "Проекты",
+    sections: [
+      {
+        title: "Коммерческие Проекты",
+        description:
+          "Реальные проекты, которые дали мне большой опыт и сыграли решающую роль в моем профессиональном развитии.",
+      },
+      {
+        title: "Студенческие Проекты",
+        description:
+          "Вот несколько проектов, которые являются частью моего пути становления инженером-программистом.",
+      },
+    ],
+  },
   projectPages: {
     csaa: {
       title: "Приложение AAA MyQuote",
       subtitle: "Страховая Компания CSAA",
+      snippet:
+        "Современное приложение с отличным пользовательским интерфейсом.",
       paragraph1:
         "Несмотря на то, что страховая отрасль — одна из самых скучных вещей на Земле, разработка приложений для расчета страховых котировок может быть довольно увлекательной.",
       paragraph2:
@@ -448,6 +510,7 @@ const translationRussian: TTranslation = {
     "discount-tire": {
       title: "Интернет-магазин",
       subtitle: "Discount Tire",
+      snippet: "Многофункциональный интернет-магазин.",
       imageCaption: "Discount Tire Страница Магазина",
       paragraph1:
         "Несмотря на то, что я недолго работал в Discount Tire, мне это очень понравилось, потому что впервые в моей карьере я смог, наконец, объяснить непрофессионалу, чем я на самом деле занимаюсь, и дать ему ссылку на приложение.",
@@ -468,6 +531,7 @@ const translationRussian: TTranslation = {
     "automation-hero": {
       title: "HeroGo",
       subtitle: "RPA Инструмент автоматизации",
+      snippet: "Проект автоматизации взаимодействия с рабочим столом.",
       imageCaption: "Экран приложения Automation Hero",
       paragraph1:
         "Уникальность этого проекта заключалась в том, что это был мой первый (и последний) проект в качестве фрилансера, работающего удаленно. Также это был мой первый проект по созданию платформы RPA. Не говоря уже о том, что стартап был основан парой немецких предпринимателей, поэтому местонахождение их главного офиса находилось в Берлине.",
@@ -477,6 +541,7 @@ const translationRussian: TTranslation = {
     alphabank: {
       title: "Альфабанк для среднего бизнеса",
       subtitle: "Приложение банковской панели",
+      snippet: "Микро интерфейсное приложение.",
       imageCaption: "Личный кабинет Альфабанка",
       paragraph1:
         "Альфабанк — не только первая финтех-компания, в которой я работал, но и самая первая технологическая компания, в которой я работал в России.",
@@ -492,6 +557,7 @@ const translationRussian: TTranslation = {
     isonas: {
       title: "Pure Access",
       subtitle: "Панель управления доступом",
+      snippet: "Управление доступом с поддержкой IP.",
       imageCaption: "ISONAS Pure Access",
       paragraph1:
         "ISONAS был стартапом, который в основном занимался аппаратным обеспечением систем безопасности. ",
@@ -503,14 +569,31 @@ const translationRussian: TTranslation = {
     medtronic: {
       title: "Vital Sync",
       subtitle: "Панель мониторинга ИВЛ",
+      snippet: "Приложение для мониторинга вентилятора.",
       imageCaption: "Vital Sync",
       paragraph1:
         "В качестве стажера в Medtronic я отвечал за создание тонкого веб-клиента для приложения для мониторинга пациентов с использованием пакета .NET MVC4.",
+    },
+    picturesOfYou: {
+      title: "Pictures of You",
+      subtitle: "Класс по Компьютерной Графике",
+      snippet: "Визуализация Музыкального Видео при Помощи WebGL.",
+    },
+    pipBoy: {
+      title: "Pip Boy",
+      subtitle: "Персональное Портфолио",
+      snippet: "Портфолио на основе WebGL и Canvas.",
     },
   },
 };
 
 const translationChinese: TTranslation = {
+  menu: {
+    resume: "恢复",
+    projects: "项目",
+    misc: "杂项",
+    contact: "接触",
+  },
   profilePage: {
     name: "Kirill Novik",
     title: "全栈开发人员",
@@ -651,6 +734,7 @@ const translationChinese: TTranslation = {
         },
         {
           subtitle: "技能",
+          description: "技术",
         },
       ],
     },
@@ -663,10 +747,25 @@ const translationChinese: TTranslation = {
       chinese: "汉语",
     },
   },
+  projectsPage: {
+    title: "项目",
+    sections: [
+      {
+        title: "商业项目",
+        description:
+          "现实世界的项目给了我很多经验，并且是我职业发展的关键部分。",
+      },
+      {
+        title: "学生项目",
+        description: "这里有一些项目是我成为软件工程师的一部分。",
+      },
+    ],
+  },
   projectPages: {
     csaa: {
       title: "AAA MyQuote 应用程序",
       subtitle: "CSAA保险公司",
+      snippet: "具有出色用户体验的现代应用程序。",
       paragraph1:
         "尽管保险业是地球上最无聊的事情之一，但保险报价应用程序的开发实际上非常有趣。",
       paragraph2:
@@ -692,6 +791,7 @@ const translationChinese: TTranslation = {
     "discount-tire": {
       title: "网上商城",
       subtitle: "Discount Tire",
+      snippet: "功能丰富的在线商店。",
       imageCaption: "Discount Tire 商店页面",
       paragraph1:
         "尽管我在 Discount Tire 工作过短暂，但我真的很喜欢它，因为这是我职业生涯中的第一次，我终于可以向外行解释我实际在做什么，并给他们应用程序的链接。",
@@ -712,6 +812,7 @@ const translationChinese: TTranslation = {
     "automation-hero": {
       title: "HeroGo",
       subtitle: "RPA 自动化工具",
+      snippet: "桌面交互自动化项目。",
       imageCaption: "Automation Hero 应用程序屏幕",
       paragraph1:
         "这个项目的独特之处在于它是我作为一名远程工作的自由职业者的第一个（也是最后一个）项目。 此外，这是我创建 RPA 平台的第一个项目。 更不用说这家初创公司是由几位德国企业家创立的，因此，他们的主要办公室就在柏林。",
@@ -721,6 +822,7 @@ const translationChinese: TTranslation = {
     alphabank: {
       title: "面向中型企业的 Alphabank",
       subtitle: "银行仪表板应用程序",
+      snippet: "微前端应用。",
       imageCaption: "Alphabank 仪表板",
       paragraph1:
         "Alphabank 不仅是我工作的第一家金融科技公司，也是我在俄罗斯工作的第一家科技公司。",
@@ -734,6 +836,7 @@ const translationChinese: TTranslation = {
     isonas: {
       title: "Pure Access",
       subtitle: "访问控制管理仪表板",
+      snippet: "启用 IP 的访问控制。",
       imageCaption: "ISONAS Pure Access",
       paragraph1: "ISONAS 是一家主要专注于安全系统硬件的初创公司。 ",
       paragraph2:
@@ -744,9 +847,20 @@ const translationChinese: TTranslation = {
     medtronic: {
       title: "Vital Sync",
       subtitle: "呼吸机监控仪表板",
+      snippet: "呼吸机监控应用程序。",
       imageCaption: "Vital Sync",
       paragraph1:
         "作为 Medtronic 的实习生，我的职责是使用 .NET MVC4 套件为患者监测应用程序创建一个瘦 Web 客户端。",
+    },
+    picturesOfYou: {
+      title: "Pictures of You",
+      subtitle: "计算机图形类",
+      snippet: "使用 WebGL 进行音乐视频渲染。",
+    },
+    pipBoy: {
+      title: "Pip Boy",
+      subtitle: "个人投资组合",
+      snippet: "基于 WebGL 和 Canvas 的产品组合。",
     },
   },
 };

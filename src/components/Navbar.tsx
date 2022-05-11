@@ -11,7 +11,7 @@ import {
 } from "../utils/bridge";
 import { EventSubject, EventWrapper } from "../utils/EventWrapper";
 import { getCurrentPathState, getResultingPath } from "../utils/router";
-import { languageOptions, WIDTH, zIndex } from "../utils/utils";
+import { languageOptions, translations, WIDTH, zIndex } from "../utils/utils";
 
 EventSubject.pipe(
   filter(([event, id]) => event === "click" && id === `${Id.RouteChange}`)
@@ -86,10 +86,12 @@ export const Navbar = styled(
         </button>
       </EventWrapper>
       <ul className={props.isOpen ? "open" : "close"}>
-        {props.links.map((link) => (
+        {props.links.map((link, i) => (
           <li className={link[1] === props.selection ? "selected" : ""}>
             <EventWrapper id={`${Id.RouteChange}`} value={`/${link[1]}`}>
-              <a href={`/${link[1]}`}>{link[0]}</a>
+              <a href={`/${link[1]}`}>
+                {Object.entries(translations[props.language].menu)[i][1]}
+              </a>
             </EventWrapper>
           </li>
         ))}

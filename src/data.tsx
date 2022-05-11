@@ -23,10 +23,14 @@ export const tags = [
   "OWASP",
 ];
 
-export const skills: ITable = [
+export const getSkills = (language: ELanguage): ITable => [
   [
     {
-      description: <b>Technologies</b>,
+      description: (
+        <b>
+          {translations[language].profilePage.experience.list[2].description}
+        </b>
+      ),
     },
   ],
   [
