@@ -1,5 +1,8 @@
+import { useEffect } from "react";
+import { BehaviorSubject, filter } from "rxjs";
 import styled from "styled-components";
-import { ELanguage } from "../utils/bridge";
+import { imageData } from "../data";
+import { ELanguage, setState } from "../utils/bridge";
 import {
   currentLanguage,
   MOBILE_WIDTH,
@@ -8,36 +11,95 @@ import {
   WIDTH,
 } from "../utils/utils";
 
+const getImageData = (url: string): Promise<string> =>
+  new Promise((res) => {
+    const image = new Image();
+    image.src = url;
+    image.onload = () => {
+      res(image.src);
+    };
+  });
+
+const getProfilePictureElement = () => {
+  const el: Element | null = document.querySelector(".profile-picture");
+  const classList = el?.getAttribute("class")?.split(" ") || [];
+  return {
+    el,
+    classList,
+  };
+};
+
+const ImageSubject = new BehaviorSubject("");
+
+enum ProfileImageFileName {
+  md = "kirill-md.jpg",
+  lg = "kirill-lg.jpg",
+  xl = "kirill-lg.png",
+}
+
+ImageSubject.pipe(filter((v) => !!v)).subscribe((imageSrc) => {
+  setState({
+    imageSrc,
+  });
+});
+
 export const ProfilePage = styled(
   (
     props: React.InputHTMLAttributes<HTMLDivElement> & {
       content: typeof translations[string]["profilePage"];
+      imageSrc?: string;
     }
-  ) => (
-    <section className={props.className}>
-      <div className="cover-image"></div>
-      <div className="profile-container">
-        <div className="profile">
-          <div aria-label="profile picture" className="profile-picture"></div>
-          <div aria-label="profile description" className="profile-description">
-            <h1>{props.content.name}</h1>
-            <h2>{props.content.title}</h2>
-            <h3>{props.content.subtitle}</h3>
+  ) => {
+    useEffect(() => {
+      ImageSubject.next("");
+      getImageData("/kirill-md.jpg").then((src) => {
+        ImageSubject.next(src);
+      });
+      getImageData("/kirill-lg.jpg").then((src) => {
+        ImageSubject.next(src);
+      });
+      getImageData("/kirill-lg.png").then((src) => {
+        ImageSubject.next(src);
+      });
+    }, []);
+    return (
+      <section className={props.className}>
+        <div className="cover-image"></div>
+        <div className="profile-container">
+          <div className="profile">
+            <div className="picture-overlay">
+              <div
+                aria-label="profile picture"
+                className="profile-picture"
+                style={{
+                  backgroundImage: `url(${props.imageSrc || imageData})`,
+                  ...(props.imageSrc && { filter: "none" }),
+                }}
+              ></div>
+            </div>
+            <div
+              aria-label="profile description"
+              className="profile-description"
+            >
+              <h1>{props.content.name}</h1>
+              <h2>{props.content.title}</h2>
+              <h3>{props.content.subtitle}</h3>
+            </div>
           </div>
-        </div>
-        <div className="spacer"></div>
-        <div aria-label="profile summary" className="profile-summary">
-          <p>{props.content.description}</p>
           <div className="spacer"></div>
-          <div className="tag-container">
-            {props.content.tags.map((tag) => (
-              <span className="tag">{tag}</span>
-            ))}
+          <div aria-label="profile summary" className="profile-summary">
+            <p>{props.content.description}</p>
+            <div className="spacer"></div>
+            <div className="tag-container">
+              {props.content.tags.map((tag) => (
+                <span className="tag">{tag}</span>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    );
+  }
 )`
   display: flex;
   flex-direction: column;
@@ -86,24 +148,34 @@ export const ProfilePage = styled(
         margin: auto;
         width: unset;
       }
-      .profile-picture {
+
+      .picture-overlay {
         display: flex;
         min-width: 256px;
         width: 256px;
         height: 256px;
-        background-color: grey;
-        background-image: url(/kirill.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
         border-radius: 100%;
         border: 8px solid white;
         margin: 8px;
         margin-top: -96px;
+        overflow: hidden;
+
         @media (max-width: ${TABLET_WIDTH}px) {
           width: unset;
           margin: auto;
           margin-top: -96px;
+        }
+
+        & .profile-picture {
+          transition: all 1s;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          filter: blur(5px);
+          background-color: grey;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
         }
       }
 

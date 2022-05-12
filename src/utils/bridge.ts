@@ -31,6 +31,7 @@ export enum Id {
 }
 
 export interface IState {
+  imageSrc?: string;
   path: string;
   language: ELanguage;
   hasSubmitted: boolean;

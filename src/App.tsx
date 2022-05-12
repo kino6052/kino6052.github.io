@@ -17,6 +17,7 @@ export const App = styled(
   (props: React.InputHTMLAttributes<HTMLDivElement> & { state: IState }) => {
     const {
       state: {
+        imageSrc,
         path,
         language,
         hasSubmitted,
@@ -39,7 +40,10 @@ export const App = styled(
           selection={route}
         />
         {route === ERoute.Resume && (
-          <ProfilePage content={translations[language]["profilePage"]} />
+          <ProfilePage
+            content={translations[language]["profilePage"]}
+            imageSrc={imageSrc}
+          />
         )}
         {route === ERoute.Resume && <ExperiencePage language={language} />}
         <br />
