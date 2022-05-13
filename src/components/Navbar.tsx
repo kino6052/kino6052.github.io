@@ -196,13 +196,12 @@ export const Navbar = styled(
 
   select {
     display: inline-flex;
-    flex-grow: 1;
     height: 32px;
     margin: 0 8px;
     padding: 0 8px;
     border-radius: 128px;
     box-sizing: border-box;
-    width: 0;
+    width: 128px;
   }
 
   ul {
