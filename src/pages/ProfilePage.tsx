@@ -114,7 +114,7 @@ export const ProfilePage = styled(
     width: 100%;
     display: flex;
     height: 256px;
-    background-image: url(https://wallpaperaccess.com/full/1551429.jpg);
+    background-image: url(/background.svg);
     background-size: cover;
     background-position: center center;
   }
