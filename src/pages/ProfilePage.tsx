@@ -167,7 +167,7 @@ export const ProfilePage = styled(
         }
 
         & .profile-picture {
-          transition: all 1s;
+          transition: all 0.1s;
           display: flex;
           width: 100%;
           height: 100%;

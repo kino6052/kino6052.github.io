@@ -65,9 +65,9 @@ export const MiscPage: React.FC<
     <section className="container">
       <h1>{translations[language].misc.title}</h1>
       <h2>{translations[language].misc.sections[0].title}</h2>
-      <p>{translations[language].misc.sections[0].description[0]}</p>
+      <p>{translations[language].misc.sections[0].description?.[0]}</p>
       <br />
-      <p>{translations[language].misc.sections[0].description[1]}</p>
+      <p>{translations[language].misc.sections[0].description?.[1]}</p>
       <br />
       <h2>{translations[language].misc.sections[1].title}</h2>
       <br />
@@ -80,37 +80,37 @@ export const MiscPage: React.FC<
       <br />
       <br />
       <h2>{translations[language].misc.sections[3].title}</h2>
-      <p>{translations[language].misc.sections[3].description[0]}</p>
+      <p>{translations[language].misc.sections[3].description?.[0]}</p>
       <br />
       <p>
         <a href="https://soshace.com/aboutus" target="_blank" rel="noreferrer">
           {translations[language].misc.sections[3].link}
         </a>{" "}
-        {translations[language].misc.sections[3].description[1]}
+        {translations[language].misc.sections[3].description?.[1]}
       </p>
       <br />
       <CardContainer cards={other} />
       <br />
       <br />
       <h2>{translations[language].misc.sections[4].title}</h2>
-      <p>{translations[language].misc.sections[4].description[0]}</p>
+      <p>{translations[language].misc.sections[4].description?.[0]}</p>
       <br />
-      <h3>{translations[language].misc.sections[4].description[1][0]}</h3>
-      <p>{translations[language].misc.sections[4].description[1][1]}</p>
+      <h3>{translations[language].misc.sections[4].description?.[1][0]}</h3>
+      <p>{translations[language].misc.sections[4].description?.[1][1]}</p>
       <br />
-      <h3>{translations[language].misc.sections[4].description[2][0]}</h3>
-      <p>{translations[language].misc.sections[4].description[2][1]}</p>
+      <h3>{translations[language].misc.sections[4].description?.[2][0]}</h3>
+      <p>{translations[language].misc.sections[4].description?.[2][1]}</p>
       <br />
-      <p>{translations[language].misc.sections[4].description[2][2]}</p>
+      <p>{translations[language].misc.sections[4].description?.[2][2]}</p>
       <br />
-      <h3>{translations[language].misc.sections[4].description[3][0]}</h3>
-      <p>{translations[language].misc.sections[4].description[3][1]}</p>
+      <h3>{translations[language].misc.sections[4].description?.[3][0]}</h3>
+      <p>{translations[language].misc.sections[4].description?.[3][1]}</p>
       <a
         href="https://soundcloud.com/kirill-novik"
         target="_blank"
         rel="noreferrer"
       >
-        {translations[language].misc.sections[4].description[3][2]}
+        {translations[language].misc.sections[4].description?.[3][2]}
       </a>
       <br />
       <h3>{translations[language].misc.sections[4].description?.[4][0]}</h3>
