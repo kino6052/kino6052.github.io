@@ -214,6 +214,7 @@ export const App = styled(
     color: white;
     justify-content: center;
     align-items: center;
+    padding: 0 16px;
 
     a {
       display: inline-flex;

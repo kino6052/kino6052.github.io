@@ -14,7 +14,10 @@ export const IsonasPage: React.FC<
       <h2>{content.subtitle}</h2>
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
-        <Image src="/isonas.jpg" caption={content.imageCaption} />
+        <Image
+          src="/images/projects/commercial/isonas.jpg"
+          caption={content.imageCaption}
+        />
       </div>
       <div className="spacer"></div>
       <p>{content.paragraph1}</p>

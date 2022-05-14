@@ -15,7 +15,7 @@ export const MedtronicPage: React.FC<
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
         <Image
-          src="/medtronic.webp"
+          src="/images/projects/commercial/medtronic.webp"
           caption={content.imageCaption}
           isFullWidth
         />

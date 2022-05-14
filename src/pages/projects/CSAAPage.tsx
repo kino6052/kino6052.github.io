@@ -14,7 +14,10 @@ export const CSAAPage: React.FC<
       <h2>{content.subtitle}</h2>
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
-        <Image src="/csaa-desktop.jpg" caption="MyQuote Coverage Screen" />
+        <Image
+          src="/images/projects/commercial/csaa-desktop.jpg"
+          caption="MyQuote Coverage Screen"
+        />
       </div>
       <div className="spacer"></div>
       <p>{content.paragraph1}</p>

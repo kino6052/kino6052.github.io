@@ -15,7 +15,7 @@ export const DiscountTirePage: React.FC<
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
         <Image
-          src="/discount-tire.jpg"
+          src="/images/projects/commercial/discount-tire.jpg"
           caption={content.imageCaption}
           width={250}
         />

@@ -14,7 +14,10 @@ export const AlphabankPage: React.FC<
       <h2>{content.subtitle}</h2>
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
-        <Image src="/alphabank.png" caption={content.imageCaption} />
+        <Image
+          src="/images/projects/commercial/alphabank.png"
+          caption={content.imageCaption}
+        />
       </div>
       <div className="spacer"></div>
       <p>{content.paragraph1}</p>

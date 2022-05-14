@@ -15,7 +15,7 @@ export const AutomationHeroPage: React.FC<
       <div className="spacer"></div>
       <div style={{ display: "flex" }}>
         <Image
-          src="https://images.g2crowd.com/uploads/attachment/file/115914/mockup-screen-aistudio.jpg"
+          src="/images/projects/commercial/automation-hero.jpg"
           caption={content.imageCaption}
           width={250}
         />
