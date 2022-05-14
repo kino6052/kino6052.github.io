@@ -33,6 +33,25 @@ export const Table = styled(
   @media print {
     flex-direction: row;
     flex-wrap: wrap;
+    display: table;
+    tr {
+      display: block;
+      td {
+        display: block;
+        p,
+        b {
+          display: inline-block;
+        }
+      }
+    }
+
+    &.dashed {
+      display: flex;
+      tr {
+        display: flex;
+        border: 1px dashed #aaa;
+      }
+    }
   }
 
   tr {
@@ -47,7 +66,6 @@ export const Table = styled(
     }
     @media print {
       margin: 4px 4px;
-      border: 1px dashed #aaa;
     }
 
     td {

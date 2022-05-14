@@ -118,6 +118,7 @@ export const ProfilePage = styled(
     background-image: url(/background.svg);
     background-size: cover;
     background-position: center center;
+    background-color: #67417e;
 
     @media print {
       display: none;
@@ -206,33 +207,29 @@ export const ProfilePage = styled(
     .profile-summary {
       display: flex;
       flex-direction: column;
-      // margin: 8px;
 
       .tag-container {
         display: flex;
         margin: 8px 0;
         flex-wrap: wrap;
+        gap: 8px;
 
         @media print {
           margin: 0;
         }
 
         .tag {
-          &:first-child {
-            margin-left: 0;
-          }
           display: flex;
           padding: 4px 16px;
           color: white;
           background: #aaa;
           border-radius: 100px;
-          margin: 8px;
 
           @media print {
             margin: 0;
             padding: 0;
             &:not(:last-child) {
-              margin: "4px";
+              margin: 0;
               &::after {
                 content: ", ";
               }

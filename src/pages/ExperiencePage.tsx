@@ -24,14 +24,14 @@ export const ExperiencePage: React.FC<
     <br />
     <section className="container">
       <h2>{translations[language].profilePage.experience.list[2].subtitle}</h2>
-      <Table isZebra table={getSkills(language)} />
+      <Table isZebra table={getSkills(language)} className="dashed" />
     </section>
     <div className="pagebreak"></div>
     <br />
     <br />
     <section className="container">
       <h2>{translations[language].profilePage.languages.title}</h2>
-      <Table isZebra table={getLanguages(language)} />
+      <Table isZebra table={getLanguages(language)} className="dashed" />
     </section>
     <br />
     <br />

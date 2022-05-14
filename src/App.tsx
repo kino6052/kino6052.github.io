@@ -160,7 +160,7 @@ export const App = styled(
   }
 
   .pagebreak {
-    break-after: page;
+    // break-after: always;
   }
 
   .container {
