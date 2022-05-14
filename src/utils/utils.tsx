@@ -1,3 +1,4 @@
+import React from "react";
 import { BehaviorSubject } from "rxjs";
 import { getCurrentPathState } from "./router";
 
@@ -10,6 +11,22 @@ export const zIndex = {
 } as const;
 export const languageOptions = ["English", "Русский", "中文"];
 export const currentLanguage = languageOptions[2];
+
+export const processMarkup = (text: string) => {
+  const boldTransormation = text
+    .split("*")
+    .map((v, i) => (i % 2 === 0 ? v : <b>{v}</b>));
+  return boldTransormation;
+};
+
+export const interpolate = (
+  text: string,
+  interpolation: { [key: string]: React.ReactNode | string }
+) => {
+  const keys = Object.keys(interpolation);
+  const arr = text.split(/{{(.+)}}/);
+  return arr.map((k) => (keys.includes(k) ? interpolation[k] : k));
+};
 
 const translationEnglish = {
   menu: {
@@ -344,7 +361,7 @@ const translationEnglish = {
         title: "Other",
         description: [
           "There are a few items that I find relevant to share here as they provide extra details that could help to better tell my story.",
-          "<> wanted to interview me and share my story of becoming a successful freelance developer on their platform, and I have gladly taken up on this opportunity. Here is the resulting article:",
+          "{{link}} wanted to interview me and share my story of becoming a successful freelance developer on their platform, and I have gladly taken up on this opportunity. Here is the resulting article:",
         ],
         link: "Soshace freelancer agency",
         projects: [
@@ -382,8 +399,8 @@ const translationEnglish = {
             [
               "Mathematics is of interest to me as part of the broader study of philosophy. It is the most obvious field where you can build more complex knowledge from a small set of foundational pieces. It is my passion to build ontologies to store my knowledge.",
               [
-                "I have also undertaken a very interesting <>.",
-                "journey reasoning about the nature of primes and twin primes.",
+                "I have also undertaken a very interesting {{link}}.",
+                "journey reasoning about the nature of primes and twin primes",
               ],
             ],
           ],
@@ -762,7 +779,7 @@ const translationRussian: TTranslation = {
         title: "Прочее",
         description: [
           "Есть несколько моментов, которыми я считаю уместным поделиться здесь, поскольку они содержат дополнительные детали, которые могут помочь лучше рассказать мою историю.",
-          "<> хотели взять у меня интервью и поделиться своей историей о том, как стать успешным внештатным разработчиком на их платформе, и я с радостью воспользовался этой возможностью. Вот получившаяся статья:",
+          "{{link}} хотели взять у меня интервью и поделиться своей историей о том, как стать успешным внештатным разработчиком на их платформе, и я с радостью воспользовался этой возможностью. Вот получившаяся статья:",
         ],
         link: "Фрилансерское агентство Soshace",
         projects: [
@@ -800,8 +817,8 @@ const translationRussian: TTranslation = {
             [
               "Математика представляет для меня интерес как часть более широкого изучения философии. Это наиболее очевидная область, в которой вы можете построить более сложные знания из небольшого набора основополагающих элементов. Моя страсть — создавать онтологии для хранения своих знаний.",
               [
-                "Я также предпринял очень интересное <>.",
-                "путешествие, рассуждая о природе простых чисел и простых чисел-близнецов.",
+                "Я также предпринял очень интересное {{link}}.",
+                "путешествие, рассуждая о природе простых чисел и простых чисел-близнецов",
               ],
             ],
           ],
@@ -1206,7 +1223,7 @@ const translationChinese: TTranslation = {
             [
               "作为更广泛的哲学研究的一部分，我对数学很感兴趣。 这是最明显的领域，您可以从一小组构建块中构建更复杂的知识。 我的热情是创建本体来存储我的知识。",
               [
-                "我还经历了一段非常有趣的 <>.",
+                "我还经历了一段非常有趣的 {{link}}",
                 "旅程，争论素数和孪生素数的性质。",
               ],
             ],

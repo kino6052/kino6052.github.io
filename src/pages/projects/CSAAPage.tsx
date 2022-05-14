@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "../../components/Image";
-import { translations } from "../../utils/utils";
+import { processMarkup, translations } from "../../utils/utils";
 
 export const CSAAPage: React.FC<
   React.InputHTMLAttributes<unknown> & {
@@ -27,7 +27,7 @@ export const CSAAPage: React.FC<
       <div className="spacer"></div>
       <p>{content.paragraph5}</p>
       <div className="spacer"></div>
-      <p>{content.paragraph6}</p>
+      <p>{processMarkup(content.paragraph6)}</p>
       <div className="spacer"></div>
       <p>
         {content.paragraph7}{" "}

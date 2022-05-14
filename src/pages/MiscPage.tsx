@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CardContainer, ICard } from "../components/CardContainer";
 import { ELanguage } from "../utils/bridge";
-import { translations } from "../utils/utils";
+import { interpolate, processMarkup, translations } from "../utils/utils";
 
 const other: ICard[] = [
   {
@@ -83,10 +83,20 @@ export const MiscPage: React.FC<
       <p>{translations[language].misc.sections[3].description?.[0]}</p>
       <div className="spacer"></div>
       <p>
-        <a href="https://soshace.com/aboutus" target="_blank" rel="noreferrer">
-          {translations[language].misc.sections[3].link}
-        </a>{" "}
-        {translations[language].misc.sections[3].description?.[1]}
+        {interpolate(
+          translations[language].misc.sections[3].description?.[1] as string,
+          {
+            link: (
+              <a
+                href="https://soshace.com/aboutus"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {translations[language].misc.sections[3].link}
+              </a>
+            ),
+          }
+        )}
       </p>
       <div className="spacer"></div>
       <CardContainer cards={other} />
@@ -104,28 +114,37 @@ export const MiscPage: React.FC<
       <p>{translations[language].misc.sections[4].description?.[2][2]}</p>
       <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[3][0]}</h3>
-      <p>{translations[language].misc.sections[4].description?.[3][1]}</p>
+      <p>{translations[language].misc.sections[4].description?.[3][1][0]}</p>
       <a
         href="https://soundcloud.com/kirill-novik"
         target="_blank"
         rel="noreferrer"
       >
-        {translations[language].misc.sections[4].description?.[3][2]}
+        {translations[language].misc.sections[4].description?.[3][1][1]}
       </a>
       <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[4][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[4][1][0]}</p>
       <div className="spacer"></div>
       <p>
-        {translations[language].misc.sections[4].description?.[4][1][1][0]}{" "}
-        <a
-          href="https://medium.com/math-simplified/twin-prime-conjecture-proof-ef4b5c2c65e0"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {translations[language].misc.sections[4].description?.[4][1][1][1]}
-        </a>
-        .
+        {interpolate(
+          translations[language].misc.sections[4]
+            .description?.[4][1][1][0] as string,
+          {
+            link: (
+              <a
+                href="https://medium.com/math-simplified/twin-prime-conjecture-proof-ef4b5c2c65e0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {
+                  translations[language].misc.sections[4]
+                    .description?.[4][1][1][1]
+                }
+              </a>
+            ),
+          }
+        )}{" "}
       </p>
       <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[5][0]}</h3>
