@@ -30,6 +30,11 @@ export const Table = styled(
   display: flex;
   flex-direction: column;
 
+  @media print {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   tr {
     display: flex;
     flex-direction: row;
@@ -40,6 +45,10 @@ export const Table = styled(
     &.even {
       background: #f8f8f8;
     }
+    @media print {
+      margin: 4px 4px;
+      border: 1px dashed #aaa;
+    }
 
     td {
       width: 50%;
@@ -48,6 +57,9 @@ export const Table = styled(
       flex-grow: 1;
       @media (max-width: ${WIDTH}px) {
         width: 100%;
+      }
+      @media print {
+        width: fit-content;
       }
     }
   }

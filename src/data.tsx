@@ -29,15 +29,6 @@ export const imageData =
 export const getSkills = (language: ELanguage): ITable => [
   [
     {
-      description: (
-        <b>
-          {translations[language].profilePage.experience.list[2].description}
-        </b>
-      ),
-    },
-  ],
-  [
-    {
       description: "JavaScript",
     },
     {

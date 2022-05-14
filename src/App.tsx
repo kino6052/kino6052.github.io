@@ -97,6 +97,11 @@ export const App = styled(
     word-break: break-word;
   }
 
+  ul {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
   input,
   textarea,
   button {
@@ -108,12 +113,25 @@ export const App = styled(
     font-size: 64px;
     font-weight: bold;
     line-height: 64px;
+
+    @media print {
+      font-size: 32px;
+      line-height: 32px;
+      page-break-before: always;
+      margin-bottom: 8px;
+    }
   }
 
   h2 {
     font-size: 32px;
     line-height: 48px;
     font-weight: semi-bold;
+
+    @media print {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
   }
 
   b,
@@ -132,6 +150,10 @@ export const App = styled(
   .spacer {
     display: flex;
     padding: 8px;
+
+    @media print {
+      padding: 8px;
+    }
   }
 
   .container {
@@ -145,6 +167,10 @@ export const App = styled(
     @media (max-width: ${WIDTH}px) {
       width: 100%;
       padding: 16px;
+    }
+
+    @media print {
+      padding: 0 16px;
     }
   }
 

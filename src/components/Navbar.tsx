@@ -114,6 +114,10 @@ export const Navbar = styled(
     </nav>
   )
 )`
+  @media print {
+    display: none;
+  }
+
   display: flex;
   flex-direction: row;
   position: fixed;

@@ -77,6 +77,7 @@ export const ProfilePage = styled(
                 }}
               ></div>
             </div>
+            <div className="spacer"></div>
             <div
               aria-label="profile description"
               className="profile-description"
@@ -117,6 +118,11 @@ export const ProfilePage = styled(
     background-image: url(/background.svg);
     background-size: cover;
     background-position: center center;
+
+    @media print {
+      display: none;
+      height: 0;
+    }
   }
 
   .profile-container {
@@ -125,6 +131,7 @@ export const ProfilePage = styled(
     width: ${WIDTH}px;
     flex-grow: 1;
     margin: 16px;
+
     @media (max-width: ${WIDTH}px) {
       width: unset;
     }
@@ -148,6 +155,9 @@ export const ProfilePage = styled(
         margin: auto;
         width: unset;
       }
+      @media print {
+        margin: 0;
+      }
 
       .picture-overlay {
         display: flex;
@@ -156,12 +166,14 @@ export const ProfilePage = styled(
         height: 256px;
         border-radius: 100%;
         border: 8px solid white;
-        margin: 8px;
         margin-top: -96px;
         overflow: hidden;
 
+        @media print {
+          display: none;
+        }
+
         @media (max-width: ${TABLET_WIDTH}px) {
-          width: unset;
           margin: auto;
           margin-top: -96px;
         }
@@ -182,13 +194,6 @@ export const ProfilePage = styled(
       .profile-description {
         display: flex;
         flex-direction: column;
-        margin: 8px 8px;
-
-        h1 {
-        }
-
-        h2 {
-        }
 
         h3 {
           font-size: 18px;
@@ -201,12 +206,16 @@ export const ProfilePage = styled(
     .profile-summary {
       display: flex;
       flex-direction: column;
-      margin: 8px;
+      // margin: 8px;
 
       .tag-container {
         display: flex;
         margin: 8px 0;
         flex-wrap: wrap;
+
+        @media print {
+          margin: 0;
+        }
 
         .tag {
           &:first-child {
@@ -218,6 +227,17 @@ export const ProfilePage = styled(
           background: #aaa;
           border-radius: 100px;
           margin: 8px;
+
+          @media print {
+            margin: 0;
+            padding: 0;
+            &:not(:last-child) {
+              margin: "4px";
+              &::after {
+                content: ", ";
+              }
+            }
+          }
         }
       }
     }
