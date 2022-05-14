@@ -82,6 +82,10 @@ export const App = styled(
   min-height: 100vh;
   overflow: hidden;
 
+  @media print {
+    display: block;
+  }
+
   h1,
   h2,
   h3,
@@ -117,7 +121,6 @@ export const App = styled(
     @media print {
       font-size: 32px;
       line-height: 32px;
-      page-break-before: always;
       margin-bottom: 8px;
     }
   }
@@ -156,6 +159,10 @@ export const App = styled(
     }
   }
 
+  .pagebreak {
+    break-after: page;
+  }
+
   .container {
     display: flex;
     width: ${WIDTH}px;
@@ -170,6 +177,7 @@ export const App = styled(
     }
 
     @media print {
+      display: block;
       padding: 0 16px;
     }
   }

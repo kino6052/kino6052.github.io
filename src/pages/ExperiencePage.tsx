@@ -15,6 +15,7 @@ export const ExperiencePage: React.FC<
     </section>
     <br />
     <br />
+    <div className="pagebreak"></div>
     <section className="container">
       <h2>{translations[language].profilePage.experience.list[1].subtitle}</h2>
       <Table isZebra table={getEducation(language)} />
@@ -25,6 +26,7 @@ export const ExperiencePage: React.FC<
       <h2>{translations[language].profilePage.experience.list[2].subtitle}</h2>
       <Table isZebra table={getSkills(language)} />
     </section>
+    <div className="pagebreak"></div>
     <br />
     <br />
     <section className="container">
