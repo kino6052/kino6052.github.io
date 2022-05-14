@@ -228,6 +228,7 @@ export const ProfilePage = styled(
           @media print {
             margin: 0;
             padding: 0;
+            color: #333;
             &:not(:last-child) {
               margin: 0;
               &::after {

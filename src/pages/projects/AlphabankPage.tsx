@@ -12,22 +12,22 @@ export const AlphabankPage: React.FC<
     <section className="container">
       <h1>{content.title}</h1>
       <h2>{content.subtitle}</h2>
-      <br />
+      <div className="spacer"></div>
       <div style={{ display: "flex" }}>
         <Image src="/alphabank.png" caption={content.imageCaption} />
       </div>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph1}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph2}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph3}</p>
-      <br />
+      <div className="spacer"></div>
       {/* <a href="https://www.discounttire.com/" target="_blank" rel="noreferrer">
         {content.link}
       </a> */}
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
     </section>
   </>
 );

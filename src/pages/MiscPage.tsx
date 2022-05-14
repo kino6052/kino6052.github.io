@@ -66,43 +66,43 @@ export const MiscPage: React.FC<
       <h1>{translations[language].misc.title}</h1>
       <h2>{translations[language].misc.sections[0].title}</h2>
       <p>{translations[language].misc.sections[0].description?.[0]}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{translations[language].misc.sections[0].description?.[1]}</p>
-      <br />
+      <div className="spacer"></div>
       <h2>{translations[language].misc.sections[1].title}</h2>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={frontEndBlog} />
-      <br />
+      <div className="spacer"></div>
       <h2>{translations[language].misc.sections[2].title}</h2>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={machineLearningBlog} />
-      <br />
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+      <div className="spacer"></div>
       <h2>{translations[language].misc.sections[3].title}</h2>
       <p>{translations[language].misc.sections[3].description?.[0]}</p>
-      <br />
+      <div className="spacer"></div>
       <p>
         <a href="https://soshace.com/aboutus" target="_blank" rel="noreferrer">
           {translations[language].misc.sections[3].link}
         </a>{" "}
         {translations[language].misc.sections[3].description?.[1]}
       </p>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={other} />
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
       <h2>{translations[language].misc.sections[4].title}</h2>
       <p>{translations[language].misc.sections[4].description?.[0]}</p>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[1][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[1][1]}</p>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[2][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[2][1]}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{translations[language].misc.sections[4].description?.[2][2]}</p>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[3][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[3][1]}</p>
       <a
@@ -112,10 +112,10 @@ export const MiscPage: React.FC<
       >
         {translations[language].misc.sections[4].description?.[3][2]}
       </a>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[4][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[4][1][0]}</p>
-      <br />
+      <div className="spacer"></div>
       <p>
         {translations[language].misc.sections[4].description?.[4][1][1][0]}{" "}
         <a
@@ -127,10 +127,10 @@ export const MiscPage: React.FC<
         </a>
         .
       </p>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[5][0]}</h3>
       <p>{translations[language].misc.sections[4].description?.[5][1]}</p>
-      <br />
+      <div className="spacer"></div>
       <h3>{translations[language].misc.sections[4].description?.[6][0]}</h3>
       <p>
         <a
@@ -142,11 +142,11 @@ export const MiscPage: React.FC<
         </a>{" "}
         {translations[language].misc.sections[4].description?.[6][1][1]}
       </p>
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
     </section>
-    <br />
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
+    <div className="spacer"></div>
   </>
 );

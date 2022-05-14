@@ -157,11 +157,11 @@ export const ContactPage = styled(
       <section className={`${className} container`}>
         <h1>{translations[language].contactPage.title}</h1>
         <h2>{translations[language].contactPage.subtitle}</h2>
-        <br />
+        <div className="spacer"></div>
         {!hasSubmitted && (
           <>
             <p>{translations[language].contactPage.description}</p>
-            <br />
+            <div className="spacer"></div>
             <form>
               <div className="field-container">
                 <EventWrapper id={Id.FirstNameInput}>
@@ -218,7 +218,7 @@ export const ContactPage = styled(
                   ></Input>
                 </EventWrapper>
               </div>
-              <br />
+              <div className="spacer"></div>
               <div className="field-container">
                 <EventWrapper id="submit-question">
                   <Button
@@ -242,9 +242,9 @@ export const ContactPage = styled(
           </>
         )}
       </section>
-      <br />
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+      <div className="spacer"></div>
     </>
   )
 )`

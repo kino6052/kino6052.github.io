@@ -46,9 +46,9 @@ export const App = styled(
           />
         )}
         {route === ERoute.Resume && <ExperiencePage language={language} />}
-        <br />
-        <br />
-        <br />
+        <div className="spacer"></div>
+        <div className="spacer"></div>
+        <div className="spacer"></div>
         {currentProject && projectPages[currentProject]}
         {!currentProject && route === ERoute.Projects && (
           <ProjectPage language={language} />
@@ -144,6 +144,11 @@ export const App = styled(
     font-size: 18px;
     line-height: 26px;
     font-weight: semi-bold;
+
+    @media print {
+      font-size: 18px;
+      line-height: auto;
+    }
   }
 
   span {
@@ -183,6 +188,10 @@ export const App = styled(
   }
 
   .footer {
+    @media print {
+      display: none;
+    }
+
     display: flex;
     padding: 16px;
     box-sizing: border-box;

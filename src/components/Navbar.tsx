@@ -244,6 +244,9 @@ export const Navbar = styled(
     align-items: center;
     padding: 0;
     margin: 0;
+    &.close {
+      margin-bottom: 0;
+    }
 
     li {
       display: inline-flex;

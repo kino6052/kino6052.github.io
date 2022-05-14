@@ -106,25 +106,25 @@ export const ProjectPage: React.FC<
       <h1>{translations[language].projectsPage.title}</h1>
       <h2>{translations[language].projectsPage.sections[0].title}</h2>
       <p>{translations[language].projectsPage.sections[0].description}</p>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={getCommercialProjects(language)} />
-      <br />
+      <div className="spacer"></div>
       <h2>{translations[language].projectsPage.sections[1].title}</h2>
       <p>{translations[language].projectsPage.sections[1].description}</p>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={getStudentProjects(language)} />
-      <br />
+      <div className="spacer"></div>
       {/* <h2>Personal Projects</h2>
       <p>
         Here are some projects that demonstrate my skill and understanding of
         various aspects of web-development.
       </p>
-      <br />
+      <div className="spacer"></div>
       <CardContainer cards={personalProjects} />
-      <br /> */}
+      <div className="spacer"></div> */}
     </section>
-    <br />
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
+    <div className="spacer"></div>
   </>
 );

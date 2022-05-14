@@ -12,23 +12,23 @@ export const CSAAPage: React.FC<
     <section className="container">
       <h1>{content.title}</h1>
       <h2>{content.subtitle}</h2>
-      <br />
+      <div className="spacer"></div>
       <div style={{ display: "flex" }}>
         <Image src="/csaa-desktop.jpg" caption="MyQuote Coverage Screen" />
       </div>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph1}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph2}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph3}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph4}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph5}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph6}</p>
-      <br />
+      <div className="spacer"></div>
       <p>
         {content.paragraph7}{" "}
         <a
@@ -40,17 +40,17 @@ export const CSAAPage: React.FC<
         </a>
         .
       </p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph8}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph9}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph10}</p>
-      <br />
+      <div className="spacer"></div>
       <p>{content.paragraph11}</p>
-      <br />
-      <br />
-      <br />
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+      <div className="spacer"></div>
     </section>
   </>
 );

@@ -35,13 +35,10 @@ export const Table = styled(
     flex-wrap: wrap;
     display: table;
     tr {
-      display: block;
+      display: table-row;
       td {
-        display: block;
-        p,
-        b {
-          display: inline-block;
-        }
+        display: table-cell;
+        height: auto;
       }
     }
 

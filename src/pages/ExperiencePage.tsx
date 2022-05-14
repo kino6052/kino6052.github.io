@@ -13,28 +13,28 @@ export const ExperiencePage: React.FC<
       <h2>{translations[language].profilePage.experience.list[0].subtitle}</h2>
       <Table table={getCareer(language)} />
     </section>
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
     <div className="pagebreak"></div>
     <section className="container">
       <h2>{translations[language].profilePage.experience.list[1].subtitle}</h2>
       <Table isZebra table={getEducation(language)} />
     </section>
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
     <section className="container">
       <h2>{translations[language].profilePage.experience.list[2].subtitle}</h2>
       <Table isZebra table={getSkills(language)} className="dashed" />
     </section>
     <div className="pagebreak"></div>
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
     <section className="container">
       <h2>{translations[language].profilePage.languages.title}</h2>
       <Table isZebra table={getLanguages(language)} className="dashed" />
     </section>
-    <br />
-    <br />
-    <br />
+    <div className="spacer"></div>
+    <div className="spacer"></div>
+    <div className="spacer"></div>
   </>
 );
