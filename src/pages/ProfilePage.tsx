@@ -31,12 +31,6 @@ const getProfilePictureElement = () => {
 
 const ImageSubject = new BehaviorSubject("");
 
-enum ProfileImageFileName {
-  md = "kirill-md.jpg",
-  lg = "kirill-lg.jpg",
-  xl = "kirill-lg.png",
-}
-
 ImageSubject.pipe(filter((v) => !!v)).subscribe((imageSrc) => {
   setState({
     imageSrc,
@@ -52,13 +46,13 @@ export const ProfilePage = styled(
   ) => {
     useEffect(() => {
       ImageSubject.next("");
-      getImageData("/kirill-md.jpg").then((src) => {
+      getImageData("/images/kirill-md.jpg").then((src) => {
         ImageSubject.next(src);
       });
-      getImageData("/kirill-lg.jpg").then((src) => {
+      getImageData("/images/kirill-lg.jpg").then((src) => {
         ImageSubject.next(src);
       });
-      getImageData("/kirill-lg.png").then((src) => {
+      getImageData("/images/kirill-lg.png").then((src) => {
         ImageSubject.next(src);
       });
     }, []);
@@ -115,7 +109,7 @@ export const ProfilePage = styled(
     width: 100%;
     display: flex;
     height: 256px;
-    background-image: url(/background.svg);
+    background-image: url(/images/background.svg);
     background-size: cover;
     background-position: center center;
     background-color: #67417e;

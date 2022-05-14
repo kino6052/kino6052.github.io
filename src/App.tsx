@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { GithubIcon } from "./components/icons/GithubIcon";
+import { LinkedinIcon } from "./components/icons/LinkedinIcon";
 import { Navbar } from "./components/Navbar";
 import { links } from "./data";
 import { ContactPage } from "./pages/ContactPage";
@@ -69,6 +71,22 @@ export const App = styled(
         )}
         <div className="footer">
           <div className="footer-content">Copyright 2022</div>
+          <a
+            href="https://github.com/kino6052/"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="Link to my github"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kirill-novik-07882762/"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="Link to my linkedin"
+          >
+            <LinkedinIcon />
+          </a>
         </div>
       </div>
     );
@@ -164,10 +182,6 @@ export const App = styled(
     }
   }
 
-  .pagebreak {
-    // break-after: always;
-  }
-
   .container {
     display: flex;
     width: ${WIDTH}px;
@@ -193,13 +207,23 @@ export const App = styled(
     }
 
     display: flex;
-    padding: 16px;
     box-sizing: border-box;
     height: 48px;
     background: #333;
     width: 100%;
     color: white;
     justify-content: center;
+    align-items: center;
+
+    a {
+      display: inline-flex;
+      margin: 0 4px;
+      padding: 0;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
 
     .footer-content {
       display: flex;
