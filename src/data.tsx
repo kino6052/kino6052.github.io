@@ -458,16 +458,14 @@ const getCompany = (language: ELanguage, index: number) =>
 export const getCareer = (language: ELanguage): ITable => [
   [
     {
-      title:
-        translations[language].profilePage.experience.list?.[0].list?.[0].title,
+      title: translations[language].profilePage.experience.career.csaa.position,
       description: (
         <>
-          <p>{getCompany(language, 0)}</p>
           <p>
-            {
-              translations[language].profilePage.experience.list?.[0].list?.[0]
-                .description
-            }
+            {translations[language].profilePage.experience.career.csaa.company}
+          </p>
+          <p>
+            {translations[language].profilePage.experience.career.csaa.duration}
           </p>
         </>
       ),
@@ -475,20 +473,25 @@ export const getCareer = (language: ELanguage): ITable => [
     {
       description: (
         <>
-          {translations[
-            language
-          ].profilePage.experience.list?.[0].list?.[0].list?.map(
-            ({ title, list }) => (
-              <>
-                <b>{title}</b>
-                <ul>
-                  {list.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-              </>
-            )
-          )}
+          {(
+            ["responsibilities", "achievements", "technicalDetails"] as const
+          ).map((k) => (
+            <>
+              <b>
+                {
+                  translations[language].profilePage.experience.career.csaa[k]
+                    .title
+                }
+              </b>
+              <ul>
+                {translations[language].profilePage.experience.career.csaa[
+                  k
+                ].list.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </>
+          ))}
         </>
       ),
     },
@@ -496,14 +499,20 @@ export const getCareer = (language: ELanguage): ITable => [
   [
     {
       title:
-        translations[language].profilePage.experience.list[0].list?.[1].title,
+        translations[language].profilePage.experience.career.discountTire
+          .position,
       description: (
         <>
-          <p>{getCompany(language, 1)}</p>
           <p>
             {
-              translations[language].profilePage.experience.list[0].list?.[1]
-                .description
+              translations[language].profilePage.experience.career.discountTire
+                .company
+            }
+          </p>
+          <p>
+            {
+              translations[language].profilePage.experience.career.discountTire
+                .duration
             }
           </p>
         </>
@@ -512,20 +521,27 @@ export const getCareer = (language: ELanguage): ITable => [
     {
       description: (
         <>
-          {translations[
-            language
-          ].profilePage.experience.list[0].list?.[0].list?.map(
-            ({ title, list }) => (
-              <>
-                <b>{title}</b>
-                <ul>
-                  {list.map((item) => (
+          {(
+            ["responsibilities", "achievements", "technicalDetails"] as const
+          ).map((k) => (
+            <>
+              <b>
+                {
+                  translations[language].profilePage.experience.career
+                    .discountTire[k].title
+                }
+              </b>
+              <ul>
+                {translations[
+                  language
+                ].profilePage.experience.career.discountTire[k].list.map(
+                  (item) => (
                     <li>{item}</li>
-                  ))}
-                </ul>
-              </>
-            )
-          )}
+                  )
+                )}
+              </ul>
+            </>
+          ))}
         </>
       ),
     },
@@ -533,7 +549,7 @@ export const getCareer = (language: ELanguage): ITable => [
 ];
 
 export const getEducation = (language: ELanguage): ITable =>
-  translations[language].profilePage.experience.list?.[1].list?.map(
+  translations[language].profilePage.experience.list?.[0].list?.map(
     ({ title, description, list }) => [
       {
         title,

@@ -57,85 +57,79 @@ const translationEnglish = {
     ],
     experience: {
       title: "Experience",
-      list: [
-        {
-          subtitle: "Career",
-          list: [
-            {
-              title: "Staff Software Engineer",
-              company: "CSAA Insurance",
-              description: "November 2020 - June 2022",
-              list: [
-                {
-                  title: "Responsibilities",
-                  list: [
-                    "Create and maintain a custom insurance quote application",
-                    "Create a React UI kit according to the company's design system specifications",
-                  ],
-                },
-                {
-                  title: "Achievements",
-                  list: [
-                    "Successfully communicated technical details to business, development and QA teams",
-                    "Successful implemented major features",
-                    "Carefully followed UI design specifications to ensure quality",
-                    "Significantly improved test coverage",
-                    "Influenced important architectural decisions that proved reliable",
-                    "Demonstrated reliable performance across sprints",
-                  ],
-                },
-                {
-                  title: "Technical Details",
-                  list: [
-                    "Utilized React with Hooks",
-                    "Improved maintainability by using TypeScript and Unit Test practices",
-                    "Integrated features with the AWS backend",
-                    "Utilized best practices to optimize application performance using caching and Service Workers",
-                    "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
-                    "Verified accessibility with UsableNet AQA",
-                  ],
-                },
-              ],
-            },
-            {
-              title: "React Developer (Contract)",
-              company: "Discount Tire",
-              description: "March 2020 - May 2020",
-              items: [
-                {
-                  title: "Responsibilities",
-                  list: [
-                    "Assist in the migration of the main application to React",
-                    "Improve test coverage",
-                    "Participate in architectural decision making process",
-                  ],
-                },
-                {
-                  title: "Achievements",
-                  list: [
-                    "Successfully communicated technical details to business, development and QA teams",
-                    "Successfully implemented major features",
-                    "Carefully followed UI design specifications to ensure quality",
-                    "Significantly improved test coverage",
-                    "Influenced important architectural decisions that proved reliable",
-                    "Demonstrated reliable performance across sprints",
-                  ],
-                },
-                {
-                  title: "Technical Details",
-                  list: [
-                    "Utilized React with Hooks",
-                    "Improved maintainability by using TypeScript and Unit Test practices",
-                    "Integrated features with the AWS backend",
-                    "Utilized best practices to optimize application performance using caching and Service Workers",
-                    "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
-                    "Verified accessibility with UsableNet AQA",
-                  ],
-                },
-              ],
-            },
-          ],
+      career: {
+        title: "Career",
+        csaa: {
+          company: "CSAA Insurance",
+          position: "Staff Software Engineer",
+          duration: "November 2020 - June 2022",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Create and maintain a custom insurance quote application",
+              "Create a React UI kit according to the company's design system specifications",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Successfully communicated technical details to business, development and QA teams",
+              "Successful implemented major features",
+              "Carefully followed UI design specifications to ensure quality",
+              "Significantly improved test coverage",
+              "Influenced important architectural decisions that proved reliable",
+              "Demonstrated reliable performance across sprints",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              "Utilized React with Hooks",
+              "Improved maintainability by using TypeScript and Unit Test practices",
+              "Integrated features with the AWS backend",
+              "Utilized best practices to optimize application performance using caching and Service Workers",
+              "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
+              "Verified accessibility with UsableNet AQA",
+            ],
+          },
         },
+        discountTire: {
+          company: "Discount Tire",
+          position: "React Developer (Contract)",
+          duration: "March 2020 - May 2020",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Assist in the migration of the main application to React",
+              "Improve test coverage",
+              "Participate in architectural decision making process",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Successfully communicated technical details to business, development and QA teams",
+              "Successfully implemented major features",
+              "Carefully followed UI design specifications to ensure quality",
+              "Significantly improved test coverage",
+              "Influenced important architectural decisions that proved reliable",
+              "Demonstrated reliable performance across sprints",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              "Utilized React with Hooks",
+              "Improved maintainability by using TypeScript and Unit Test practices",
+              "Integrated features with the AWS backend",
+              "Utilized best practices to optimize application performance using caching and Service Workers",
+              "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
+              "Verified accessibility with UsableNet AQA",
+            ],
+          },
+        },
+      },
+      list: [
         {
           subtitle: "Education",
           list: [
@@ -473,85 +467,79 @@ const translationRussian: TTranslation = {
     ],
     experience: {
       title: "Опыт",
-      list: [
-        {
-          subtitle: "Карьера",
-          list: [
-            {
-              title: "Штатный Инженер-Программист",
-              company: "Страховая Компания CSAA",
-              description: "Ноябрь 2020 г. - Июнь 2022 г.",
-              list: [
-                {
-                  title: "Обязанности",
-                  list: [
-                    "Создание и поддержка специализированного приложения для расчета стоимости страховки",
-                    "Создайте библиотеки пользовательского интерфейса React в соответствии со спецификациями системы дизайна компании",
-                  ],
-                },
-                {
-                  title: "Достижения",
-                  list: [
-                    "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
-                    "Успешно реализованы основные функции",
-                    "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
-                    "Значительно улучшенное тестовое покрытие",
-                    "Повлиял на важные архитектурные решения, которые оказались надежными",
-                    "Продемонстрированная надежная производительность в спринтах",
-                  ],
-                },
-                {
-                  title: "Технические Подробности",
-                  list: [
-                    "Использовали React с Hooks",
-                    "Улучшенная поддерживаемость за счет использования методов TypeScript и модульного тестирования.",
-                    "Интегрированные функции с серверной частью AWS",
-                    "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers.",
-                    "Использование лучших практик для оптимизации производительности приложений. Настройка и автоматизация процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline), кэширование Sing и Service Workers.",
-                    "Подтвержденная доступность с помощью UsableNet AQA",
-                  ],
-                },
-              ],
-            },
-            {
-              title: "Разработчик React (Контракт)",
-              company: "Discount Tire",
-              description: "Март 2020 г. - Май 2020 г.",
-              items: [
-                {
-                  title: "Обязанности",
-                  list: [
-                    "Помощь в переносе основного приложения на React",
-                    "Улучшить тестовое покрытие",
-                    "Участвовать в процессе принятия архитектурных решений",
-                  ],
-                },
-                {
-                  title: "Achievements",
-                  list: [
-                    "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
-                    "Успешно реализованы основные функции",
-                    "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
-                    "Значительно улучшенное тестовое покрытие",
-                    "Повлиял на важные архитектурные решения, которые оказались надежными",
-                    "Продемонстрированная надежная производительность в спринтах",
-                  ],
-                },
-                {
-                  title: "Технические подробности",
-                  list: [
-                    "Использовали React с Hooks",
-                    "Улучшенная ремонтопригодность за счет использования методов TypeScript и модульного тестирования",
-                    "Интегрированные функции с серверной частью AWS",
-                    "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers",
-                    "Настройка и использование автоматизации процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline)",
-                    "Подтвержденная доступность с помощью UsableNet AQA",
-                  ],
-                },
-              ],
-            },
-          ],
+      career: {
+        title: "Карьера",
+        csaa: {
+          company: "Страховая Компания CSAA",
+          position: "Штатный Инженер-Программист",
+          duration: "Ноябрь 2020 г. - Июнь 2022 г.",
+          responsibilities: {
+            title: "Обязанности",
+            list: [
+              "Создание и поддержка специализированного приложения для расчета стоимости страховки",
+              "Создайте библиотеки пользовательского интерфейса React в соответствии со спецификациями системы дизайна компании",
+            ],
+          },
+          achievements: {
+            title: "Достижения",
+            list: [
+              "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
+              "Успешно реализованы основные функции",
+              "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
+              "Значительно улучшенное тестовое покрытие",
+              "Повлиял на важные архитектурные решения, которые оказались надежными",
+              "Продемонстрированная надежная производительность в спринтах",
+            ],
+          },
+          technicalDetails: {
+            title: "Технические Подробности",
+            list: [
+              "Использовали React с Hooks",
+              "Улучшенная поддерживаемость за счет использования методов TypeScript и модульного тестирования.",
+              "Интегрированные функции с серверной частью AWS",
+              "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers.",
+              "Использование лучших практик для оптимизации производительности приложений. Настройка и автоматизация процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline), кэширование Sing и Service Workers.",
+              "Подтвержденная доступность с помощью UsableNet AQA",
+            ],
+          },
         },
+        discountTire: {
+          company: "Discount Tire",
+          position: "Разработчик React (Контракт)",
+          duration: "Март 2020 г. - Май 2020 г.",
+          responsibilities: {
+            title: "Обязанности",
+            list: [
+              "Помощь в переносе основного приложения на React",
+              "Улучшить тестовое покрытие",
+              "Участвовать в процессе принятия архитектурных решений",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
+              "Успешно реализованы основные функции",
+              "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
+              "Значительно улучшенное тестовое покрытие",
+              "Повлиял на важные архитектурные решения, которые оказались надежными",
+              "Продемонстрированная надежная производительность в спринтах",
+            ],
+          },
+          technicalDetails: {
+            title: "Технические подробности",
+            list: [
+              "Использовали React с Hooks",
+              "Улучшенная ремонтопригодность за счет использования методов TypeScript и модульного тестирования",
+              "Интегрированные функции с серверной частью AWS",
+              "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers",
+              "Настройка и использование автоматизации процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline)",
+              "Подтвержденная доступность с помощью UsableNet AQA",
+            ],
+          },
+        },
+      },
+      list: [
         {
           subtitle: "Образование",
           list: [
@@ -889,85 +877,79 @@ const translationChinese: TTranslation = {
     ],
     experience: {
       title: "经验",
-      list: [
-        {
-          subtitle: "职业",
-          list: [
-            {
-              title: "职员软件工程师",
-              company: "CSAA 保险",
-              description: "2020年11月 - 2022年6月",
-              list: [
-                {
-                  title: "责任",
-                  list: [
-                    "创建和维护自定义保险报价应用程序",
-                    "根据公司的设计系统规范创建一个 React UI 套件",
-                  ],
-                },
-                {
-                  title: "成就",
-                  list: [
-                    "成功地向业务、开发和质量保证团队传达了技术细节",
-                    "成功实现主要功能",
-                    "严格遵循 UI 设计规范，确保质量",
-                    "显着提高测试覆盖率",
-                    "影响了证明可靠的重要架构决策",
-                    "在冲刺中表现出可靠的性能",
-                  ],
-                },
-                {
-                  title: "技术细节",
-                  list: [
-                    "使用带有 Hooks 的 React",
-                    "通过使用 TypeScript 和单元测试实践提高了可维护性",
-                    "与 AWS 后端集成的功能",
-                    "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
-                    "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
-                    "使用 UsableNet AQA 验证可访问性",
-                  ],
-                },
-              ],
-            },
-            {
-              title: "React 开发人员（合同）",
-              company: "折扣轮胎",
-              description: "2020年3月 - 2020年5月",
-              items: [
-                {
-                  title: "责任",
-                  list: [
-                    "协助将主应用程序迁移到 React",
-                    "提高测试覆盖率",
-                    "参与架构决策过程",
-                  ],
-                },
-                {
-                  title: "成就",
-                  list: [
-                    "成功地向业务、开发和质量保证团队传达了技术细节",
-                    "成功实现主要功能",
-                    "严格遵循 UI 设计规范，确保质量",
-                    "显着提高测试覆盖率",
-                    "影响了证明可靠的重要架构决策",
-                    "在冲刺中表现出可靠的性能",
-                  ],
-                },
-                {
-                  title: "技术细节",
-                  list: [
-                    "使用带有 Hooks 的 React",
-                    "通过使用 TypeScript 和单元测试实践提高了可维护性",
-                    "与 AWS 后端集成的功能",
-                    "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
-                    "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
-                    "使用 UsableNet AQA 验证可访问性",
-                  ],
-                },
-              ],
-            },
-          ],
+      career: {
+        title: "职业",
+        csaa: {
+          company: "CSAA 保险",
+          position: "职员软件工程师",
+          duration: "2020年11月 - 2022年6月",
+          responsibilities: {
+            title: "责任",
+            list: [
+              "创建和维护自定义保险报价应用程序",
+              "根据公司的设计系统规范创建一个 React UI 套件",
+            ],
+          },
+          achievements: {
+            title: "成就",
+            list: [
+              "成功地向业务、开发和质量保证团队传达了技术细节",
+              "成功实现主要功能",
+              "严格遵循 UI 设计规范，确保质量",
+              "显着提高测试覆盖率",
+              "影响了证明可靠的重要架构决策",
+              "在冲刺中表现出可靠的性能",
+            ],
+          },
+          technicalDetails: {
+            title: "技术细节",
+            list: [
+              "使用带有 Hooks 的 React",
+              "通过使用 TypeScript 和单元测试实践提高了可维护性",
+              "与 AWS 后端集成的功能",
+              "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
+              "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
+              "使用 UsableNet AQA 验证可访问性",
+            ],
+          },
         },
+        discountTire: {
+          company: "Discount Tire",
+          position: "React 开发人员（合同）",
+          duration: "2020年3月 - 2020年5月",
+          responsibilities: {
+            title: "责任",
+            list: [
+              "协助将主应用程序迁移到 React",
+              "提高测试覆盖率",
+              "参与架构决策过程",
+            ],
+          },
+          achievements: {
+            title: "成就",
+            list: [
+              "成功地向业务、开发和质量保证团队传达了技术细节",
+              "成功实现主要功能",
+              "严格遵循 UI 设计规范，确保质量",
+              "显着提高测试覆盖率",
+              "影响了证明可靠的重要架构决策",
+              "在冲刺中表现出可靠的性能",
+            ],
+          },
+          technicalDetails: {
+            title: "技术细节",
+            list: [
+              "使用带有 Hooks 的 React",
+              "通过使用 TypeScript 和单元测试实践提高了可维护性",
+              "与 AWS 后端集成的功能",
+              "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
+              "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
+              "使用 UsableNet AQA 验证可访问性",
+            ],
+          },
+        },
+      },
+      list: [
         {
           subtitle: "教育",
           list: [
