@@ -128,6 +128,76 @@ const translationEnglish = {
             ],
           },
         },
+        automationHero: {
+          company: "Automation Hero via Soshace (Contractor)",
+          position: "Senior Front-end Developer",
+          duration: "January 2019 - January 2020",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Develop a cross-platform RPA application available as Chrome extension and a desktop client",
+              "Deliver new functionality quick",
+              "Implement design according to specifications",
+              "Create .NET service for Windows to facilitate interactions between the desktop application and Windows",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Successfully implemented core functionality",
+              "Have been keeping high percent of test coverage via the red-green-refactor TDD practice",
+              "Designed highly modular and fast to develop architecture",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              "Used React + Typescript + RxJS for presentation and business logic",
+              "Use .NET Framework to build Windows Services",
+              "Utilized chrome extension APIs as well as Windows Interop API to implement the RPA functionality",
+              "Integrated our product with Salesforce by adding an ability to open an extension from Salesforce dashboard",
+              "Gained a wealth of knowledge working with Chrome API for browser extensions and DOM",
+            ],
+          },
+        },
+        alphabank: {
+          company: "Alfabank",
+          position: "Senior Front-end Developer",
+          duration: "March 2018 - October 2018",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Develop front-end applications using React + Redux + Saga",
+              "Contribute to several fast paced bank projects",
+              "Increase test coverage",
+              "Follow agile scrum best practices",
+              "Effectively communicate with teams on different projects",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Successfully implemented several bank projects including mail service and factoring",
+              "Quickly gained familiarity with complex code bases on various projects",
+              "Significantly increased test coverage",
+              "Effectively communicated with teams on different projects",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              "Used React + Redux + Saga as a stack for the front-end application development",
+              "Contributed to the open source UI library (ARUI Feather)",
+              "Consumed data from the middle side of the application",
+              "Utilized server side rendering to improve the load speed",
+              "Used Docker and OpenShift as well as JIRA + Jenkins pipelines on the DevOps side of the application",
+              "Used Redux Form for the form data",
+              "Used Jest and snapshots for unit testing",
+              "Used PostCSS for styles",
+              "Proposed several improvements to project structure",
+            ],
+          },
+        },
       },
       list: [
         {

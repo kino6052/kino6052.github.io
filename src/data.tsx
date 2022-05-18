@@ -456,98 +456,58 @@ const getCompany = (language: ELanguage, index: number) =>
     ] as unknown as { company?: string }
   )?.company;
 
-export const getCareer = (language: ELanguage): ITable => [
-  [
-    {
-      title: translations[language].profilePage.experience.career.csaa.position,
-      description: (
-        <>
-          <p>
-            {translations[language].profilePage.experience.career.csaa.company}
-          </p>
-          <p>
-            {translations[language].profilePage.experience.career.csaa.duration}
-          </p>
-        </>
-      ),
-    },
-    {
-      description: (
-        <>
-          {(
-            ["responsibilities", "achievements", "technicalDetails"] as const
-          ).map((k) => (
-            <>
-              <b>
-                {
-                  translations[language].profilePage.experience.career.csaa[k]
-                    .title
-                }
-              </b>
-              <ul>
-                {translations[language].profilePage.experience.career.csaa[
-                  k
-                ].list.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
-            </>
-          ))}
-        </>
-      ),
-    },
-  ],
-  [
-    {
-      title:
-        translations[language].profilePage.experience.career.discountTire
-          .position,
-      description: (
-        <>
-          <p>
-            {
-              translations[language].profilePage.experience.career.discountTire
-                .company
-            }
-          </p>
-          <p>
-            {
-              translations[language].profilePage.experience.career.discountTire
-                .duration
-            }
-          </p>
-        </>
-      ),
-    },
-    {
-      description: (
-        <>
-          {(
-            ["responsibilities", "achievements", "technicalDetails"] as const
-          ).map((k) => (
-            <>
-              <b>
-                {
-                  translations[language].profilePage.experience.career
-                    .discountTire[k].title
-                }
-              </b>
-              <ul>
-                {translations[
-                  language
-                ].profilePage.experience.career.discountTire[k].list.map(
-                  (item) => (
+export const getCareer = (language: ELanguage): ITable =>
+  (["csaa", "discountTire", "automationHero", "alphabank"] as const).map(
+    (company) => [
+      {
+        title:
+          translations[language].profilePage.experience.career[company]
+            .position,
+        description: (
+          <>
+            <p>
+              {
+                translations[language].profilePage.experience.career[company]
+                  .company
+              }
+            </p>
+            <p>
+              {
+                translations[language].profilePage.experience.career[company]
+                  .duration
+              }
+            </p>
+          </>
+        ),
+      },
+      {
+        description: (
+          <>
+            {(
+              ["responsibilities", "achievements", "technicalDetails"] as const
+            ).map((section) => (
+              <>
+                <b>
+                  {
+                    translations[language].profilePage.experience.career[
+                      company
+                    ][section].title
+                  }
+                </b>
+                <ul>
+                  {translations[language].profilePage.experience.career[
+                    company
+                  ][section].list.map((item) => (
                     <li>{item}</li>
-                  )
-                )}
-              </ul>
-            </>
-          ))}
-        </>
-      ),
-    },
-  ],
-];
+                  ))}
+                </ul>
+              </>
+            ))}
+          </>
+        ),
+      },
+    ]
+  );
 
 export const getEducation = (language: ELanguage): ITable =>
   translations[language].profilePage.experience.list?.[0].list?.map(
