@@ -3,7 +3,7 @@ import { WIDTH } from "../utils/utils";
 
 export type ITable = {
   title?: string | React.ReactElement;
-  description: string | React.ReactElement;
+  description: string | number | React.ReactElement;
 }[][];
 
 export const Table = styled(
