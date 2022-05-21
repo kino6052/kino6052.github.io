@@ -35,7 +35,6 @@ EventSubject.pipe(
 });
 
 EventSubject.pipe(
-  tap(console.warn),
   filter(
     ([event, id]) =>
       event === "click" &&
