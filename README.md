@@ -2,4 +2,6 @@
 
 ## Портфолио
 
-![alt text](/blob?file=public%2Fimages%2Freadme.jpg)
+Портфолио сделанное на React.
+
+![alt text](/kirillnovik/portfolio/blob?file=public%2Fimages%2Freadme.jpg)
