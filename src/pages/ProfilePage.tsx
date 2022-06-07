@@ -78,6 +78,9 @@ export const ProfilePage = styled(
             >
               <h1>{props.content.name}</h1>
               <h2>{props.content.title}</h2>
+              <a href="/" className="hidden-link">
+                Website
+              </a>
               <h3>{props.content.subtitle}</h3>
             </div>
           </div>
@@ -196,6 +199,14 @@ export const ProfilePage = styled(
           font-size: 1.2rem;
           color: #aaa;
           font-weight: 400;
+        }
+
+        .hidden-link {
+          display: none;
+
+          @media print {
+            display: inline-flex;
+          }
         }
       }
     }
