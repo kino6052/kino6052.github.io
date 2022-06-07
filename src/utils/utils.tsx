@@ -198,6 +198,114 @@ const translationEnglish = {
             ],
           },
         },
+        isonas: {
+          company: "ISONAS",
+          position: "Software Engineer",
+          duration: "July 2016 - December 2017",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Maintain a tightly-coupled monolithic application",
+              "Increase code base maintainability, readability and testability",
+              "Gain expertise with company's proprietary frameworks",
+              "Consistently deliver well written and well tested code",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed React.js UI elements for integration with legacy UI codebase",
+              "Introduced real-time data transfer into the application using WebSockets",
+              "Designed and implemented a thin client integrating the application with Active Directory",
+              "Implemented logic and styles of various views of the application",
+              "Designed and implemented REST API gateway allowing clients to integrate with the application",
+              "Refactored legacy monolith application into microservices using Docker",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*"
+              ),
+              processMarkup(
+                "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*"
+              ),
+              processMarkup(
+                "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality"
+              ),
+              processMarkup(
+                "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*"
+              ),
+              processMarkup(
+                "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems"
+              ),
+              processMarkup(
+                "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods"
+              ),
+              processMarkup(
+                "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*"
+              ),
+              processMarkup(
+                "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment"
+              ),
+              processMarkup(
+                "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability"
+              ),
+              processMarkup(
+                "Successfully introduced *multithreaded behavior* for several performance-critical features of the application"
+              ),
+              processMarkup("DesignedUI features with *Sass* and *PostCSS*"),
+              processMarkup("Created complex *automation scripts* with *Gulp*"),
+              processMarkup(
+                "Reimplemented *complex legacy data migration batch scripts* with *Python*"
+              ),
+              processMarkup(
+                "Enhanced *performance of slow PostgreSQL queries*"
+              ),
+              processMarkup("Utilized *GitHub VCS*"),
+            ],
+          },
+        },
+        medtronic: {
+          company: "Medtronic",
+          position: "Software Application Developer",
+          duration: "May 2015 - September 2015",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Work with a remote international team on a legacy project",
+              "Integrate an application into the lgacy project with a REST API using Bridge OOP pattern",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed and developed a patient monitoring web application letting to put hospital's monitoring station inside the nurse's pocket",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
+              ),
+              processMarkup(
+                "Consumed REST API using company's bridge API tool and LINQ queries"
+              ),
+              processMarkup(
+                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
+              ),
+              processMarkup("Utilized *Perforce VSC*"),
+            ],
+          },
+        },
       },
       list: [
         {
@@ -678,6 +786,114 @@ const translationRussian: TTranslation = {
             ],
           },
         },
+        isonas: {
+          company: "ISONAS",
+          position: "Software Engineer",
+          duration: "July 2016 - December 2017",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Maintain a tightly-coupled monolithic application",
+              "Increase code base maintainability, readability and testability",
+              "Gain expertise with company's proprietary frameworks",
+              "Consistently deliver well written and well tested code",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed React.js UI elements for integration with legacy UI codebase",
+              "Introduced real-time data transfer into the application using WebSockets",
+              "Designed and implemented a thin client integrating the application with Active Directory",
+              "Implemented logic and styles of various views of the application",
+              "Designed and implemented REST API gateway allowing clients to integrate with the application",
+              "Refactored legacy monolith application into microservices using Docker",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*"
+              ),
+              processMarkup(
+                "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*"
+              ),
+              processMarkup(
+                "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality"
+              ),
+              processMarkup(
+                "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*"
+              ),
+              processMarkup(
+                "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems"
+              ),
+              processMarkup(
+                "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods"
+              ),
+              processMarkup(
+                "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*"
+              ),
+              processMarkup(
+                "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment"
+              ),
+              processMarkup(
+                "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability"
+              ),
+              processMarkup(
+                "Successfully introduced *multithreaded behavior* for several performance-critical features of the application"
+              ),
+              processMarkup("DesignedUI features with *Sass* and *PostCSS*"),
+              processMarkup("Created complex *automation scripts* with *Gulp*"),
+              processMarkup(
+                "Reimplemented *complex legacy data migration batch scripts* with *Python*"
+              ),
+              processMarkup(
+                "Enhanced *performance of slow PostgreSQL queries*"
+              ),
+              processMarkup("Utilized *GitHub VCS*"),
+            ],
+          },
+        },
+        medtronic: {
+          company: "Medtronic",
+          position: "Software Application Developer",
+          duration: "May 2015 - September 2015",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Work with a remote international team on a legacy project",
+              "Integrate an application into the lgacy project with a REST API using Bridge OOP pattern",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed and developed a patient monitoring web application letting to put hospital's monitoring station inside the nurse's pocket",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
+              ),
+              processMarkup(
+                "Consumed REST API using company's bridge API tool and LINQ queries"
+              ),
+              processMarkup(
+                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
+              ),
+              processMarkup("Utilized *Perforce VSC*"),
+            ],
+          },
+        },
       },
       list: [
         {
@@ -1155,6 +1371,114 @@ const translationChinese: TTranslation = {
               "Used Jest and snapshots for unit testing",
               "Used PostCSS for styles",
               "Proposed several improvements to project structure",
+            ],
+          },
+        },
+        isonas: {
+          company: "ISONAS",
+          position: "Software Engineer",
+          duration: "July 2016 - December 2017",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Maintain a tightly-coupled monolithic application",
+              "Increase code base maintainability, readability and testability",
+              "Gain expertise with company's proprietary frameworks",
+              "Consistently deliver well written and well tested code",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed React.js UI elements for integration with legacy UI codebase",
+              "Introduced real-time data transfer into the application using WebSockets",
+              "Designed and implemented a thin client integrating the application with Active Directory",
+              "Implemented logic and styles of various views of the application",
+              "Designed and implemented REST API gateway allowing clients to integrate with the application",
+              "Refactored legacy monolith application into microservices using Docker",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*"
+              ),
+              processMarkup(
+                "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*"
+              ),
+              processMarkup(
+                "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*"
+              ),
+              processMarkup(
+                "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality"
+              ),
+              processMarkup(
+                "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*"
+              ),
+              processMarkup(
+                "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems"
+              ),
+              processMarkup(
+                "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods"
+              ),
+              processMarkup(
+                "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*"
+              ),
+              processMarkup(
+                "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment"
+              ),
+              processMarkup(
+                "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability"
+              ),
+              processMarkup(
+                "Successfully introduced *multithreaded behavior* for several performance-critical features of the application"
+              ),
+              processMarkup("DesignedUI features with *Sass* and *PostCSS*"),
+              processMarkup("Created complex *automation scripts* with *Gulp*"),
+              processMarkup(
+                "Reimplemented *complex legacy data migration batch scripts* with *Python*"
+              ),
+              processMarkup(
+                "Enhanced *performance of slow PostgreSQL queries*"
+              ),
+              processMarkup("Utilized *GitHub VCS*"),
+            ],
+          },
+        },
+        medtronic: {
+          company: "Medtronic",
+          position: "Software Application Developer",
+          duration: "May 2015 - September 2015",
+          responsibilities: {
+            title: "Responsibilities",
+            list: [
+              "Work with a remote international team on a legacy project",
+              "Integrate an application into the lgacy project with a REST API using Bridge OOP pattern",
+            ],
+          },
+          achievements: {
+            title: "Achievements",
+            list: [
+              "Designed and developed a patient monitoring web application letting to put hospital's monitoring station inside the nurse's pocket",
+            ],
+          },
+          technicalDetails: {
+            title: "Technical Details",
+            list: [
+              processMarkup(
+                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
+              ),
+              processMarkup(
+                "Consumed REST API using company's bridge API tool and LINQ queries"
+              ),
+              processMarkup(
+                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
+              ),
+              processMarkup("Utilized *Perforce VSC*"),
             ],
           },
         },

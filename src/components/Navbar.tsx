@@ -210,6 +210,8 @@ export const Navbar = styled(
   }
 
   ul {
+    margin-top: 0 !important;
+
     @media (max-width: ${WIDTH}px) {
       &.close {
         display: none;
@@ -245,7 +247,6 @@ export const Navbar = styled(
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-top: 0;
     &.close {
       margin-bottom: 0;
     }
