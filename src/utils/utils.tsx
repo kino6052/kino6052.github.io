@@ -84,13 +84,13 @@ const translationEnglish = {
           technicalDetails: {
             title: "Technical Details",
             list: [
-              "Utilized React with Hooks",
-              "Improved maintainability by using TypeScript and Unit Test practices",
-              "Integrated features with the AWS backend",
-              "Utilized best practices to optimize application performance using caching and Service Workers",
-              "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
-              "Verified accessibility with UsableNet AQA",
-            ],
+              "Utilized *React with Hooks*",
+              "Improved maintainability by using *TypeScript and Unit Test* practices",
+              "Integrated features with the *AWS backend*",
+              "Utilized best practices to optimize application performance using caching and *Service Workers*",
+              "Set up and utilized process automation (*GitHub workflows, Git hooks, AWS CI Pipeline*)",
+              "Verified accessibility with *UsableNet AQA*",
+            ].map((i) => processMarkup(i)),
           },
         },
         discountTire: {
@@ -108,24 +108,17 @@ const translationEnglish = {
           achievements: {
             title: "Achievements",
             list: [
-              "Successfully communicated technical details to business, development and QA teams",
-              "Successfully implemented major features",
-              "Carefully followed UI design specifications to ensure quality",
+              "Successfully migrated several features from the legacy code base",
               "Significantly improved test coverage",
-              "Influenced important architectural decisions that proved reliable",
-              "Demonstrated reliable performance across sprints",
+              "Influenced some of the important architecture decisions",
             ],
           },
           technicalDetails: {
             title: "Technical Details",
             list: [
-              "Utilized React with Hooks",
-              "Improved maintainability by using TypeScript and Unit Test practices",
-              "Integrated features with the AWS backend",
-              "Utilized best practices to optimize application performance using caching and Service Workers",
-              "Set up and utilized process automation (GitHub workflows, Git hooks, AWS CI Pipeline)",
-              "Verified accessibility with UsableNet AQA",
-            ],
+              "Worked with *React16 + GraphQL* stack",
+              "Utilized best practices to optimize application performance such as memoization and caching with *Service Workers*",
+            ].map((i) => processMarkup(i)),
           },
         },
         automationHero: {
@@ -152,17 +145,17 @@ const translationEnglish = {
           technicalDetails: {
             title: "Technical Details",
             list: [
-              "Used React + Typescript + RxJS for presentation and business logic",
-              "Use .NET Framework to build Windows Services",
-              "Utilized chrome extension APIs as well as Windows Interop API to implement the RPA functionality",
-              "Integrated our product with Salesforce by adding an ability to open an extension from Salesforce dashboard",
-              "Gained a wealth of knowledge working with Chrome API for browser extensions and DOM",
-            ],
+              "Used *React + Typescript + RxJS* for presentation and business logic",
+              "Use *.NET Framework* to build *Windows Services*",
+              "Utilized *chrome extension APIs* as well as *Windows Interop API* to implement the RPA functionality",
+              "Integrated our product with *Salesforce* by adding an ability to open an extension from Salesforce dashboard",
+              "Gained a wealth of knowledge working with *Chrome API* for browser extensions and DOM",
+            ].map((i) => processMarkup(i)),
           },
         },
         alphabank: {
           company: "Alfabank",
-          position: "Senior Front-end Developer",
+          position: "Front-end Developer",
           duration: "March 2018 - October 2018",
           responsibilities: {
             title: "Responsibilities",
@@ -186,16 +179,16 @@ const translationEnglish = {
           technicalDetails: {
             title: "Technical Details",
             list: [
-              "Used React + Redux + Saga as a stack for the front-end application development",
+              "Used *React + Redux + Saga* as a stack for the front-end application development",
               "Contributed to the open source UI library (ARUI Feather)",
               "Consumed data from the middle side of the application",
               "Utilized server side rendering to improve the load speed",
-              "Used Docker and OpenShift as well as JIRA + Jenkins pipelines on the DevOps side of the application",
-              "Used Redux Form for the form data",
-              "Used Jest and snapshots for unit testing",
-              "Used PostCSS for styles",
+              "Used *Docker and OpenShift* as well as JIRA + Jenkins pipelines on the DevOps side of the application",
+              "Used *Redux* Form for the form data",
+              "Used *Jest and snapshots* for unit testing",
+              "Used *PostCSS* for styles",
               "Proposed several improvements to project structure",
-            ],
+            ].map((i) => processMarkup(i)),
           },
         },
         isonas: {
@@ -293,17 +286,11 @@ const translationEnglish = {
           technicalDetails: {
             title: "Technical Details",
             list: [
-              processMarkup(
-                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
-              ),
-              processMarkup(
-                "Consumed REST API using company's bridge API tool and LINQ queries"
-              ),
-              processMarkup(
-                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
-              ),
-              processMarkup("Utilized *Perforce VSC*"),
-            ],
+              "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine",
+              "Consumed REST API using company's bridge API tool and LINQ queries",
+              "Utilized *LessCSS* and *Bootstrap* to design front-end layouts",
+              "Utilized *Perforce VSC*",
+            ].map((i) => processMarkup(i)),
           },
         },
       },
@@ -625,10 +612,10 @@ const translationRussian: TTranslation = {
   },
   profilePage: {
     name: "Кирилл Новик",
-    title: "Фул-стэк Разработчик",
+    title: "Full-stack Разработчик",
     subtitle: "Более 7 лет опыта. Рассматриваю предложения по удаленке.",
     description:
-      "Я универсальный фул-стэк разработчик, имеющий опыт проектирования, создания и обслуживания масштабируемых облачных инфраструктур и приложений с акцентом на методах разработки, основанной на тестировании, гибкой и объектно-ориентированной разработке.",
+      "Я универсальный full-stack разработчик, имеющий опыт проектирования, создания и обслуживания масштабируемых облачных инфраструктур и приложений с акцентом на методах разработки, основанной на тестировании, гибкой и объектно-ориентированной разработке.",
     tags: [
       "React",
       "TypeScript",
@@ -672,226 +659,185 @@ const translationRussian: TTranslation = {
           technicalDetails: {
             title: "Технические Подробности",
             list: [
-              "Использовали React с Hooks",
-              "Улучшенная поддерживаемость за счет использования методов TypeScript и модульного тестирования.",
-              "Интегрированные функции с серверной частью AWS",
-              "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers.",
-              "Использование лучших практик для оптимизации производительности приложений. Настройка и автоматизация процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline), кэширование Sing и Service Workers.",
-              "Подтвержденная доступность с помощью UsableNet AQA",
-            ],
+              "Использовали *React с Hooks*",
+              "Улучшенная поддерживаемость за счет использования методов *TypeScript* и *юнит тестирования*.",
+              "Интегрированные функции с серверной частью *AWS*",
+              "Использованы лучшие практики для оптимизации производительности приложений с помощью *кэширования и Service Workers*.",
+              "Использование лучших практик для оптимизации производительности приложений. Настройка и автоматизация процессов (*GitHub workflows*, *Git hooks*, *AWS CI Pipeline*).",
+              "Улучшение доступности с помощью *UsableNet AQA*",
+            ].map((i) => processMarkup(i)),
           },
         },
         discountTire: {
           company: "Discount Tire",
-          position: "Разработчик React (Контракт)",
-          duration: "Март 2020 г. - Май 2020 г.",
+          position: "React Разработчик (Контракт)",
+          duration: "Март 2020 - Май 2020",
           responsibilities: {
             title: "Обязанности",
             list: [
               "Помощь в переносе основного приложения на React",
-              "Улучшить тестовое покрытие",
-              "Участвовать в процессе принятия архитектурных решений",
+              "Улучшение тестового покрытия",
+              "Участие в процессе принятия архитектурных решений",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "Достижения",
             list: [
-              "Успешная передача технических деталей бизнес-командам, командам разработчиков и отдела контроля качества",
-              "Успешно реализованы основные функции",
-              "Тщательное соблюдение спецификаций дизайна пользовательского интерфейса для обеспечения качества",
-              "Значительно улучшенное тестовое покрытие",
-              "Повлиял на важные архитектурные решения, которые оказались надежными",
-              "Продемонстрированная надежная производительность в спринтах",
+              "Успешно перенесено несколько функций из устаревшей базы кода",
+              "Значительно улучшено покрытие тестами",
+              "Повлияло на некоторые важные архитектурные решения",
             ],
           },
           technicalDetails: {
-            title: "Технические подробности",
+            title: "Технические Детали",
             list: [
-              "Использовали React с Hooks",
-              "Улучшенная ремонтопригодность за счет использования методов TypeScript и модульного тестирования",
-              "Интегрированные функции с серверной частью AWS",
-              "Использованы лучшие практики для оптимизации производительности приложений с помощью кэширования и Service Workers",
-              "Настройка и использование автоматизации процессов (рабочие процессы GitHub, обработчики Git, AWS CI Pipeline)",
-              "Подтвержденная доступность с помощью UsableNet AQA",
-            ],
+              "Работал со стеком *React16 + GraphQL*",
+              "Использовал лучшие практики для оптимизации производительности приложений, такие как мемоизация и кэширование с помощью *Service Workers*",
+            ].map((i) => processMarkup(i)),
           },
         },
         automationHero: {
-          company: "Automation Hero via Soshace (Contractor)",
-          position: "Senior Front-end Developer",
-          duration: "January 2019 - January 2020",
+          company: "Automation Hero через Soshace (Контракт)",
+          position: "Старший Front-end Разработчик",
+          duration: "Январь 2019 - Январь 2020",
           responsibilities: {
-            title: "Responsibilities",
+            title: "Обязанности",
             list: [
-              "Develop a cross-platform RPA application available as Chrome extension and a desktop client",
-              "Deliver new functionality quick",
-              "Implement design according to specifications",
-              "Create .NET service for Windows to facilitate interactions between the desktop application and Windows",
+              "Разработка кроссплатформенного приложения RPA, доступного в виде расширения Chrome и десктоп клиента",
+              "Быстрое предоставление новых функциональных возможностей",
+              "Реализация дизайна в соответствии со спецификациями",
+              "Создание службы .NET для Windows для облегчения взаимодействия между настольным приложением и Windows",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "Достижения",
             list: [
-              "Successfully implemented core functionality",
-              "Have been keeping high percent of test coverage via the red-green-refactor TDD practice",
-              "Designed highly modular and fast to develop architecture",
+              "Успешно реализована основная функциональность",
+              "Удалось сохранить высокий процент охвата тестированием с помощью практики TDD red-green-refactor",
+              "Разработана высоко модульная и быстрая в разработке архитектура",
             ],
           },
           technicalDetails: {
             title: "Technical Details",
             list: [
-              "Used React + Typescript + RxJS for presentation and business logic",
-              "Use .NET Framework to build Windows Services",
-              "Utilized chrome extension APIs as well as Windows Interop API to implement the RPA functionality",
-              "Integrated our product with Salesforce by adding an ability to open an extension from Salesforce dashboard",
-              "Gained a wealth of knowledge working with Chrome API for browser extensions and DOM",
-            ],
+              "Использовал *React + Typescript + RxJS* для презентации и бизнес-логики",
+              "Использовал *.NET* Framework для создания *сервисов Windows*",
+              "Использовал *API расширений Chrome*, а также *Windows Interop API* для реализации функциональности RPA",
+              "Интегрировал наш продукт с *Salesforce*, добавив возможность открывать расширение из панели мониторинга *Salesforce*",
+              "Получил богатый опыт работы с *Chrome API* для расширений браузера и DOM",
+            ].map((i) => processMarkup(i)),
           },
         },
         alphabank: {
-          company: "Alfabank",
-          position: "Senior Front-end Developer",
-          duration: "March 2018 - October 2018",
+          company: "Альфабанк",
+          position: "Front-end Разработчик",
+          duration: "Март 2018 - Октябрь 2018",
           responsibilities: {
-            title: "Responsibilities",
+            title: "Обязанности",
             list: [
-              "Develop front-end applications using React + Redux + Saga",
-              "Contribute to several fast paced bank projects",
-              "Increase test coverage",
-              "Follow agile scrum best practices",
-              "Effectively communicate with teams on different projects",
+              "Разработка интерфейсных приложений с использованием React + Redux + Saga",
+              "Участие в нескольких быстро развивающихся банковских проектах",
+              "Увеличение тестового покрытия",
+              "Следование лучшим практикам agile scrum",
+              "Эффективное общение с командами по различным проектам",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "Достижения",
             list: [
-              "Successfully implemented several bank projects including mail service and factoring",
-              "Quickly gained familiarity with complex code bases on various projects",
-              "Significantly increased test coverage",
-              "Effectively communicated with teams on different projects",
+              "Успешно реализовал несколько банковских проектов, включая почтовую службу и факторинг",
+              "Быстро познакомился со сложными кодовыми базами в различных проектах",
+              "Значительно увеличил охват тестированием",
+              "Эффективно общался с командами по различным проектам",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "Технические Детали",
             list: [
-              "Used React + Redux + Saga as a stack for the front-end application development",
-              "Contributed to the open source UI library (ARUI Feather)",
-              "Consumed data from the middle side of the application",
-              "Utilized server side rendering to improve the load speed",
-              "Used Docker and OpenShift as well as JIRA + Jenkins pipelines on the DevOps side of the application",
-              "Used Redux Form for the form data",
-              "Used Jest and snapshots for unit testing",
-              "Used PostCSS for styles",
-              "Proposed several improvements to project structure",
-            ],
+              "Использовал *React + Redux + Saga* в качестве стека для разработки интерфейсных приложений",
+              "Внес вклад в библиотеку пользовательского интерфейса с открытым исходным кодом (*ARUI Feather*)",
+              "Потреблял данные из middle части приложения",
+              "Использовал рендеринг на стороне сервера для повышения скорости загрузки",
+              "Использовал *Docker и OpenShift*, а также конвейеры JIRA + Jenkins на стороне DevOps приложения",
+              "Использовала форму *Redux* для данных формы",
+              "Использовала *Jest* и снимки для модульного тестирования",
+              "Использовала *PostCSS* для стилей",
+              "Предложено несколько улучшений структуры проекта",
+            ].map((i) => processMarkup(i)),
           },
         },
         isonas: {
           company: "ISONAS",
-          position: "Software Engineer",
-          duration: "July 2016 - December 2017",
+          position: "Инжинер-программист",
+          duration: "Июль 2016 - Декабрь 2017",
           responsibilities: {
-            title: "Responsibilities",
+            title: "Обязанности",
             list: [
-              "Maintain a tightly-coupled monolithic application",
-              "Increase code base maintainability, readability and testability",
-              "Gain expertise with company's proprietary frameworks",
-              "Consistently deliver well written and well tested code",
+              "Поддерживать тесно связанное монолитное приложение",
+              "Повысить поддерживаемость, читаемость и тестируемость базы кода",
+              "Получить опыт работы с реализованными компанией фреймворками",
+              "Постоянно предоставлять хорошо написанный и хорошо протестированный код",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "Достижения",
             list: [
-              "Designed React.js UI elements for integration with legacy UI codebase",
-              "Introduced real-time data transfer into the application using WebSockets",
-              "Designed and implemented a thin client integrating the application with Active Directory",
-              "Implemented logic and styles of various views of the application",
-              "Designed and implemented REST API gateway allowing clients to integrate with the application",
-              "Refactored legacy monolith application into microservices using Docker",
+              "Спроектированный React.js Элементы пользовательского интерфейса для интеграции с устаревшей кодовой базой пользовательского интерфейса",
+              "Внедрена передача данных в реальном времени в приложение с использованием WebSockets",
+              "Разработан и реализован тонкий клиент, интегрирующий приложение с Active Directory",
+              "Реализована логика и стили различных представлений приложения",
+              "Разработан и реализован REST API-шлюз, позволяющий клиентам интегрироваться с приложением",
+              "Переработанное устаревшее монолитное приложение в микросервисы с помощью Docker",
             ],
           },
           technicalDetails: {
             title: "Technical Details",
             list: [
-              processMarkup(
-                "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*"
-              ),
-              processMarkup(
-                "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*"
-              ),
-              processMarkup(
-                "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*"
-              ),
-              processMarkup(
-                "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*"
-              ),
-              processMarkup(
-                "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality"
-              ),
-              processMarkup(
-                "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*"
-              ),
-              processMarkup(
-                "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems"
-              ),
-              processMarkup(
-                "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods"
-              ),
-              processMarkup(
-                "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*"
-              ),
-              processMarkup(
-                "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment"
-              ),
-              processMarkup(
-                "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability"
-              ),
-              processMarkup(
-                "Successfully introduced *multithreaded behavior* for several performance-critical features of the application"
-              ),
-              processMarkup("DesignedUI features with *Sass* and *PostCSS*"),
-              processMarkup("Created complex *automation scripts* with *Gulp*"),
-              processMarkup(
-                "Reimplemented *complex legacy data migration batch scripts* with *Python*"
-              ),
-              processMarkup(
-                "Enhanced *performance of slow PostgreSQL queries*"
-              ),
-              processMarkup("Utilized *GitHub VCS*"),
-            ],
+              "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*",
+              "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*",
+              "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*",
+              "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*",
+              "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality",
+              "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*",
+              "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems",
+              "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods",
+              "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*",
+              "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment",
+              "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability",
+              "Successfully introduced *multithreaded behavior* for several performance-critical features of the application",
+              "DesignedUI features with *Sass* and *PostCSS*",
+              "Created complex *automation scripts* with *Gulp*",
+              "Reimplemented *complex legacy data migration batch scripts* with *Python*",
+              "Enhanced *performance of slow PostgreSQL queries*",
+              "Utilized *GitHub VCS*",
+            ].map((i) => processMarkup(i)),
           },
         },
         medtronic: {
           company: "Medtronic",
-          position: "Software Application Developer",
-          duration: "May 2015 - September 2015",
+          position: "Разработчик-стажер",
+          duration: "Май 2015 - Сентябрь 2015",
           responsibilities: {
-            title: "Responsibilities",
+            title: "Обязанности",
             list: [
-              "Work with a remote international team on a legacy project",
-              "Integrate an application into the lgacy project with a REST API using Bridge OOP pattern",
+              "Работа с удаленной международной командой над устаревшим проектом",
+              "Интеграция приложения в проект lgacy с помощью REST API с использованием шаблона Bridge",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "Достижения",
             list: [
-              "Designed and developed a patient monitoring web application letting to put hospital's monitoring station inside the nurse's pocket",
+              "Спроектировал и разработал веб-приложение для мониторинга пациентов, позволяющее поместить станцию мониторинга больницы в карман медсестры",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "Технические Детали",
             list: [
-              processMarkup(
-                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
-              ),
-              processMarkup(
-                "Consumed REST API using company's bridge API tool and LINQ queries"
-              ),
-              processMarkup(
-                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
-              ),
-              processMarkup("Utilized *Perforce VSC*"),
-            ],
+              "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine",
+              "Consumed REST API using company's bridge API tool and LINQ queries",
+              "Utilized *LessCSS* and *Bootstrap* to design front-end layouts",
+              "Utilized *Perforce VSC*",
+            ].map((i) => processMarkup(i)),
           },
         },
       },
@@ -1266,7 +1212,7 @@ const translationChinese: TTranslation = {
               "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
               "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
               "使用 UsableNet AQA 验证可访问性",
-            ],
+            ].map((i) => processMarkup(i)),
           },
         },
         discountTire: {
@@ -1301,185 +1247,151 @@ const translationChinese: TTranslation = {
               "利用缓存和 Service Worker 优化应用程序性能的最佳实践",
               "设置和使用流程自动化（GitHub 工作流程、Git 挂钩、AWS CI 管道）",
               "使用 UsableNet AQA 验证可访问性",
-            ],
+            ].map((i) => processMarkup(i)),
           },
         },
         automationHero: {
           company: "Automation Hero via Soshace (Contractor)",
-          position: "Senior Front-end Developer",
-          duration: "January 2019 - January 2020",
+          position: "高级前端开发人员",
+          duration: "2019 年 1 月 - 2020 年 1 月",
           responsibilities: {
-            title: "Responsibilities",
+            title: "责任",
             list: [
-              "Develop a cross-platform RPA application available as Chrome extension and a desktop client",
-              "Deliver new functionality quick",
-              "Implement design according to specifications",
-              "Create .NET service for Windows to facilitate interactions between the desktop application and Windows",
+              "开发可用作 Chrome 扩展和桌面客户端的跨平台 RPA 应用程序",
+              "快速交付新功能",
+              "按规范实施设计",
+              "为 Windows 创建 .NET 服务以促进桌面应用程序和 Windows 之间的交互",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "成就",
             list: [
-              "Successfully implemented core functionality",
-              "Have been keeping high percent of test coverage via the red-green-refactor TDD practice",
-              "Designed highly modular and fast to develop architecture",
+              "成功实现核心功能",
+              "通过红绿重构 TDD 实践一直保持高百分比的测试覆盖率",
+              "设计的高度模块化和快速开发的架构",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "技术细节",
             list: [
-              "Used React + Typescript + RxJS for presentation and business logic",
-              "Use .NET Framework to build Windows Services",
-              "Utilized chrome extension APIs as well as Windows Interop API to implement the RPA functionality",
-              "Integrated our product with Salesforce by adding an ability to open an extension from Salesforce dashboard",
-              "Gained a wealth of knowledge working with Chrome API for browser extensions and DOM",
-            ],
+              "使用 React + Typescript + RxJS 进行演示和业务逻辑",
+              "使用 .NET Framework 构建 Windows 服务",
+              "利用 chrome 扩展 API 以及 Windows 互操作 API 来实现 RPA 功能",
+              "通过添加从 Salesforce 仪表板打开扩展的功能，将我们的产品与 Salesforce 集成",
+              "获得了使用 Chrome API 进行浏览器扩展和 DOM 的丰富知识",
+            ].map((i) => processMarkup(i)),
           },
         },
         alphabank: {
           company: "Alfabank",
-          position: "Senior Front-end Developer",
-          duration: "March 2018 - October 2018",
+          position: "高级前端开发人员",
+          duration: "2018年3月 - 2018年10月",
           responsibilities: {
-            title: "Responsibilities",
+            title: "责任",
             list: [
-              "Develop front-end applications using React + Redux + Saga",
-              "Contribute to several fast paced bank projects",
-              "Increase test coverage",
-              "Follow agile scrum best practices",
-              "Effectively communicate with teams on different projects",
+              "使用 React + Redux + Saga 开发前端应用程序",
+              "为几个快节奏的银行项目做出贡献",
+              "增加测试覆盖率",
+              "遵循敏捷 Scrum 最佳实践",
+              "有效地与不同项目的团队沟通",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "成就",
             list: [
-              "Successfully implemented several bank projects including mail service and factoring",
-              "Quickly gained familiarity with complex code bases on various projects",
-              "Significantly increased test coverage",
-              "Effectively communicated with teams on different projects",
+              "成功实施了包括邮件服务和保理在内的多个银行项目",
+              "快速熟悉各种项目的复杂代码库",
+              "显着增加测试覆盖率",
+              "有效地与不同项目的团队沟通",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "技术细节",
             list: [
-              "Used React + Redux + Saga as a stack for the front-end application development",
-              "Contributed to the open source UI library (ARUI Feather)",
-              "Consumed data from the middle side of the application",
-              "Utilized server side rendering to improve the load speed",
-              "Used Docker and OpenShift as well as JIRA + Jenkins pipelines on the DevOps side of the application",
-              "Used Redux Form for the form data",
-              "Used Jest and snapshots for unit testing",
-              "Used PostCSS for styles",
-              "Proposed several improvements to project structure",
-            ],
+              "使用 React + Redux + Saga 作为前端应用程序开发的堆栈",
+              "贡献于开源 UI 库（ARUI Feather）",
+              "从应用程序的中间消费数据",
+              "利用服务器端渲染提高加载速度",
+              "在应用程序的 DevOps 端使用了 Docker 和 OpenShift 以及 JIRA + Jenkins 管道",
+              "使用 Redux Form 处理表单数据",
+              "使用 Jest 和快照进行单元测试",
+              "使用 PostCSS 作为样式",
+              "提出了对项目结构的几项改进",
+            ].map((i) => processMarkup(i)),
           },
         },
         isonas: {
           company: "ISONAS",
-          position: "Software Engineer",
-          duration: "July 2016 - December 2017",
+          position: "软件工程师",
+          duration: "2016年7月 - 2017年12月",
           responsibilities: {
-            title: "Responsibilities",
+            title: "责任",
             list: [
-              "Maintain a tightly-coupled monolithic application",
-              "Increase code base maintainability, readability and testability",
-              "Gain expertise with company's proprietary frameworks",
-              "Consistently deliver well written and well tested code",
+              "维护一个紧密耦合的单体应用程序",
+              "提高代码库的可维护性、可读性和可测试性",
+              "获得公司专有框架的专业知识",
+              "始终如一地交付编写良好且经过良好测试的代码",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "成就",
             list: [
-              "Designed React.js UI elements for integration with legacy UI codebase",
-              "Introduced real-time data transfer into the application using WebSockets",
-              "Designed and implemented a thin client integrating the application with Active Directory",
-              "Implemented logic and styles of various views of the application",
-              "Designed and implemented REST API gateway allowing clients to integrate with the application",
-              "Refactored legacy monolith application into microservices using Docker",
+              "为与遗留 UI 代码库集成而设计的 React.js UI 元素",
+              "使用 WebSockets 将实时数据传输引入应用程序",
+              "设计并实现了一个将应用程序与 Active Directory 集成的瘦客户端",
+              "应用程序各种视图的实现逻辑和样式",
+              "设计并实现了允许客户端与应用程序集成的 REST API 网关",
+              "使用 Docker 将遗留的单体应用程序重构为微服务",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "技术细节",
             list: [
-              processMarkup(
-                "Created *microservices* as *docker service stacks* with well defined *REST* interfaces deployed as a cloud cluster with *docker swarm mode*"
-              ),
-              processMarkup(
-                "Reduced front-end technical debt by refactoring and modularizing components according to proper *MVC and SOLID principles* using *best JavaScript OOP practices*"
-              ),
-              processMarkup(
-                "Designed applications *REST API according to Swagger OpenAPI specification* and created highly scalable *REST API gateway microservice* utilizing *Swagger Codegen API*"
-              ),
-              processMarkup(
-                "Successfully implemented *REST API gateway microservice* utilizing *Swagger Codegen API*"
-              ),
-              processMarkup(
-                "Successfully implemented two separate *WebSocket* servers with *javax WebSocket Server API* as a part of the java package, as well as highly scalable *Socket.io Server API* as a microservice as well as *WebSocet client* functionality"
-              ),
-              processMarkup(
-                "Designed minimally code-invasive *AWS read-replica based solution* into the application to alleviate slow response time issues of the critical DB queries on tables with high read-write contention *reducing the query response times by the factor of 10*"
-              ),
-              processMarkup(
-                "Designed and implemented *Active Directory integration client* utilizing *LDAP queries* allowing to import Active Directory users and credentials into the systems"
-              ),
-              processMarkup(
-                "Created testing suites with *Mockito* and *JUnit* to unit-test complex dependency-heavy methods"
-              ),
-              processMarkup(
-                "Created front-end testing suites with *Selenium*, *Sikuli* as well as *NodeUnit* and *Mocha*"
-              ),
-              processMarkup(
-                "Configured and deployed *Jetty* and *Tomcat* servers in the *AWS* environment"
-              ),
-              processMarkup(
-                "Designed and proposed *ReactJS + Redux UI elements + TypeScript* to integrate with the company's framework for better maintainability"
-              ),
-              processMarkup(
-                "Successfully introduced *multithreaded behavior* for several performance-critical features of the application"
-              ),
-              processMarkup("DesignedUI features with *Sass* and *PostCSS*"),
-              processMarkup("Created complex *automation scripts* with *Gulp*"),
-              processMarkup(
-                "Reimplemented *complex legacy data migration batch scripts* with *Python*"
-              ),
-              processMarkup(
-                "Enhanced *performance of slow PostgreSQL queries*"
-              ),
-              processMarkup("Utilized *GitHub VCS*"),
-            ],
+              "创建 *微服务* 作为 *docker 服务堆栈*，具有定义明确的 *REST* 接口，部署为具有 *docker swarm 模式* 的云集群",
+              "根据正确的 *MVC 和 SOLID 原则*，使用 *最佳 JavaScript OOP 实践*，通过重构和模块化组件来减少前端技术债务",
+              "根据 Swagger OpenAPI 规范*设计应用程序 *REST API，并利用 *Swagger Codegen API* 创建高度可扩展的 *REST API 网关微服务*",
+              "利用 *Swagger Codegen API* 成功实现 *REST API 网关微服务*",
+              "成功实现了两个独立的 *WebSocket* 服务器，其中 *javax WebSocket Server API* 作为 java 包的一部分，以及高度可扩展的 *Socket.io Server API* 作为微服务以及 *WebSocet 客户端* 功能",
+              "在应用程序中设计了最低限度的代码侵入性*基于 AWS 读取副本的解决方案*，以缓解对具有高读写争用的表的关键数据库查询的缓慢响应时间问题*将查询响应时间减少 10 倍*",
+              "设计和实施的 *Active Directory 集成客户端 * 利用 *LDAP 查询 * 允许将 Active Directory 用户和凭据导入系统",
+              "使用 *Mockito* 和 *JUnit* 创建了测试套件，以对复杂依赖重的方法进行单元测试",
+              "使用 *Selenium*、*Sikuli* 以及 *NodeUnit* 和 *Mocha* 创建了前端测试套件",
+              "在 *AWS* 环境中配置和部署 *Jetty* 和 *Tomcat* 服务器",
+              "设计并提出 *ReactJS + Redux UI 元素 + TypeScript* 以与公司的框架集成以实现更好的可维护性",
+              "为应用程序的几个性能关键特性成功引入了*多线程行为*",
+              "DesignedUI features with *Sass* and *PostCSS*",
+              "用 *Gulp* 创建了复杂的 *自动化脚本*",
+              "使用 *Python* 重新实现 *复杂的遗留数据迁移批处理脚本*",
+              "增强 *慢 PostgreSQL 查询的性能*",
+              "利用 *GitHub VCS*",
+            ].map((i) => processMarkup(i)),
           },
         },
         medtronic: {
           company: "Medtronic",
-          position: "Software Application Developer",
-          duration: "May 2015 - September 2015",
+          position: "软件应用程序开发人员",
+          duration: "2015年5月 - 2015年9月",
           responsibilities: {
-            title: "Responsibilities",
+            title: "责任",
             list: [
-              "Work with a remote international team on a legacy project",
-              "Integrate an application into the lgacy project with a REST API using Bridge OOP pattern",
+              "与远程国际团队合作开展遗留项目",
+              "使用 Bridge OOP 模式通过 REST API 将应用程序集成到 lgacy 项目中",
             ],
           },
           achievements: {
-            title: "Achievements",
+            title: "成就",
             list: [
-              "Designed and developed a patient monitoring web application letting to put hospital's monitoring station inside the nurse's pocket",
+              "设计并开发了一个病人监控网络应用程序，让医院的监控站放在护士的口袋里",
             ],
           },
           technicalDetails: {
-            title: "Technical Details",
+            title: "技术细节",
             list: [
-              processMarkup(
-                "Utilized *.NET MVC4* framework tools as well as *Razor* templating engine"
-              ),
-              processMarkup(
-                "Consumed REST API using company's bridge API tool and LINQ queries"
-              ),
-              processMarkup(
-                "Utilized *LessCSS* and *Bootstrap* to design front-end layouts"
-              ),
-              processMarkup("Utilized *Perforce VSC*"),
-            ],
+              "利用 *.NET MVC4* 框架工具以及 *Razor* 模板引擎",
+              "使用公司的桥接 API 工具和 LINQ 查询使用 REST API",
+              "利用 *LessCSS* 和 *Bootstrap* 设计前端布局",
+              "利用 *Perforce VSC*",
+            ].map((i) => processMarkup(i)),
           },
         },
       },
