@@ -4,13 +4,27 @@ import { CardContainer, ICard } from "../components/CardContainer";
 import { ELanguage } from "../utils/bridge";
 import { interpolate, processMarkup, translations } from "../utils/utils";
 
-const other: ICard[] = [
+const getOther = (language: ELanguage): ICard[] => [
   {
-    title: "Interview Article",
-    subtitle: "Level Up Coding Publication",
-    description: "Interviewed by Marina Vorontsova",
+    title: translations[language].misc.sections[3].projects?.[0].title || "",
+    subtitle:
+      translations[language].misc.sections[3].projects?.[0].subtitle || "",
+    description:
+      translations[language].misc.sections[3].projects?.[0].snippet || "",
     url: "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f",
     imageUrl: "/images/misc/article.png",
+  },
+  {
+    title: translations[language].misc.sections[3].projects?.[1].title || "",
+    subtitle:
+      translations[language].misc.sections[3].projects?.[1].subtitle || "",
+    description:
+      translations[language].misc.sections[3].projects?.[1].snippet || "",
+    url:
+      language === ELanguage.Russian
+        ? "https://zen.yandex.ru/media/id/5b0f13489f43477a6c509028/kto-takoi-horoshii-programmist-6286f2403e78be4dd6728939?&"
+        : "https://medium.com/@kirill-novik/what-makes-a-good-programmer-82adaefba4a",
+    imageUrl: "/images/misc/unicorn.webp",
   },
 ];
 
@@ -103,7 +117,7 @@ export const MiscPage: React.FC<
         )}
       </p>
       <div className="spacer"></div>
-      <CardContainer cards={other} />
+      <CardContainer cards={getOther(language)} />
       <div className="spacer"></div>
       <div className="spacer"></div>
       <h2>{translations[language].misc.sections[4].title}</h2>
