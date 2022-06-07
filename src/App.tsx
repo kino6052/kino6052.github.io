@@ -70,7 +70,9 @@ export const App = styled(
           />
         )}
         <div className="footer">
-          <div className="footer-content">Copyright 2022</div>
+          <div className="footer-content">
+            Copyright {new Date().getFullYear()}
+          </div>
           <a
             href="https://github.com/kino6052/"
             rel="noreferrer"
