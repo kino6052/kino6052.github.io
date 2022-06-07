@@ -84,12 +84,12 @@ export const CardContainer = styled(
       color: transparent;
     }
     h1 {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
     h2 {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
     }
   }
 `;

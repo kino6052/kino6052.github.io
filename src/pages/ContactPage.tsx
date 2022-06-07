@@ -84,7 +84,7 @@ const Input = styled(
   textarea {
     display: flex;
     padding: 8px;
-    font-size: 16px;
+    font-size: 1.2rem;
     flex-grow: 1;
   }
 

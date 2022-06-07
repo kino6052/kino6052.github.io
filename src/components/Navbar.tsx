@@ -204,7 +204,9 @@ export const Navbar = styled(
     padding: 0 8px;
     border-radius: 128px;
     box-sizing: border-box;
-    width: 128px;
+    width: 8rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
 
   ul {
@@ -243,6 +245,7 @@ export const Navbar = styled(
     align-items: center;
     padding: 0;
     margin: 0;
+    margin-top: 0;
     &.close {
       margin-bottom: 0;
     }
@@ -257,7 +260,7 @@ export const Navbar = styled(
       &.selected {
         background: #ffffff1a;
         & > a {
-          font-weight: semi-bold;
+          font-weight: 400;
         }
       }
 
@@ -265,9 +268,9 @@ export const Navbar = styled(
         display: inline-flex;
         color: white;
         text-decoration: none;
-        font-size: 16px;
-        line-height: 16px;
-        font-weight: semi-bold;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-weight: 400;
       }
 
       & .icon-container {
@@ -277,7 +280,7 @@ export const Navbar = styled(
         .icon {
           pointer-events: none;
           position: relative;
-          left: 84px;
+          left: 5.25rem;
           border: 1px solid grey;
           min-width: 27px;
         }

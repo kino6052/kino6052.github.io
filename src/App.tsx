@@ -122,35 +122,37 @@ export const App = styled(
   ul {
     margin: 0;
     margin-bottom: 8px;
+    margin-top: 8px;
   }
 
   input,
   textarea,
   button {
     font-family: system-ui, "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: bold;
-    line-height: 64px;
+    line-height: 4rem;
 
     @media print {
-      font-size: 32px;
-      line-height: 32px;
+      font-size: 2rem;
+      line-height: 2.2rem;
       margin-bottom: 8px;
     }
   }
 
   h2 {
-    font-size: 32px;
-    line-height: 48px;
-    font-weight: semi-bold;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
 
     @media print {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
       margin-bottom: 8px;
     }
   }
@@ -159,18 +161,17 @@ export const App = styled(
   p,
   a,
   li {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: semi-bold;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
 
     @media print {
-      font-size: 18px;
+      font-size: 1.2rem;
       line-height: auto;
     }
   }
 
   span {
-    font-size: 16px;
+    font-size: 1.2rem;
   }
 
   .spacer {

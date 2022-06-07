@@ -193,7 +193,7 @@ export const ProfilePage = styled(
         flex-direction: column;
 
         h3 {
-          font-size: 18px;
+          font-size: 1.2rem;
           color: #aaa;
           font-weight: 400;
         }
