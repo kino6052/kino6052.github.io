@@ -773,7 +773,7 @@ const translationRussian: TTranslation = {
         },
         isonas: {
           company: "ISONAS",
-          position: "Инжинер-программист",
+          position: "Инженер-программист",
           duration: "Июль 2016 - Декабрь 2017",
           responsibilities: {
             title: "Обязанности",
