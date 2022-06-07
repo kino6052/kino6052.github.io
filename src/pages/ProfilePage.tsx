@@ -87,7 +87,9 @@ export const ProfilePage = styled(
             <div className="spacer"></div>
             <div className="tag-container">
               {props.content.tags.map((tag) => (
-                <span className="tag">{tag}</span>
+                <span key={tag} className="tag">
+                  {tag}
+                </span>
               ))}
             </div>
           </div>

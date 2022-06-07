@@ -15,9 +15,9 @@ export const Table = styled(
   ) => (
     <table className={props.className}>
       {props.table.map((row, i) => (
-        <tr className={props.isZebra && (i + 1) % 2 ? "even" : ""}>
-          {row.map((col) => (
-            <td>
+        <tr key={i} className={props.isZebra && (i + 1) % 2 ? "even" : ""}>
+          {row.map((col, j) => (
+            <td key={j}>
               <b>{col.title}</b>
               <p>{col.description}</p>
             </td>

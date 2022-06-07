@@ -30,6 +30,7 @@ export const CardContainer = styled(
                 href={card.url}
                 target={card.shouldStay ? "_self" : "_blank"}
                 rel="noreferrer"
+                key={card.url}
               >
                 <div
                   className="card-image"

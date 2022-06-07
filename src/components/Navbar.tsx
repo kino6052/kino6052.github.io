@@ -104,7 +104,7 @@ export const Navbar = styled(
             </div>
             <select value={props.language}>
               {languageOptions.map((option) => (
-                <option>{option}</option>
+                <option key={option}>{option}</option>
               ))}
             </select>
           </EventWrapper>

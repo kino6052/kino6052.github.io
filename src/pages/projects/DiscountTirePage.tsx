@@ -26,7 +26,7 @@ export const DiscountTirePage: React.FC<
       <p>{content.paragraph2}</p>
       <ul>
         {content.features.map((v) => (
-          <li>{v}</li>
+          <li key={v}>{v}</li>
         ))}
       </ul>
       <div className="spacer"></div>
