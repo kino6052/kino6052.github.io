@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Pragmatism Fallacy | Kirill Novik</title><meta name="description" content="Why &quot;it works, it's in production&quot; is a weak defense of tangled code, and what taking pride in design looks like."><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0a14"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4fb"><script>
+      // Runs before first paint, so a saved theme never flashes.
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script><base target="_blank"><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://kino6052.github.io/ch/blog/pragmatism-fallacy/"><link rel="alternate" hreflang="en" href="https://kino6052.github.io/en/blog/pragmatism-fallacy/"><link rel="alternate" hreflang="ru" href="https://kino6052.github.io/ru/blog/pragmatism-fallacy/"><link rel="alternate" hreflang="zh" href="https://kino6052.github.io/ch/blog/pragmatism-fallacy/"><meta property="og:title" content="The Pragmatism Fallacy | Kirill Novik"><meta property="og:description" content="Why &quot;it works, it's in production&quot; is a weak defense of tangled code, and what taking pride in design looks like."><meta property="og:type" content="website"><meta property="og:url" content="https://kino6052.github.io/ch/blog/pragmatism-fallacy/"><meta property="og:image" content="https://kino6052.github.io/images/kirill-lg.jpg"><script>
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t);
+        a = e.getElementsByTagName(t)[0];
+        k.async = 1;
+        k.src = r;
+        a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89261329, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+    </script><link rel="stylesheet" href="/assets/Base.DmZbXt2F.css"></head><body><canvas id="background" aria-hidden="true"></canvas><header class="site-header"><nav aria-label="Main"><a class="brand" href="/ch/" target="_self">Kirill Novik</a><ul class="links"><li><a href="/ch/" target="_self">简历</a></li><li><a href="/ch/projects/" target="_self">项目</a></li><li><a href="/ch/misc/" target="_self">文章</a></li><li><a href="/ch/contact/" target="_self">联系</a></li></ul><ul class="languages" aria-label="Language"><li><a href="/en/blog/pragmatism-fallacy/" target="_self" hreflang="en" lang="en">EN</a></li><li><a href="/ru/blog/pragmatism-fallacy/" target="_self" hreflang="ru" lang="ru">RU</a></li><li><a href="/ch/blog/pragmatism-fallacy/" target="_self" hreflang="zh" lang="zh" aria-current="true">中文</a></li></ul><button id="theme" class="theme" type="button" aria-label="切换主题" title="切换主题"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"></path></svg></button></nav></header><main><article class="article" lang="en"><a class="back" href="/ch/misc/" target="_self" lang="zh">← 全部文章</a><h1>The Pragmatism Fallacy</h1><p class="subtitle">Why &quot;it works, it&#39;s in production&quot; is a weak defense of tangled code, and what taking pride in design looks like.</p><figure><img src="/images/covers/pragmatism-fallacy.webp" alt=""></figure><div class="prose"><p>This post looks at the most common defense of over-engineered code, “it works”, and explains why it falls short as an engineering argument.</p>
+<h2 id="the-shield-of-false-pragmatism">The shield of false pragmatism</h2>
+<p>Challenge an over-engineered labyrinth of ghosts (seven layers of abstraction, ORM magic, framework rituals) and a developer will often raise this shield:</p>
+<blockquote>
+<p><em>“It works, it’s in production, and at the end of the day, that’s all that matters.”</em></p>
+</blockquote>
+<p>That is not pragmatism. It gives up the real work and mistakes execution for engineering.</p>
+<p>If you do not preserve structure and refuse to take pride in your design, you do not ship a solution. You ship <strong>instant-legacy</strong>.</p>
+<pre class="astro-code astro-code-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>┌────────────────────────────────────────────────────────────────────────┐</span></span>
+<span class="line"><span>│                        THE INSTANT-LEGACY TRAP                         │</span></span>
+<span class="line"><span>├──────────────────────────────────┬─────────────────────────────────────┤</span></span>
+<span class="line"><span>│ MEDIOCRE ENGINEERING             │ TOP-NOTCH ENGINEERING               │</span></span>
+<span class="line"><span>├──────────────────────────────────┼─────────────────────────────────────┤</span></span>
+<span class="line"><span>│ • Driven by "It works for now"   │ • Driven by Structural Preservation │</span></span>
+<span class="line"><span>│ • Ships instant-legacy           │ • Ships software built to last      │</span></span>
+<span class="line"><span>│ • Becomes a source of problems   │ • Becomes a source of learning      │</span></span>
+<span class="line"><span>│ • Degrades under every change    │ • Remains soft and adaptable        │</span></span>
+<span class="line"><span>└──────────────────────────────────┴─────────────────────────────────────┘</span></span></code></pre>
+<h2 id="a-car-that-works-versus-a-car-that-is-well-made">A car that works versus a car that is well made</h2>
+<p>Think about how we judge physical engineering.</p>
+<p>A team can put together a mediocre car with cheap shortcuts and brittle routing. The engine starts and the car drives off the lot. In a narrow sense, it works. But when it needs maintenance, the design flaw shows: replacing a headlight means removing the whole front bumper, and the wiring is a tangled nest of hidden dependencies. Every mechanic who touches that car has a hard time.</p>
+<p>Now take a precision-engineered car built to last. When you open the hood, the layout is clear and deliberate. Every part is reachable, its purpose is obvious and its boundaries are respected. It works today, and it also teaches good engineering to whoever opens the hood tomorrow.</p>
+<h2 id="a-source-of-problems-or-a-source-of-learning">A source of problems or a source of learning</h2>
+<p>Software is no different.</p>
+<p>If you build without preserving the essence, if you mix machinery with meaning and bury simple state transitions under layers of accidental complexity, your codebase becomes a <strong>source of problems</strong>:</p>
+<ul>
+<li>Every new feature means finding a path through an ungrounded labyrinth.</li>
+<li>Every bug fix risks side effects in accidental layers.</li>
+<li>Every new engineer meets fatigue instead of clarity.</li>
+</ul>
+<p>A well-structured, Substance-First system does the opposite. It becomes a <strong>source of learning</strong>. It shows how to keep software soft, how to isolate accidents, and how to model human intent without noise.</p>
+<h2 id="taking-pride-in-the-design">Taking pride in the design</h2>
+<p>Making code run is the minimum a beginner can do. Keeping a system soft, clear and elegant as it changes over time is what marks a software engineer.</p>
+<p>Hiding behind “it works” is negligence dressed up as business wisdom, and it gives up your craft.</p>
+<p>Taking pride in your architecture is not ivory-tower perfectionism. It is a basic obligation to build systems that last, that inspire, and that stay soft.</p>
+</div><p class="source" lang="zh">最初发表于： <a href="https://kino6052.github.io/personal-blog/meataphysics-of-code.pargmatism-fallacy.html" rel="noreferrer">原文</a></p></article></main><script type="module" src="/assets/Base.astro_astro_type_script_index_0_lang.D9hX_okJ.js"></script></body></html>

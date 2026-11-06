@@ -1,0 +1,49 @@
+---
+import Base from "../../layouts/Base.astro";
+import type { Language } from "../../data/resume";
+import { email, github, languages, linkedin, ui } from "../../data/ui";
+
+export function getStaticPaths() {
+  return languages.map(({ code }) => ({ params: { lang: code } }));
+}
+
+const lang = Astro.params.lang as Language;
+const t = ui[lang].contact;
+---
+
+<Base lang={lang} path="/contact/" title={t.title} description={t.description}>
+  <section class="page-head">
+    <h1>{t.title}</h1>
+    <p>{t.description}</p>
+  </section>
+
+  <form
+    id="contact-form"
+    class="form"
+    data-language={lang}
+    data-address={email}
+    data-sending={t.sending}
+    data-sent={t.sent}
+    data-failed={t.failed}
+  >
+    <label>{t.name}<input name="name" autocomplete="name" maxlength="100" required /></label>
+    <label>{t.email}<input name="email" type="email" autocomplete="email" maxlength="200" required /></label>
+    <label>{t.message}<textarea name="message" maxlength="5000" required></textarea></label>
+    <label class="trap" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+    <div>
+      <button class="button primary" type="submit">{t.send}</button>
+    </div>
+    <p data-status role="status"></p>
+  </form>
+
+  <p class="direct">
+    {t.direct}:
+    <a href={`mailto:${email}`} target="_self">{email}</a>
+    <a href={github} rel="noreferrer">GitHub</a>
+    <a href={linkedin} rel="noreferrer">LinkedIn</a>
+  </p>
+
+  <script>
+    import "../../scripts/contact";
+  </script>
+</Base>

@@ -1,0 +1,94 @@
+---
+import Base from "../../layouts/Base.astro";
+import { resume, type Language } from "../../data/resume";
+import { currentProject, languages, ui } from "../../data/ui";
+
+export function getStaticPaths() {
+  return languages.map(({ code }) => ({ params: { lang: code } }));
+}
+
+const lang = Astro.params.lang as Language;
+const t = ui[lang];
+const { profile, career, education, skills, languages: spoken } = resume[lang];
+---
+
+<Base lang={lang} path="/" title={`${t.name} | ${profile.title}`} description={profile.description}>
+  <section class="hero">
+    <div>
+      <h1>{t.name}</h1>
+      <p class="role">{profile.title}</p>
+      <p class="status">{profile.subtitle}</p>
+      <p class="summary">{profile.description}</p>
+      <ul class="tags">{profile.tags.map((tag) => <li>{tag}</li>)}</ul>
+      <div class="actions">
+        <a class="button primary" href={`/${lang}/contact/`}>{t.resume.contact}</a>
+        <a class="button" href={`/${lang}/projects/`}>{t.resume.projects}</a>
+      </div>
+    </div>
+    <img src="/images/kirill-md.jpg" alt={t.name} width="176" height="176" />
+  </section>
+
+  <section class="section">
+    <h2>{t.now.title}</h2>
+    <a class="panel now" href={currentProject.url} rel="noreferrer">
+      <h3>{currentProject.name}</h3>
+      <p>{t.now.text}</p>
+      <span>{t.now.visit} →</span>
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>{t.resume.experience}</h2>
+    <div class="timeline">
+      {career.map((job) => (
+        <article class="panel job">
+          <div class="meta">
+            <strong>{job.company}</strong>
+            <span>{job.position}</span>
+            <br />
+            <span>{job.duration}</span>
+          </div>
+          <ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{t.resume.education}</h2>
+    <div class="columns">
+      {education.map((degree) => (
+        <article class="panel degree">
+          <h3>{degree.degree}</h3>
+          <p class="school">{degree.school}</p>
+          <p>{degree.dates}</p>
+          <p class="courses">{degree.details}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{t.resume.skills}</h2>
+    <dl class="panel rows">
+      {skills.map(([group, items]) => (
+        <div>
+          <dt>{group}</dt>
+          <dd>{items}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="section">
+    <h2>{t.resume.languages}</h2>
+    <dl class="panel rows">
+      {spoken.map(([name, level]) => (
+        <div>
+          <dt>{name}</dt>
+          <dd>{level}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+</Base>

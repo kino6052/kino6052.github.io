@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import articles from "../../data/articles.json";
+import type { Language } from "../../data/resume";
+import { languages, ui } from "../../data/ui";
+
+export function getStaticPaths() {
+  return languages.map(({ code }) => ({ params: { lang: code } }));
+}
+
+const lang = Astro.params.lang as Language;
+const t = ui[lang].writing;
+const posts = (await getCollection("blog")).sort(
+  (a, b) => articles.order.indexOf(a.id) - articles.order.indexOf(b.id),
+);
+
+const cards = (group: string) =>
+  posts
+    .filter((post) => post.data.group === group)
+    .map((post) => ({
+      title: post.data.title,
+      subtitle: post.data.description,
+      url: `/${lang}/blog/${post.id}/`,
+      image: `/images/covers/${post.id}.webp`,
+    }));
+
+const interview = { ...articles.interview[lang], image: "/images/covers/interview.webp" };
+
+const sections = [
+  [t.metaphysics, t.metaphysicsDescription, cards("metaphysics")],
+  [t.web, "", cards("web")],
+  [t.ml, "", cards("ml")],
+  [t.other, "", [...cards("other"), interview]],
+] as const;
+---
+
+<Base lang={lang} path="/misc/" title={t.title} description={t.description}>
+  <section class="page-head">
+    <h1>{t.title}</h1>
+    <p>{t.description}</p>
+  </section>
+
+  {sections.map(([title, description, items]) => (
+    <section class="section">
+      <h2>{title}</h2>
+      {description && <p class="section-note">{description}</p>}
+      <div class="cards">
+        {items.map((article) => (
+          <a class="card" href={article.url}>
+            <img src={article.image} alt="" loading="lazy" />
+            <div class="text">
+              <h3>{article.title}</h3>
+              <p>{article.subtitle}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>

@@ -1,0 +1,34 @@
+{
+ "order": [
+  "metaphysics-introduction",
+  "what-makes-software-good",
+  "pragmatism-fallacy",
+  "personal-preference",
+  "scale",
+  "revolution",
+  "react-rxjs",
+  "react-tdd",
+  "graphql",
+  "webrtc",
+  "svm",
+  "krr",
+  "good-programmer"
+ ],
+ "interview": {
+  "en": {
+   "title": "Interview Article",
+   "subtitle": "Level Up Coding Publication",
+   "url": "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f"
+  },
+  "ru": {
+   "title": "Интервью Статья",
+   "subtitle": "Level Up Coding Публикация",
+   "url": "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f"
+  },
+  "ch": {
+   "title": "采访文章",
+   "subtitle": "Level Up Coding 出版物",
+   "url": "https://levelup.gitconnected.com/kirill-novik-career-is-not-always-linear-it-is-a-journey-or-a-lab-experiment-132a72e74f4f"
+  }
+ }
+}

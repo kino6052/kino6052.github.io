@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import type { Language } from "../../../data/resume";
+import { languages, ui } from "../../../data/ui";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return languages.flatMap(({ code }) =>
+    posts.map((post) => ({ params: { lang: code, slug: post.id }, props: { post } })),
+  );
+}
+
+const { post } = Astro.props;
+const lang = Astro.params.lang as Language;
+const t = ui[lang].blog;
+const { Content } = await render(post);
+const { title, description, original, archived } = post.data;
+---
+
+<Base lang={lang} path={`/blog/${post.id}/`} title={title} description={description}>
+  <article class="article" lang="en">
+    <a class="back" href={`/${lang}/misc/`} target="_self" lang={lang === "ch" ? "zh" : lang}>← {t.back}</a>
+    <h1>{title}</h1>
+    <p class="subtitle">{description}</p>
+    <figure>
+      <img src={`/images/covers/${post.id}.webp`} alt="" />
+    </figure>
+    <div class="prose">
+      <Content />
+    </div>
+    <p class="source" lang={lang === "ch" ? "zh" : lang}>
+      {archived ? t.archived : t.original}
+      {" "}
+      <a href={archived ? `https://web.archive.org/web/2023/${original}` : original} rel="noreferrer">{t.link}</a>
+    </p>
+  </article>
+</Base>

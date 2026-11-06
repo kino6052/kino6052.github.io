@@ -1,0 +1,38 @@
+---
+import Base from "../../../layouts/Base.astro";
+import projects from "../../../data/projects.json";
+import { resume, type Language } from "../../../data/resume";
+import { languages, ui } from "../../../data/ui";
+
+export function getStaticPaths() {
+  return languages.flatMap(({ code }) =>
+    projects[code].commercial.map((project) => ({
+      params: { lang: code, slug: project.slug },
+      props: { project },
+    })),
+  );
+}
+
+const { project } = Astro.props;
+const lang = Astro.params.lang as Language;
+const t = ui[lang].projects;
+const strong = (text: string) => text.replace(/\*(.+?)\*/g, "<strong>$1</strong>");
+const points = project.slug === "beeline" ? resume[lang].career[0].highlights : project.features;
+---
+
+<Base lang={lang} path={`/projects/${project.slug}/`} title={project.title} description={project.snippet}>
+  <article class="article">
+    <a class="back" href={`/${lang}/projects/`} target="_self">← {t.back}</a>
+    <h1>{project.title}</h1>
+    <p class="subtitle">{project.subtitle}</p>
+    <figure>
+      <img src={project.image ?? `/images/covers/project-${project.slug}.webp`} alt={project.caption || project.title} />
+      {project.caption && <figcaption>{project.caption}</figcaption>}
+    </figure>
+    <div class="body">
+      {project.paragraphs.map((paragraph) => <p set:html={strong(paragraph)} />)}
+      {points && <ul>{points.map((point) => <li>{point}</li>)}</ul>}
+      {project.url && <p><a href={project.url} rel="noreferrer">{t.visit}</a></p>}
+    </div>
+  </article>
+</Base>

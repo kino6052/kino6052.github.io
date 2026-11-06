@@ -1,0 +1,107 @@
+---
+import "@fontsource-variable/inter";
+import "../styles/global.css";
+import type { Language } from "../data/resume";
+import { languages, ui } from "../data/ui";
+
+interface Props {
+  lang: Language;
+  path: string;
+  title: string;
+  description: string;
+}
+
+const { lang, path, title, description } = Astro.props;
+const t = ui[lang];
+const site = "https://kino6052.github.io";
+const pageTitle = path === "/" ? title : `${title} | ${t.name}`;
+const html = languages.find(({ code }) => code === lang)?.html;
+const links = [
+  ["/", t.nav.resume],
+  ["/projects/", t.nav.projects],
+  ["/misc/", t.nav.writing],
+  ["/contact/", t.nav.contact],
+];
+const isCurrent = (link: string) => (link === "/" ? path === "/" : path.startsWith(link));
+---
+
+<!doctype html>
+<html lang={html}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0a14" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4fb" />
+    <script is:inline>
+      // Runs before first paint, so a saved theme never flashes.
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+    <base target="_blank" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={`${site}/${lang}${path}`} />
+    {languages.map(({ code, html }) => (
+      <link rel="alternate" hreflang={html} href={`${site}/${code}${path}`} />
+    ))}
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${site}/${lang}${path}`} />
+    <meta property="og:image" content={`${site}/images/kirill-lg.jpg`} />
+    <script is:inline>
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t);
+        a = e.getElementsByTagName(t)[0];
+        k.async = 1;
+        k.src = r;
+        a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89261329, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+    </script>
+  </head>
+  <body>
+    <canvas id="background" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <nav aria-label="Main">
+        <a class="brand" href={`/${lang}/`} target="_self">{t.name}</a>
+        <ul class="links">
+          {links.map(([link, label]) => (
+            <li>
+              <a href={`/${lang}${link}`} target="_self" aria-current={isCurrent(link) ? "page" : undefined}>{label}</a>
+            </li>
+          ))}
+        </ul>
+        <ul class="languages" aria-label="Language">
+          {languages.map(({ code, label, html }) => (
+            <li>
+              <a href={`/${code}${path}`} target="_self" hreflang={html} lang={html} aria-current={code === lang ? "true" : undefined}>{label}</a>
+            </li>
+          ))}
+        </ul>
+        <button id="theme" class="theme" type="button" aria-label={t.theme} title={t.theme}>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <script>
+      import "../scripts/background";
+      import "../scripts/analytics";
+      import "../scripts/theme";
+    </script>
+  </body>
+</html>

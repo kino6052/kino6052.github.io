@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Gaslighting of Software Engineering | Кирилл Новик</title><meta name="description" content="A speech about how complexity gets used as status in software teams, and why the user's screen is a clearer ground for judging tools."><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0a14"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4fb"><script>
+      // Runs before first paint, so a saved theme never flashes.
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script><base target="_blank"><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://kino6052.github.io/ru/blog/revolution/"><link rel="alternate" hreflang="en" href="https://kino6052.github.io/en/blog/revolution/"><link rel="alternate" hreflang="ru" href="https://kino6052.github.io/ru/blog/revolution/"><link rel="alternate" hreflang="zh" href="https://kino6052.github.io/ch/blog/revolution/"><meta property="og:title" content="The Gaslighting of Software Engineering | Кирилл Новик"><meta property="og:description" content="A speech about how complexity gets used as status in software teams, and why the user's screen is a clearer ground for judging tools."><meta property="og:type" content="website"><meta property="og:url" content="https://kino6052.github.io/ru/blog/revolution/"><meta property="og:image" content="https://kino6052.github.io/images/kirill-lg.jpg"><script>
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t);
+        a = e.getElementsByTagName(t)[0];
+        k.async = 1;
+        k.src = r;
+        a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89261329, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+    </script><link rel="stylesheet" href="/assets/Base.DmZbXt2F.css"></head><body><canvas id="background" aria-hidden="true"></canvas><header class="site-header"><nav aria-label="Main"><a class="brand" href="/ru/" target="_self">Кирилл Новик</a><ul class="links"><li><a href="/ru/" target="_self">Резюме</a></li><li><a href="/ru/projects/" target="_self">Проекты</a></li><li><a href="/ru/misc/" target="_self">Статьи</a></li><li><a href="/ru/contact/" target="_self">Контакты</a></li></ul><ul class="languages" aria-label="Language"><li><a href="/en/blog/revolution/" target="_self" hreflang="en" lang="en">EN</a></li><li><a href="/ru/blog/revolution/" target="_self" hreflang="ru" lang="ru" aria-current="true">RU</a></li><li><a href="/ch/blog/revolution/" target="_self" hreflang="zh" lang="zh">中文</a></li></ul><button id="theme" class="theme" type="button" aria-label="Сменить тему" title="Сменить тему"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"></path></svg></button></nav></header><main><article class="article" lang="en"><a class="back" href="/ru/misc/" target="_self" lang="ru">← Все статьи</a><h1>The Gaslighting of Software Engineering</h1><p class="subtitle">A speech about how complexity gets used as status in software teams, and why the user&#39;s screen is a clearer ground for judging tools.</p><figure><img src="/images/covers/revolution.webp" alt=""></figure><div class="prose"><p>This post is a speech. It describes how complexity is used as a weapon in software teams, explains why it happens, and offers a way to stay clear-headed about it.</p>
+<h2 id="the-question">The question</h2>
+<p>Have you ever had a colleague who, when you asked a simple question or said a system was needlessly complex, made you feel like <em>you</em> were the problem?</p>
+<p>Not the system. Not the complexity. You.</p>
+<p>“You just don’t understand.”
+“This is how we’ve always done it.”
+“It’s more complicated than you think.”
+“Maybe you’re not senior enough to see the bigger picture.”</p>
+<p>This is gaslighting, and it is everywhere in software engineering.</p>
+<h2 id="an-example-with-webpack">An example with Webpack</h2>
+<p>I once told a colleague that I hated working with Webpack. You waste all day fighting it to set things up the way you want. You can hardly do it without debugging Webpack itself and learning how it processes its config.</p>
+<p>They said: “That’s because you don’t understand it.” Or: “I don’t think it’s hard at all. I never had this problem.”</p>
+<p>That is not true. Webpack is notoriously picky about getting tools to work together. With CSS, TypeScript and PostCSS there will be friction, and you will have to debug it.</p>
+<p>My colleague would not admit this. They made me feel that the problem was me, that I was not smart enough, not experienced enough, not serious enough.</p>
+<h2 id="an-example-with-react">An example with React</h2>
+<p>It is not only build tools. It is the frameworks too.</p>
+<p>React started as a declarative view library. It promised simplicity: “just render the UI.”</p>
+<p>Today React needs a careful understanding of lifecycle, hooks, dependencies, memoization and reconciliation. Expertise is measured by how well you manage React’s internals, and not by how clearly and cleanly you build. I find that absurd.</p>
+<p>React went against common sense. It could have been a plain declarative view library, with reactive state and side effects managed outside it. Instead it put everything inside. State management is internal. Side effects are internal. The lifecycle is internal.</p>
+<p>You cannot use React as a simple view layer. You have to understand React itself, master its internals and fight its abstractions. And when you say “this is unnecessarily complex,” they say: “You just don’t understand React.”</p>
+<h2 id="the-pattern">The pattern</h2>
+<p>This repeats everywhere.</p>
+<ul>
+<li>You say: “This system is unnecessarily complex.”
+They say: “You just don’t understand the bigger picture.”</li>
+<li>You say: “Why do we need seven layers of abstraction?”
+They say: “This is how we maintain separation of concerns.”</li>
+<li>You say: “Can we simplify this?”
+They say: “It’s more complicated than you think.”</li>
+<li>You say: “React should be a dumb view layer.”
+They say: “You just don’t understand the React way.”</li>
+</ul>
+<p>The message is always the same: <em>Your confusion is your fault. Your wish for clarity is a weakness. Your sense that something is wrong shows you don’t belong.</em></p>
+<h2 id="the-toxicity">The toxicity</h2>
+<p>I have met this in many forms:</p>
+<ul>
+<li>The backend engineer who looks down on frontend work as “lesser.”</li>
+<li>The architect who dismisses your simplification as “naive.”</li>
+<li>The senior developer who uses obscure jargon to prove superiority.</li>
+<li>The manager who asks why you can’t “just get it done.”</li>
+</ul>
+<p>This toxicity is one of the reasons our industry is so hard. The code is not the cause, and neither are the deadlines or the complexity. The cause is people who use complexity as a weapon, a culture that rewards obscurity over clarity, and a status trap that makes us compete when we could help each other.</p>
+<h2 id="the-root-problem">The root problem</h2>
+<p>What if this toxicity is the root problem behind software being “hard”?</p>
+<p>What if the complexity we fight is the deliberate creation of a priesthood that wants to keep you out, and not the natural cost of real work?</p>
+<p>When someone says “Webpack isn’t hard, you just don’t understand it,” they are defending their status, and Webpack is only the occasion. The same goes for “React isn’t complicated, you just don’t understand hooks.”</p>
+<p>They have mastered the labyrinth. They spent years learning its twists and turns and became the expert. When you say “this is unnecessarily complex,” you threaten their identity. If Webpack is a bad tool, their expertise is in a bad tool. If React is a bad abstraction, their mastery is of a bad abstraction. If the labyrinth is a waste, so is the time they spent in it.</p>
+<p>They will not admit this, and perhaps they cannot. Their self-worth is tied to the complexity they have mastered.</p>
+<h2 id="what-makes-these-systems-so-complex">What makes these systems so complex?</h2>
+<p>Webpack is overcomplicated and lacks empirical grounding. It is grounded in the machinery of building, and not in what the user perceives. It solves a problem that should not exist: bundling, transpiling and managing dependencies in a fragmented ecosystem.</p>
+<p>React is overcomplicated too. It puts lifecycle, state and side effects inside itself, and all of them require you to master React.</p>
+<p>Why do we accept this? Because we are gaslit into believing it is normal, that it is “real work”, and that this is what a serious engineer does.</p>
+<h2 id="the-screen-is-the-ground">The screen is the ground</h2>
+<p>Here is the truth they do not want you to know:</p>
+<p><strong>The screen is the ground.</strong></p>
+<p>What the user perceives is the only reality that matters. The code, the architecture, the database, the infrastructure, the Webpack config and the React internals all exist to serve that screen.</p>
+<p>The user does not see your Webpack config, your React lifecycle or your architecture. The user sees buttons, text, images, status messages, forms, lists and results.</p>
+<p>That is the software, and that is the substance. Everything else is machinery.</p>
+<h2 id="the-status-trap">The status trap</h2>
+<p>Software developers constantly flex on each other:</p>
+<ul>
+<li>Backend over frontend.</li>
+<li>Systems over applications.</li>
+<li>Algorithms over UI.</li>
+<li>Infrastructure over user experience.</li>
+<li>Complexity over clarity.</li>
+</ul>
+<p>We have built a status hierarchy based on <em>distance from the user</em>. The farther you are from the screen, the more “serious” you are considered.</p>
+<p>The gaslighting about Webpack is one example and the gaslighting about React is another. The tools are hard and needlessly complex, and admitting it would threaten the status of those who have mastered them.</p>
+<p>This is a status game and not a technical truth. It signals superiority and keeps others out.</p>
+<h2 id="liberation">Liberation</h2>
+<p>When you understand this, you are free of the gaslighting, the status trap and the hierarchy.</p>
+<p>You know the screen is the ground. You know the user’s experience is the substance. You know Webpack is an accident and React is an accident.</p>
+<p>You no longer have to pretend that fighting a build tool is “real work,” that mastering a framework’s internals is “expertise,” or that complexity is a sign of seriousness.</p>
+<h2 id="what-to-do-when-it-happens">What to do when it happens</h2>
+<p>Stop gaslighting yourself. Stop accepting the hierarchy. Stop believing that complexity is competence, and stop treating machinery as if it were the substance.</p>
+<p>The screen is the software, the substance and the ground. Everything else is machinery, support and accident.</p>
+<p>When someone makes you feel small for wanting clarity and simplicity, and for wanting to focus on what matters, remember:</p>
+<p><em>They are not defending Webpack. They are defending their status.</em></p>
+<p><em>They are not defending React. They are defending their status.</em></p>
+<h2 id="the-truth">The truth</h2>
+<p><strong>Software is the communicated idea.</strong> It is what the user perceives and understands.</p>
+<p>The code, the frameworks, the databases, Webpack and React are machinery. The screen is the substance, and the user is the ground. Everything else is an accident.</p>
+<h2 id="join-the-movement">Join the movement</h2>
+<p>I am building a movement called <strong>Empirical Software</strong>.</p>
+<p>Its core is this: <strong>ground everything in perception, treat everything else as swappable, refuse the status trap, and build soft software.</strong></p>
+<h3 id="what-we-stand-for">What we stand for</h3>
+<ul>
+<li><strong>The screen is the substance.</strong> What the user perceives is the only reality that matters.</li>
+<li><strong>The user is the ground.</strong> Their experience is our guide.</li>
+<li><strong>The code is machinery.</strong> Frameworks and tools are machinery, and everything else is an accident.</li>
+<li><strong>Complexity is not competence.</strong> Simplicity is not naivety.</li>
+<li><strong>Clarity is strength.</strong> Obscurity is weakness.</li>
+</ul>
+<h3 id="what-you-can-do">What you can do</h3>
+<p><strong>Join the community.</strong>
+We are building a movement of developers who refuse the gaslighting, demand clarity and ground everything in perception.</p>
+<p><strong>Learn Empirical Software.</strong>
+Study the principles, apply them to your work and see the difference.</p>
+<p><strong>Start building substance.</strong>
+Stop building ghosts and labyrinths. Build what the user actually sees and experiences.</p>
+<p><strong>Challenge the status quo.</strong>
+When someone gaslights you, push back. When someone defends complexity, question it. When someone makes you feel small, remember that <em>they are protecting their status, and the system is not what they are protecting</em>.</p>
+<p><strong>Spread the word.</strong>
+Share this philosophy with your colleagues, your team, your company and the industry.</p>
+<p><a href="https://empiricalsoftware.com/community">https://empiricalsoftware.com/community</a></p>
+<p>The time for gaslighting is over. The time for clarity has come. The truth is on your side.</p>
+</div><p class="source" lang="ru">Впервые опубликовано здесь: <a href="https://kino6052.github.io/personal-blog/meataphysics-of-code.speech.revolution.html" rel="noreferrer">оригинал статьи</a></p></article></main><script type="module" src="/assets/Base.astro_astro_type_script_index_0_lang.D9hX_okJ.js"></script></body></html>

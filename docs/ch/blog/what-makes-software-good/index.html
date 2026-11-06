@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>What Makes Software Good? | Kirill Novik</title><meta name="description" content="Why common software metrics are opinions, and why the user's screen is a firmer ground for judging code."><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0a14"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f4fb"><script>
+      // Runs before first paint, so a saved theme never flashes.
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script><base target="_blank"><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://kino6052.github.io/ch/blog/what-makes-software-good/"><link rel="alternate" hreflang="en" href="https://kino6052.github.io/en/blog/what-makes-software-good/"><link rel="alternate" hreflang="ru" href="https://kino6052.github.io/ru/blog/what-makes-software-good/"><link rel="alternate" hreflang="zh" href="https://kino6052.github.io/ch/blog/what-makes-software-good/"><meta property="og:title" content="What Makes Software Good? | Kirill Novik"><meta property="og:description" content="Why common software metrics are opinions, and why the user's screen is a firmer ground for judging code."><meta property="og:type" content="website"><meta property="og:url" content="https://kino6052.github.io/ch/blog/what-makes-software-good/"><meta property="og:image" content="https://kino6052.github.io/images/kirill-lg.jpg"><script>
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t);
+        a = e.getElementsByTagName(t)[0];
+        k.async = 1;
+        k.src = r;
+        a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89261329, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+    </script><link rel="stylesheet" href="/assets/Base.DmZbXt2F.css"></head><body><canvas id="background" aria-hidden="true"></canvas><header class="site-header"><nav aria-label="Main"><a class="brand" href="/ch/" target="_self">Kirill Novik</a><ul class="links"><li><a href="/ch/" target="_self">简历</a></li><li><a href="/ch/projects/" target="_self">项目</a></li><li><a href="/ch/misc/" target="_self">文章</a></li><li><a href="/ch/contact/" target="_self">联系</a></li></ul><ul class="languages" aria-label="Language"><li><a href="/en/blog/what-makes-software-good/" target="_self" hreflang="en" lang="en">EN</a></li><li><a href="/ru/blog/what-makes-software-good/" target="_self" hreflang="ru" lang="ru">RU</a></li><li><a href="/ch/blog/what-makes-software-good/" target="_self" hreflang="zh" lang="zh" aria-current="true">中文</a></li></ul><button id="theme" class="theme" type="button" aria-label="切换主题" title="切换主题"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"></path></svg></button></nav></header><main><article class="article" lang="en"><a class="back" href="/ch/misc/" target="_self" lang="zh">← 全部文章</a><h1>What Makes Software Good?</h1><p class="subtitle">Why common software metrics are opinions, and why the user&#39;s screen is a firmer ground for judging code.</p><figure><img src="/images/covers/what-makes-software-good.webp" alt=""></figure><div class="prose"><p>This post asks what makes software good, argues that the usual answers rest on opinion, and offers a firmer ground: what the user perceives. It then summarizes the philosophy I call Empirical Software.</p>
+<h2 id="the-question">The question</h2>
+<p>We have been given many answers:</p>
+<ul>
+<li>It should be modular.</li>
+<li>It should be loosely coupled.</li>
+<li>It should follow SOLID principles.</li>
+<li>It should use the right design patterns.</li>
+<li>It should have high test coverage.</li>
+<li>It should be “clean.”</li>
+</ul>
+<p>Do these metrics guarantee good code?</p>
+<p>How do you know when to stop decoupling? How much modularity is enough? When does a pattern become a burden? When does “clean” become a labyrinth?</p>
+<p>These metrics are opinions and preferences. They come from people who built successful systems, and that wisdom is useful, but wisdom is not the same as truth.</p>
+<h2 id="solutions-are-relative">Solutions are relative</h2>
+<p>Like many things in this world, software solutions are not absolute. They are relative to a reference frame.</p>
+<p>In one frame a solution is well crafted. In another it is a disaster. A system that works perfectly for a small startup can collapse under the weight of a large enterprise. A system that is elegant in theory can be unworkable in practice.</p>
+<p>So how do we choose the reference frame? Personal preference? The team’s opinion? An architect’s imagination? A senior engineer’s authority?</p>
+<p>If so, we are not in a good place. An opinion is still an opinion when it comes from someone who has built successful projects. Authority does not make something true. It only makes it authoritative.</p>
+<h2 id="the-problem-with-authority">The problem with authority</h2>
+<p>A firm ground should depend on reality, and not on us.</p>
+<p>Software is a lot like philosophy here. Philosophy is not true because Aristotle or Hegel said it. It is true when it is honest and grounded.</p>
+<p>The same applies to software. A system is not good because an authority says so. It is good because it corresponds to something real: it serves a real purpose and communicates a real experience to a real person.</p>
+<h2 id="the-philosophical-root">The philosophical root</h2>
+<p>I apply the rigorous critique of the empiricists to software.</p>
+<p>I agree with Berkeley that if we ground our thinking in opinions or imagination, we produce elaborate metaphysical labyrinths and nothing that corresponds to reality.</p>
+<p>So we need to <strong>dereify</strong>: stop treating abstractions as if they were real things, and stop building ghosts. And we need to <strong>ground ourselves in perception</strong>.</p>
+<h2 id="the-screen-is-the-ground">The screen is the ground</h2>
+<p>What is the ground of software?</p>
+<p>It is what the user perceives: the screen, the buttons, the forms, the status messages, the results.</p>
+<p>Everything else, meaning the code, the architecture, the database and the framework, is machinery. It supports the software and implements it, and it could be different. Philosophers call this an accident.</p>
+<p>This is a description of how software is used, and not a matter of taste. The user does not see your architecture, your database or your code. The user sees the screen. That is the ground.</p>
+<h2 id="what-empirical-software-offers">What Empirical Software offers</h2>
+<p>Empirical Software is a philosophy of building software that is grounded in reality. It says:</p>
+<ul>
+<li><strong>Ground everything in perception.</strong> What the user sees is the only reality that matters.</li>
+<li><strong>Distinguish substance from accidents.</strong> The substance is what the user perceives. The accidents are the machinery that delivers it.</li>
+<li><strong>Protect the substance.</strong> Keep it pure, testable and soft.</li>
+<li><strong>Treat accidents as swappable.</strong> Change them freely and replace them without changing the substance.</li>
+<li><strong>Refuse the status trap.</strong> Complexity is not competence. Simplicity is not naivety. Clarity is strength.</li>
+</ul>
+<h2 id="an-invitation">An invitation</h2>
+<p>I invite you to stop building ghosts, to stop accepting the gaslighting, and to stop pretending that complexity is a sign of seriousness. I invite you to start building substance, grounding everything in perception, and building software that is truly soft.</p>
+<p>The truth is on your side. If this appeals to you:</p>
+<ul>
+<li><strong>Join the community.</strong> Connect with others who are building grounded software.</li>
+<li><strong>Learn the principles.</strong> Study the difference between substance and accidents, and the practice of grounding in perception.</li>
+<li><strong>Apply the philosophy.</strong> Start building software that is soft, grounded in what the user perceives.</li>
+</ul>
+<p>The screen is the ground. The user is the reality. The code is machinery.</p>
+</div><p class="source" lang="zh">最初发表于： <a href="https://kino6052.github.io/personal-blog/meataphysics-of-code.what-makes-software-good.html" rel="noreferrer">原文</a></p></article></main><script type="module" src="/assets/Base.astro_astro_type_script_index_0_lang.D9hX_okJ.js"></script></body></html>

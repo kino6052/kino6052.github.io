@@ -1,0 +1,19 @@
+---
+import Base from "../layouts/Base.astro";
+import { ui } from "../data/ui";
+
+const t = ui.en;
+---
+
+<Base lang="en" path="/" title={t.notFound.title} description={t.notFound.title}>
+  <script is:inline>
+    // Old links had no language in the path.
+    if (/^\/(projects|misc|contact)(\/|$)/.test(location.pathname)) {
+      location.replace(`/en${location.pathname}`);
+    }
+  </script>
+  <section class="page-head">
+    <h1>{t.notFound.title}</h1>
+    <p><a href="/en/">{t.notFound.back}</a></p>
+  </section>
+</Base>

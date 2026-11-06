@@ -1,0 +1,26 @@
+{
+  "tags": [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Node.js",
+    "Python",
+    "UI Architecture",
+    "Design Systems",
+    "Clean Architecture",
+    "TDD",
+    "Automation",
+    "AI-Assisted Development",
+    "Playwright"
+  ],
+  "groups": {
+    "frontend": "React, TypeScript, Next.js, RxJS, Zustand, Web Components",
+    "ui": "Design Systems, Tailwind CSS, shadcn/ui, Storybook, Figma, WCAG",
+    "architecture": "Clean Architecture, Domain-Driven Design, Microservices, Monorepo",
+    "ai": "Claude Code, Cursor, AI agents, RPA, GitHub Actions, Python scripting",
+    "testing": "TDD, Vitest, Jest, Playwright",
+    "backend": "Node.js, Python, GraphQL, gRPC, Prisma",
+    "cloud": "AWS, Docker, Kubernetes, CI/CD, Vercel",
+    "data": "Pandas, scikit-learn, PyTorch"
+  }
+}

@@ -1,0 +1,75 @@
+---
+import { existsSync } from "node:fs";
+import Base from "../../../layouts/Base.astro";
+import projects from "../../../data/projects.json";
+import type { Language } from "../../../data/resume";
+import { currentProject, languages, ui } from "../../../data/ui";
+
+export function getStaticPaths() {
+  return languages.map(({ code }) => ({ params: { lang: code } }));
+}
+
+const lang = Astro.params.lang as Language;
+const page = ui[lang];
+const t = page.projects;
+const { commercial, student } = projects[lang];
+
+// Generated covers are used where they exist; other projects keep their logo.
+const generated = (name: string) => {
+  const path = `/images/covers/project-${name}.webp`;
+  return existsSync(`public${path}`) ? path : undefined;
+};
+const studentNames = ["pictures", "pipboy"];
+const nowCover = generated("haoshuode");
+---
+
+<Base lang={lang} path="/projects/" title={t.title} description={t.description}>
+  <section class="page-head">
+    <h1>{t.title}</h1>
+    <p>{t.description}</p>
+  </section>
+
+  <section class="section">
+    <h2>{page.now.title}</h2>
+    <a class="panel now" href={currentProject.url} rel="noreferrer">
+      {nowCover && <img src={nowCover} alt="" />}
+      <h3>{currentProject.name}</h3>
+      <p>{page.now.text}</p>
+      <span>{page.now.visit} →</span>
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>{t.commercial}</h2>
+    <div class="cards">
+      {commercial.map((project) => (
+        <a class="card" href={`/${lang}/projects/${project.slug}/`}>
+          {generated(project.slug)
+            ? <img src={generated(project.slug)} alt="" loading="lazy" />
+            : <img class="logo" src={project.cover} alt="" loading="lazy" />}
+          <div class="text">
+            <h3>{project.title}</h3>
+            <p>{project.subtitle}</p>
+            <p>{project.snippet}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>{t.student}</h2>
+    <div class="cards">
+      {student.map((project, index) => (
+        <a class="card" href={project.url}>
+          <img src={generated(studentNames[index]) ?? project.cover} alt="" loading="lazy" />
+          <div class="text">
+            <h3>{project.title}</h3>
+            <p>{project.subtitle}</p>
+            <p>{project.snippet}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
