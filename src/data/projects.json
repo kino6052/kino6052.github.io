@@ -120,11 +120,11 @@
     "url": "/picturesOfYou"
    },
    {
-    "title": "Pip Boy",
-    "subtitle": "Personal Portfolio",
-    "snippet": "WebGL and Canvas Based Portfolio.",
-    "cover": "/images/projects/student/pipboy.jpg",
-    "url": "/pipboy"
+    "title": "CRT Terminal Portfolio",
+    "subtitle": "Canvas and WebGL",
+    "snippet": "A retro portfolio shown through a CRT shader.",
+    "cover": "/images/covers/project-pipboy.webp",
+    "url": "/pipboy/"
    }
   ]
  },
@@ -249,11 +249,11 @@
     "url": "/picturesOfYou"
    },
    {
-    "title": "Pip Boy",
-    "subtitle": "Персональное Портфолио",
-    "snippet": "Портфолио на основе WebGL и Canvas.",
-    "cover": "/images/projects/student/pipboy.jpg",
-    "url": "/pipboy"
+    "title": "Портфолио CRT-терминал",
+    "subtitle": "Canvas и WebGL",
+    "snippet": "Ретро-портфолио на экране с CRT-шейдером.",
+    "cover": "/images/covers/project-pipboy.webp",
+    "url": "/pipboy/"
    }
   ]
  },
@@ -378,11 +378,11 @@
     "url": "/picturesOfYou"
    },
    {
-    "title": "Pip Boy",
-    "subtitle": "个人投资组合",
-    "snippet": "基于 WebGL 和 Canvas 的产品组合。",
-    "cover": "/images/projects/student/pipboy.jpg",
-    "url": "/pipboy"
+    "title": "CRT 终端作品集",
+    "subtitle": "Canvas 与 WebGL",
+    "snippet": "通过 CRT 着色器呈现的复古作品集。",
+    "cover": "/images/covers/project-pipboy.webp",
+    "url": "/pipboy/"
    }
   ]
  }
